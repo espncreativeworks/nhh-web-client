@@ -1,0 +1,18 @@
+<div class="row ballot-item center-block text-center">
+  <div class="col-xs-12 ballot-heading-container">
+    <h3 class="ballot-heading athlete-name">{{item.name | fullName}}</h3>
+    <hr>
+  </div>
+  <div class="col-xs-12 ballot-details-container">
+    <ul class="list-inline ballot-details">
+      <li class="ballot-detail school-name">{{item.school.name}}</li>
+      <li class="ballot-detail position-abbreviation">{{item.position.abbreviation}}</li>
+      <li class="ballot-detail experience-abbreviation">{{item.experience.abbreviation}}</li>
+    </ul>
+  </div>
+  <div class="col-xs-12 ballot-controls-container">
+    <button class="btn btn-nhh" ng-click="vote(item)" title="Vote for {{item.name | fullName}}">
+      Vote
+    </button>
+  </div>
+</div>

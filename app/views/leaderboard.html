@@ -1,0 +1,17 @@
+<div id="leaderboard-container" class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="page-heading-container text-center">
+        <h1 class="heading">Vote Leaderboard!</h1>
+        <hr class="narrow-top">
+      </div>
+    </div>
+  </div>
+  <div class="row leaderboard-row" ng-class='{ "even": $even, "odd": $odd }' ng-repeat="athlete in athletes | orderBy: sortPredicate : reverse">
+    <div class="col-xs-8 col-sm-3 leaderboard-column name">{{athlete.name | fullName}}</div>
+    <div class="col-xs-4 col-sm-3 leaderboard-column vote percentage-value">{{getPercentage(athlete, true)}}%</div>
+    <div class="col-sm-6 hidden-xs leaderboard-column vote percentage-bar">
+      <div class="bar" ng-style="{ 'width': '{{getPercentage(athlete, true) * 2 + '%'}}' }"></div>
+    </div>
+  </div>
+</div>

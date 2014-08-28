@@ -1,0 +1,41 @@
+$ballot-item-width: 300px;
+$ballot-item-margin-bottom: 15px;
+$ballot-item-padding-top: 15px;
+$ballot-item-padding-bottom: $ballot-item-padding-top;
+
+#ballot-container {
+
+  .ballot-item {
+    //max-width: $ballot-item-width;
+    margin-bottom: $ballot-item-margin-bottom;
+    padding-top: $ballot-item-padding-top;
+    padding-bottom: $ballot-item-padding-bottom;
+    font-family: $nhh-font-family-sans-serif;
+    background-color: $nhh-grey;
+    color: $nhh-white;
+
+    .ballot-heading-container {
+      .ballot-heading {
+        margin-top: 0;
+        margin-bottom: 0;
+        color: $nhh-white;
+      }
+
+      hr {
+        margin-top: 6px;
+        margin-bottom: 9px
+      }
+    }
+
+    .ballot-details-container {
+
+      .position-abbreviation {
+        color: $nhh-gold;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min){
+
+}

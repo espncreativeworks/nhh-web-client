@@ -1,0 +1,140 @@
+#video-showcase-container {
+  padding-bottom: 40px;
+  background-color: transparent;
+
+  .headings {
+    padding-top: 24px;
+    text-align: left;
+
+    .heading-label {
+      display: none;
+      font-weight: normal;
+      font-size: 17px;
+      color: $nhh-white;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .heading {
+      font-size: 29px;
+      font-style: italic;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .nhh-slide-item {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 125px;
+
+    .thumbnail-link {
+      display: block;
+      float: left;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .backdrop {
+      display: none;
+      position: absolute;
+      top: 10px;
+      left: 0;
+      right: 10px;
+      width: auto;
+      height: inherit;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .btn-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -52px;
+      margin-left: -42px;
+      font-size: 3em;
+
+      .fa-circle {
+        color: $nhh-gold;
+      }
+
+      .fa-play {
+        color: $nhh-white;
+        text-indent: 8px;
+      }
+
+      &:hover,
+      &:focus,
+      &:active
+      &.active {
+        .fa-circle {
+          color: darken($nhh-gold, 15%);
+        }
+        .fa-play {
+          color: darken($nhh-white, 15%);
+        }
+      }
+    }
+
+    .caption {
+      display: none;
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 10px;
+      text-align: center;
+    }
+  }
+
+  .nhh-slide-item:hover {
+    .backdrop {
+      display: block;
+    }
+  }
+
+  .rn-carousel-controls {
+    .rn-carousel-control {
+      font-size: 70px;
+      margin-top: -65px;
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min){
+
+  body.home #video-showcase-container {
+    background-image: url($image-path + 'bg_video_showcase.png');
+    background-size: cover;
+  }
+
+  #video-showcase-container {
+    .headings {
+      padding-top: 14px;
+      text-align: right;
+
+      .heading-label {
+        display: block;
+        margin-bottom: 4px;
+      }
+    }
+
+    .nhh-slide-item {
+      max-width: 226px;
+      padding-right: 14px;
+      padding-top: 14px;
+    }
+
+    .nhh-carousel :first-child.nhh-slide :first-child.nhh-slide-item {
+      max-width: 464px;
+      height: 260px;
+
+      .caption {
+        display: block;
+      }
+    }
+  }
+}

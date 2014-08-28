@@ -1,0 +1,36 @@
+// optimal video heights obtained from:
+// http://support.brightcove.com/en/video-cloud/docs/optimal-video-dimensions
+
+#video-container .page-title {
+  font-style: italic;
+}
+
+.video-player-container {
+  min-height: 144px;
+  padding-top: 12px;
+
+  .player {
+    width: 100%;
+    height: auto;
+    min-height: inherit;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: $screen-sm-min){
+  .video-player-container {
+    min-height: 288px;
+  }
+}
+
+@media (min-width: $screen-md-min){
+  .video-player-container {
+    min-height: 432px;
+  }
+}
+
+@media (min-width: $screen-lg-min){
+  .video-player-container {
+    min-height: 576px;
+  }
+}

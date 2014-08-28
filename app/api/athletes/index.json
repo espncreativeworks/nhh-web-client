@@ -1,0 +1,245 @@
+[
+  {
+    "id": 1,
+    "espnId": "511459",
+    "active": true,
+    "votes": 2389,
+    "name": {
+      "first": "Marcus",
+      "last": "Mariota",
+      "short": "M. Mariota"
+    },
+    "position": {
+      "abbreviation": "QB",
+      "name": "Quarterback"
+    },
+    "jersey": 8,
+    "experience": {
+      "abbreviation": "JR",
+      "name": "Junior",
+      "count": 2
+    },
+    "school": {
+      "espnId": "2483",
+      "abbreviation": "ORE",
+      "name": "Oregon",
+      "primaryColor": "#022000"
+    }
+  },
+  {
+    "id": 2,
+    "espnId": "530308",
+    "active": true,
+    "votes": 2134,
+    "name": {
+      "first": "Jameis",
+      "last": "Winston",
+      "short": "J. Winston"
+    },
+    "position": {
+      "abbreviation": "QB",
+      "name": "Quarterback"
+    },
+    "jersey": 5,
+    "experience": {
+      "abbreviation": "SO",
+      "name": "Sophomore",
+      "count": 1
+    },
+    "school": {
+      "espnId": "52",
+      "abbreviation": "FSU",
+      "name": "Florida State",
+      "primaryColor": "#7f001b"
+    }
+  },
+  {
+    "id": 3,
+    "espnId": "534669",
+    "active": true,
+    "votes": 1324,
+    "name": {
+      "first": "Todd",
+      "last": "Gurley",
+      "short": "T. Gurley"
+    },
+    "position": {
+      "abbreviation": "RB",
+      "name": "Running Back"
+    },
+    "jersey": 3,
+    "experience": {
+      "abbreviation": "JR",
+      "name": "Junior",
+      "count": 2
+    },
+    "school": {
+      "espnId": "61",
+      "abbreviation": "UGA",
+      "name": "Georgia",
+      "primaryColor": "#a0000b"
+    }
+  },
+  {
+    "id": 4,
+    "espnId": "512838",
+    "active": true,
+    "votes": 102,
+    "name": {
+      "first": "Braxton",
+      "last": "Miller",
+      "short": "B. Miller"
+    },
+    "position": {
+      "abbreviation": "QB",
+      "name": "Quarterback"
+    },
+    "jersey": 5,
+    "experience": {
+      "abbreviation": "SR",
+      "name": "Senior",
+      "count": 3
+    },
+    "school": {
+      "espnId": "194",
+      "abbreviation": "OSU",
+      "name": "Ohio State",
+      "primaryColor": "#a00612"
+    }
+  },
+  {
+    "id": 5,
+    "espnId": "511982",
+    "active": true,
+    "votes": 1896,
+    "name": {
+      "first": "Brett",
+      "last": "Hundley",
+      "short": "B. Hundley"
+    },
+    "position": {
+      "abbreviation": "QB",
+      "name": "Quarterback"
+    },
+    "jersey": 17,
+    "experience": {
+      "abbreviation": "JR",
+      "name": "Junior",
+      "count": 2
+    },
+    "school": {
+      "espnId": "26",
+      "abbreviation": "UCLA",
+      "name": "UCLA",
+      "primaryColor": "#004775"
+    }
+  },
+  {
+    "id": 6,
+    "espnId": "480746",
+    "active": true,
+    "votes": 9765,
+    "name": {
+      "first": "Bryce",
+      "last": "Petty",
+      "short": "B. Petty"
+    },
+    "position": {
+      "abbreviation": "QB",
+      "name": "Quarterback"
+    },
+    "jersey": 14,
+    "experience": {
+      "abbreviation": "SR",
+      "name": "Senior",
+      "count": 3
+    },
+    "school": {
+      "espnId": "239",
+      "abbreviation": "BAY",
+      "name": "Baylor",
+      "primaryColor": "#003322"
+    }
+  },
+  {
+    "id": 7,
+    "espnId": "514218",
+    "active": true,
+    "votes": 4536,
+    "name": {
+      "first": "Melvin",
+      "last": "Gordon",
+      "short": "M. Gordon"
+    },
+    "position": {
+      "abbreviation": "RB",
+      "name": "Running Back"
+    },
+    "jersey": 25,
+    "experience": {
+      "abbreviation": "JR",
+      "name": "Junior",
+      "count": 2
+    },
+    "school": {
+      "espnId": "275",
+      "abbreviation": "WIS",
+      "name": "Wisconsin",
+      "primaryColor": "#c32122"
+    }
+  },
+  {
+    "id": 8,
+    "espnId": "530398",
+    "active": true,
+    "votes": 2341,
+    "name": {
+      "first": "Duke",
+      "last": "Johnson",
+      "short": "D. Johnson"
+    },
+    "position": {
+      "abbreviation": "RB",
+      "name": "Running Back"
+    },
+    "jersey": 8,
+    "experience": {
+      "abbreviation": "JR",
+      "name": "Junior",
+      "count": 2
+    },
+    "school": {
+      "espnId": "2390",
+      "abbreviation": "MIA",
+      "name": "Miami (FL)",
+      "primaryColor": "#004325"
+    }
+  },
+  {
+    "id": 9,
+    "espnId": "534409",
+    "active": true,
+    "votes": 3459,
+    "name": {
+      "first": "T.J.",
+      "last": "Yeldon",
+      "short": "T. Yeldon"
+    },
+    "position": {
+      "abbreviation": "RB",
+      "name": "Running Back"
+    },
+    "jersey": 4,
+    "experience": {
+      "abbreviation": "JR",
+      "name": "Junior",
+      "count": 2
+    },
+    "school": {
+      "espnId": "333",
+      "abbreviation": "ALA",
+      "name": "Alabama",
+      "primaryColor": "#690014"
+    }
+  }
+]

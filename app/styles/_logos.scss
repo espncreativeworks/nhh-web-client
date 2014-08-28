@@ -1,0 +1,72 @@
+$logo-espn-default: $image-path + 'logo_espn.png';
+$logo-espn-hires: $image-path + 'logo_espn@2x.png';
+$logo-espn-hover-default: $image-path + 'logo_espn_hover.png';
+$logo-espn-hover-hires: $image-path + 'logo_espn_hover@2x.png';
+$logo-espn-width: 83px;
+$logo-espn-height: 21px;
+
+$logo-heisman-default: $image-path + 'logo_heisman.png';
+$logo-heisman-hires: $image-path + 'logo_heisman@2x.png';
+$logo-heisman-large-default: $image-path + 'logo_heisman_large.png';
+$logo-heisman-large-hires: $image-path + 'logo_heisman_large@2x.png';
+$logo-heisman-width: 52px;
+$logo-heisman-height: 51px;
+$logo-heisman-large-width: 365px;
+$logo-heisman-large-height: 351px;
+
+$logo-nissan-width: 100px;
+$logo-nissan-height: 86px;
+$logo-nissan-default: $image-path + 'logo_nissan.png';
+$logo-nissan-hires: $image-path + 'logo_nissan@2x.png';
+
+.logo-container {
+  @include center-block();
+  background-repeat: no-repeat;
+  background-position: center;
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.espn {
+    display: inline-block;
+    width: $logo-espn-width;
+    height: $logo-espn-height;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+    @include img-retina($logo-espn-default, $logo-espn-hires, $logo-espn-width, $logo-espn-height);
+
+    &:hover {
+      @include img-retina($logo-espn-hover-default, $logo-espn-hover-hires, $logo-espn-width, $logo-espn-height);
+    }
+  }
+
+  &.heisman {
+
+    &.small {
+      display: inline-block;
+      margin-left: 0;
+      margin-right: 0;
+      width: $logo-heisman-width;
+      height: $logo-heisman-height;
+      @include img-retina($logo-heisman-default, $logo-heisman-hires, $logo-heisman-width, $logo-heisman-height);
+    }
+
+    &.large {
+      width: $logo-heisman-large-width;
+      height: $logo-heisman-large-height;
+      @include img-retina($logo-heisman-large-default, $logo-heisman-large-hires, $logo-heisman-large-width, $logo-heisman-large-height);
+    }
+
+  }
+
+  &.nissan {
+    width: $logo-nissan-width;
+    height: $logo-nissan-height;
+    @include img-retina($logo-nissan-default, $logo-nissan-hires, $logo-nissan-width, $logo-nissan-height)
+  }
+
+}

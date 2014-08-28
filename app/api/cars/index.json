@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Nissan 370z",
+    "cssName": "370z",
+    "href": "http://www.nissanusa.com/sportscars/z-coupe"
+  },
+  {
+    "id": 2,
+    "name": "Nissan Altima",
+    "cssName": "altima",
+    "href": "http://www.nissanusa.com/cars/altima"
+  },
+  {
+    "id": 3,
+    "name": "Nissan Juke",
+    "cssName": "juke",
+    "href": "http://www.nissanusa.com/crossovers/juke"
+  },
+  {
+    "id": 4,
+    "name": "Nissan GT-R",
+    "cssName": "gtr",
+    "href": "http://www.nissanusa.com/sportscars/gt-r"
+  },
+  {
+    "id": 5,
+    "name": "Nissan Murano",
+    "cssName": "murano",
+    "href": "http://www.nissanusa.com/crossovers/murano"
+  },
+  {
+    "id": 6,
+    "name": "Nissan Pathfinder",
+    "cssName": "pathfinder",
+    "href": "http://www.nissanusa.com/suvs/pathfinder"
+  },
+  {
+    "id": 7,
+    "name": "Nissan Rogue",
+    "cssName": "rogue",
+    "href": "http://www.nissanusa.com/crossovers/rogue"
+  }
+]

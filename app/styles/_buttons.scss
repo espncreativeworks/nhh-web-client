@@ -1,0 +1,29 @@
+.btn-nhh {
+  padding: 3px 48px;
+  border: 3px solid $nhh-white;
+  border-radius: 0;
+  background-color: transparent;
+  color: $nhh-white;
+  text-transform: uppercase;
+  font-style: italic;
+
+  &:hover {
+    border-color: $nhh-dark-gold;
+  }
+
+  &:hover,
+  &:focus {
+    color: $nhh-white;
+  }
+
+  &:focus {
+    outline: 5px auto $nhh-gold;
+  }
+
+  &:active,
+  &.active {
+    &:focus {
+      outline: 5px auto $nhh-gold;
+    }
+  }
+}

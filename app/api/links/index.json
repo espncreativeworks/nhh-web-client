@@ -1,0 +1,32 @@
+[
+  {
+    "url": "#!/",
+    "title": "Home",
+    "target": "",
+    "text": "Home"
+  },
+  {
+    "url": "#!/leaderboard",
+    "title": "Vote Leaderboard",
+    "target": "",
+    "text": "Vote Leaderboard"
+  },
+  {
+    "url": "#!/tour",
+    "title": "Heisman House Tour",
+    "target": "",
+    "text": "Heisman House Tour"
+  },
+  {
+    "url": "http://espn.go.com/college-football/heisman14/",
+    "title": "Heisman Watch",
+    "target": "_blank",
+    "text": "Heisman Watch"
+  },
+  {
+    "url": "#!/rules",
+    "title": "Official Rules",
+    "target": "",
+    "text": "Official Rules"
+  }
+]

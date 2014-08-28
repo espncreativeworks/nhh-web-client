@@ -1,0 +1,19 @@
+<div id="thanks-container" class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="page-heading-container text-center">
+        <h1 class="heading">Thanks</h1>
+        <hr class="narrow-top">
+        <p class="subheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam esse sapiente commodi voluptatum unde vitae facere molestias, excepturi cum eius ipsam ullam laudantium sed sit possimus. Iusto et facilis aut.</p>
+        <hr>
+      </div>
+    </div>
+  </div>
+  <div class="row" ng-if="eligibility">
+    <div class="col-xs-12">
+      <a href="/enter" class="btn btn-nhh" title="Enter Now!">Enter Now</a>
+    </div>
+  </div>
+</div>
+
+<ng-include ng-if="!eligibility" ng-controller="VideoShowcaseCtrl" src="'views/video-showcase.html'"></ng-include>

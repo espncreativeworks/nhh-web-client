@@ -1,0 +1,109 @@
+$cars-image-path: $image-path + 'cars/';
+$car-altima-width: 350px;
+$car-altima-height: 128px;
+$car-altima-default: $cars-image-path + 'altima.png';
+$car-altima-hires: $cars-image-path + 'altima@2x.png';
+
+$car-370z-width: 350px;
+$car-370z-height: 128px;
+$car-370z-default: $cars-image-path + '370z.png';
+$car-370z-hires: $cars-image-path + '370z@2x.png';
+
+$car-gtr-width: 324px;
+$car-gtr-height: 134px;
+$car-gtr-default: $cars-image-path + 'gtr.png';
+$car-gtr-hires: $cars-image-path + 'gtr@2x.png';
+
+$car-juke-width: 324px;
+$car-juke-height: 153px;
+$car-juke-default: $cars-image-path + 'juke.png';
+$car-juke-hires: $cars-image-path + 'juke@2x.png';
+
+$car-murano-width: 324px;
+$car-murano-height: 159px;
+$car-murano-default: $cars-image-path + 'murano.png';
+$car-murano-hires: $cars-image-path + 'murano@2x.png';
+
+$car-pathfinder-width: 350px;
+$car-pathfinder-height: 168px;
+$car-pathfinder-default: $cars-image-path + 'pathfinder.png';
+$car-pathfinder-hires: $cars-image-path + 'pathfinder@2x.png';
+
+$car-rogue-width: 350px;
+$car-rogue-height: 179px;
+$car-rogue-default: $cars-image-path + 'rogue.png';
+$car-rogue-hires: $cars-image-path + 'rogue@2x.png';
+
+.car-container {
+  color: $nhh-white;
+  text-transform: uppercase;
+  text-align: center;
+  a {
+    font-style: italic;
+    color: $nhh-white;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: $nhh-gold;
+    }
+  }
+}
+
+.car-thumbnail {
+  display: block;
+  @include center-block();
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 10px;
+
+  &[data-car="altima"]{
+    width: $car-altima-width;
+    height: $car-altima-height;
+    @include img-retina($car-altima-default, $car-altima-hires, $car-altima-width, $car-altima-height);
+  }
+
+  &[data-car="370z"]{
+    width: $car-370z-width;
+    height: $car-370z-height;
+    @include img-retina($car-370z-default, $car-370z-hires, $car-370z-width, $car-370z-height);
+  }
+
+  &[data-car="gtr"]{
+    width: $car-gtr-width;
+    height: $car-gtr-height;
+    @include img-retina($car-gtr-default, $car-gtr-hires, $car-gtr-width, $car-gtr-height);
+  }
+
+  &[data-car="juke"]{
+    width: $car-juke-width;
+    height: $car-juke-height;
+    @include img-retina($car-juke-default, $car-juke-hires, $car-juke-width, $car-juke-height);
+  }
+
+  &[data-car="murano"]{
+    width: $car-murano-width;
+    height: $car-murano-height;
+    @include img-retina($car-murano-default, $car-murano-hires, $car-murano-width, $car-murano-height);
+  }
+
+  &[data-car="pathfinder"]{
+    width: $car-pathfinder-width;
+    height: $car-pathfinder-height;
+    @include img-retina($car-pathfinder-default, $car-pathfinder-hires, $car-pathfinder-width, $car-pathfinder-height);
+  }
+
+  &[data-car="rogue"]{
+    width: $car-rogue-width;
+    height: $car-rogue-height;
+    @include img-retina($car-rogue-default, $car-rogue-hires, $car-rogue-width, $car-rogue-height);
+  }
+}
+
+@media (min-width: $screen-sm-min){
+  .car-container {
+    position: absolute;
+    bottom: 20px;
+  }
+}

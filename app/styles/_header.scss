@@ -1,0 +1,173 @@
+$header-components-height: 599px;
+$logo-heisman-large-height: 351px;
+
+#home-header-container {
+  .welcome-container,
+  .hero-container {
+    width: 100%;
+
+    .headings-container .heading {
+      font-family: $nhh-font-family-headings;
+      color: $nhh-white;
+      text-transform: uppercase;
+    }
+
+    .headings-container .subheading {
+      color: $nhh-gold;
+    }
+  }
+
+  .welcome-container {
+    padding-top: 20px;
+  }
+
+  .lockup-container {
+    padding-top: 18px;
+    max-width: 384px;
+    @include center-block();
+
+    hr {
+      border-top-color: transparentize($nhh-white, .5);
+    }
+
+    .title {
+      width: 100%;
+      float: left;
+      font-family: $nhh-font-family-headings;
+      color: $nhh-white;
+      text-transform: uppercase;
+
+      &.title-large {
+        font-size: 30px;
+        line-height: 30px;
+        margin-top: 7px;
+      }
+
+      &.title-small {
+        font-size: 14px;
+        line-height: 14px;
+
+        .bookend,
+        .book {
+          float: left;
+        }
+
+        .bookend {
+          width: 12%;
+          margin-top: 7px;
+          margin-bottom: 6px;
+        }
+
+        .book {
+          width: 76%;
+        }
+      }
+    }
+
+    .bottom {
+      width: 100%;
+      float: left;
+      margin-top: 10px;
+    }
+  }
+
+  .hero-container {
+    .heading {
+      font-size: 45px;
+    }
+    .subheading {
+      font-size: 16px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .hero-voted {
+    font-size: 21px;
+    line-height: 51px;
+    color: $nhh-white;
+
+    .voted-for-container,
+    .vote-again-container {
+      padding-top: 3px;
+      padding-bottom: 3px;
+    }
+
+    .vote-again-container {
+      background-color: $nhh-grey;
+    }
+
+    .hero-video-container {
+      .hero-video {
+        width: 100%;
+        height: 240px;
+        background-size: cover;
+        background-position: center;
+      }
+      .btn-play {
+        position: absolute;
+        top: 50%;
+        margin-top: -42px;
+      }
+    }
+
+    .voted-for {
+      margin-left: 20px;
+    }
+
+    .athlete-name,
+    .time-ago {
+      color: $nhh-gold;
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min){
+  #home-header-container {
+    .welcome-container,
+    .hero-container {
+      height: $header-components-height;
+      background-size: cover;
+    }
+
+    .welcome-container {
+      background-image: url($image-path + 'bg_header.png')
+    }
+
+    .lockup-container {
+      .title {
+        &.title-large {
+          font-size: 45px;
+          line-height: 45px;
+        }
+
+        &.title-small {
+          font-size: 20px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    .hero-container {
+      background-image: url($image-path + 'bg_marquee.png');
+    }
+
+    .hero-vote {
+      padding-top: ($header-components-height - $logo-heisman-large-height) / 2;
+    }
+
+    .hero-voted .hero-video-container {
+      .hero-video {
+        height: 539px;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-md-min){
+  #home-header-container {
+/*     .hero-container {
+  padding-top: (\$header-components-height - \$logo-heisman-large-height) / 2;
+} */
+  }
+}

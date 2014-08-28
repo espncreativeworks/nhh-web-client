@@ -1,0 +1,63 @@
+body {
+  background-image: url($image-path + 'bg_house.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-color: #000;
+  padding-bottom: 40px;
+}
+
+.page-heading-container {
+
+  .heading {
+    font-family: $nhh-font-family-headings;
+    color: $nhh-white
+  }
+
+  hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    &.narrow-top {
+      margin-top: 3px;
+    }
+  }
+}
+
+.container.full-width {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+
+  > .row {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.padding-less {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.margin-less {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+a.no-decoration {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@media (min-width: $screen-sm-min){
+  body.info {
+    background-image: url($image-path + 'bg_house.png');
+    background-size: cover;
+  }
+}

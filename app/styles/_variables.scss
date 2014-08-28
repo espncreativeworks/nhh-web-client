@@ -1,0 +1,19 @@
+$image-path: '../images/';
+
+// project specific
+$nhh-grey: #3b3b3b;
+$nhh-gold: #ceae94;
+$nhh-dark-gold: #cead92;
+$nhh-white: #fff;
+
+$nhh-bg-color: $nhh-grey;
+
+$nhh-font-family-sans-serif: "ff-meta-web-pro";
+$nhh-font-family-headings: "adobe-garamond-pro";
+
+
+// bootstrap overrides
+$bg-color: $nhh-bg-color;
+$text-color: $nhh-white;
+$font-family-sans-serif: $nhh-font-family-sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headings-color: $nhh-gold;

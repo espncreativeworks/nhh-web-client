@@ -1,0 +1,14 @@
+[
+  {
+    "network": "facebook",
+    "title": "Share on Facebook",
+    "shareUrl": "http://nissanheismanhouse.com/"
+  },
+  {
+    "network": "twitter",
+    "title": "Share on Twitter",
+    "shareUrl": "http://nissanheismanhouse.com/",
+    "text": "I just voted for the next Heisman. You can too.",
+    "hashtags": ""
+  }
+]

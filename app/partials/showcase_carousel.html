@@ -1,0 +1,46 @@
+<div class="row" ng-if="!isMobile">
+  <div class="col-xs-12 col-sm-4 headings">
+    <h3 class="heading-label">Video</h3>
+    <h2 class="heading">{{category}}</h2>
+  </div>
+  <div class="col-xs-12 col-sm-8 videos-items">
+    <ul class="nhh-carousel" rn-carousel rn-carousel-control>
+      <li class="nhh-slide" ng-repeat="slide in slides[category]">
+        <div class="nhh-slide-item" ng-repeat="video in slide">
+          <a class="thumbnail-link" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name}}" ng-style="{ 'background-image': 'url({{video.thumbnail}})' }">
+            <span class="text-hide">{{video.description}}</span>
+          </a>
+          <div class="backdrop">
+            <a class="btn btn-play fa-stack fa-stack-large" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name}}">
+              <i class="fa fa-stack-2x fa-circle"></i>
+              <i class="fa fa-stack-1x fa-play fa-inverse"></i>
+            </a>
+            <p class="caption">{{video.description}}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="row" ng-if="isMobile">
+  <div class="col-xs-12 col-sm-4 headings">
+    <h3 class="heading-label">Video</h3>
+    <h2 class="heading">{{category}}</h2>
+  </div>
+  <div class="col-xs-12 col-sm-8 videos-items">
+    <ul class="nhh-carousel" rn-carousel rn-carousel-control>
+      <li class="nhh-slide" ng-repeat="video in videos">
+        <div class="nhh-slide-item">
+          <a class="thumbnail-link" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name}}" ng-style="{ 'background-image': 'url({{video.thumbnail}})' }">
+            <span class="text-hide">{{video.description}}</span>
+          </a>
+          <a class="btn btn-play fa-stack fa-stack-large" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name}}">
+            <i class="fa fa-stack-2x fa-circle"></i>
+            <i class="fa fa-stack-1x fa-play fa-inverse"></i>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
