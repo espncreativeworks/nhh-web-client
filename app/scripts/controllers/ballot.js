@@ -8,7 +8,19 @@
  * Controller of the nhhApp
  */
 angular.module('nhhApp')
-  .controller('BallotCtrl', ['$scope', '$location', 'Page', 'Athletes', function ($scope, $location, Page, Athletes) {
+  .controller('BallotCtrl', ['$scope', '$location', 'Page', 'Athletes', 'Votes', '$moment', function ($scope, $location, Page, Athletes, Votes, $moment) {
+
+    Votes.last().then(function(vote){
+      var now = $moment();
+      var next = $moment(vote.ts).add('days', 1);
+      if (now.isBefore(next)){
+        //$location.path('/');
+      }
+      $scope.lastVote = vote;
+      $scope.disabled = true;
+    }).catch(function (){
+      
+    });
 
     Page.meta.set('title', 'Cast Your Vote!');
     Page.body.set('class', 'info ballot');

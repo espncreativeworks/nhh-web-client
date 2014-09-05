@@ -50,36 +50,6 @@
       background-color: rgba(0,0,0,0.6);
     }
 
-    .btn-play {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: -52px;
-      margin-left: -42px;
-      font-size: 3em;
-
-      .fa-circle {
-        color: $nhh-gold;
-      }
-
-      .fa-play {
-        color: $nhh-white;
-        text-indent: 8px;
-      }
-
-      &:hover,
-      &:focus,
-      &:active
-      &.active {
-        .fa-circle {
-          color: darken($nhh-gold, 15%);
-        }
-        .fa-play {
-          color: darken($nhh-white, 15%);
-        }
-      }
-    }
-
     .caption {
       display: none;
       position: absolute;

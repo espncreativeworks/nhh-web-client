@@ -47,9 +47,6 @@ $logo-nissan-hires: $image-path + 'logo_nissan@2x.png';
   &.heisman {
 
     &.small {
-      display: inline-block;
-      margin-left: 0;
-      margin-right: 0;
       width: $logo-heisman-width;
       height: $logo-heisman-height;
       @include img-retina($logo-heisman-default, $logo-heisman-hires, $logo-heisman-width, $logo-heisman-height);
@@ -64,9 +61,18 @@ $logo-nissan-hires: $image-path + 'logo_nissan@2x.png';
   }
 
   &.nissan {
-    width: $logo-nissan-width;
-    height: $logo-nissan-height;
-    @include img-retina($logo-nissan-default, $logo-nissan-hires, $logo-nissan-width, $logo-nissan-height)
+
+    &.default {
+      width: $logo-nissan-width;
+      height: $logo-nissan-height;
+      @include img-retina($logo-nissan-default, $logo-nissan-hires, $logo-nissan-width, $logo-nissan-height);
+    }
+
+    &.small {
+      width: $logo-nissan-width / 2;
+      height: $logo-nissan-height / 2;
+      @include img-retina($logo-nissan-default, $logo-nissan-hires, $logo-nissan-width / 2, $logo-nissan-height / 2);
+    }
   }
 
 }

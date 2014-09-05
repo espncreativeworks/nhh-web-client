@@ -14,12 +14,8 @@ angular.module('nhhApp')
       Page.meta.set('description', video.description);
       Page.body.set('class', 'video info');
       $scope.video = video;
-
-      if ('more' in video){
-        $scope.video.moreHtml = $sce.trustAsHtml(video.more);
-      }
     }).catch(function(){
-      //$location.path('/');
+      $location.path('/');
     });
 
   }]);

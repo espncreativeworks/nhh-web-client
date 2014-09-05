@@ -1,0 +1,21 @@
+#rules-container {
+
+  .page-subheading .subheading {
+    color: $nhh-white;
+    font-weight: 500;
+  }
+
+  .presby {
+    font-style: italic;
+    font-weight: 400;
+    font-size: .7em;
+  }
+
+  .rules {
+    .section-heading {
+      text-transform: uppercase;
+      font-size: 1.2em;
+      margin-top: 20px;      
+    }
+  }
+}

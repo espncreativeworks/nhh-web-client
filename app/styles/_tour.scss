@@ -1,0 +1,27 @@
+#tour-stops-list-container {
+  .angular-google-map-container {
+    height: 320px;
+  }
+
+  .stop-list-heading-container {
+    .heading {
+      color: $nhh-gold;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+      font-size: 1.2em;
+    }
+  }
+
+  .stop-list-summary-container {
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: $screen-md-min){
+  #tour-stops-list-container {
+    .angular-google-map-container {
+      height: 220px;
+    }
+  }
+}

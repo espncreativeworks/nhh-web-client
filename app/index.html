@@ -23,20 +23,43 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- <ng-include ng-controller="MenuCtrl" src="'partials/menu.html'"></ng-include> -->
+    <ng-include ng-controller="MenuCtrl" src="'partials/menu'"></ng-include>
 
-    <!-- Add your site or application content here -->
+    <div class="dynamic-background-alpha-mask"></div>
+
+    <!-- Main view here -->
     <div ng-view=""></div>
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <!-- Google Analytics -->
      <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
        ga('create', 'UA-38720475-15', 'auto');
+       ga('require', 'displayfeatures');
+       ga('require', 'linkid', 'linkid.js');
+    </script>
+
+    <!-- Facebook SDK -->
+    <script>
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+
+     window.fbAsyncInit = function (){
+       FB.init({
+         appId: '519320781532323',
+         status: true,
+         xfbml: true,
+         version: 'v2.0'
+       });
+     };
     </script>
 
     <!-- build:js(.) scripts/oldieshim.js -->
@@ -46,6 +69,7 @@
     <![endif]-->
     <!-- endbuild -->
 
+    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyB5Isk6ZFFCMKoaCK3LroN1Bw-xvk9WHOw&sensor=false"></script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -92,6 +116,9 @@
     <script src="bower_components/angulartics/src/angulartics-splunk.js"></script>
     <script src="bower_components/angulartics/src/angulartics-woopra.js"></script>
     <script src="bower_components/angulartics/src/angulartics-marketo.js"></script>
+    <script src="bower_components/angular-local-storage/angular-local-storage.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -120,6 +147,11 @@
     <script src="scripts/directives/youtube.js"></script>
     <script src="scripts/services/cars.js"></script>
     <script src="scripts/controllers/cars.js"></script>
+    <script src="scripts/controllers/rules.js"></script>
+    <script src="scripts/services/ballots.js"></script>
+    <script src="scripts/services/tourstops.js"></script>
+    <script src="scripts/controllers/tourStopList.js"></script>
+    <script src="scripts/controllers/tourStopDetail.js"></script>
     <!-- endbuild -->
 </body>
 </html>

@@ -8,9 +8,10 @@
  * Factory in the nhhApp.
  */
 angular.module('nhhApp')
-  .factory('Athletes', ['$q', '$http', '$timeout', 'underscore', '$sessionStorage', function ($q, $http, $timeout, underscore, $sessionStorage) {
+  .factory('Athletes', ['$q', '$http', '$timeout', 'underscore', 'Ballots', 'Votes', function ($q, $http, $timeout, underscore, Ballots, Votes) {
 
     var _ = underscore
+      //, baseUrl = 'http://0.0.0.0:9001/api/athletes';
       , baseUrl = './api/athletes';
 
     // Public API here
@@ -18,7 +19,7 @@ angular.module('nhhApp')
       all: function () {
         var deferred = $q.defer();
 
-        $http.get(baseUrl + '/')
+        $http.get(baseUrl + '/?populate=school,position,experience')
           .success(function (athletes){
             deferred.resolve(athletes);
           }).error(function(err){
@@ -30,12 +31,9 @@ angular.module('nhhApp')
       active: function (){
         var deferred = $q.defer();
 
-        $http.get(baseUrl + '/')
+        $http.get(baseUrl + '/?active=1&populate=school,position,experience')
           .success(function (athletes){
-            var _athletes = _.filter(athletes, function (athlete){
-              return athlete.active;
-            });
-            deferred.resolve(_athletes);
+            deferred.resolve(athletes);
           }).error(function(err){
             deferred.reject(err);
           });
@@ -43,36 +41,21 @@ angular.module('nhhApp')
         return deferred.promise;
       },
       vote: function (athlete){
-        var deferred = $q.defer();
-          //, baseUrl = '/api/votes';
+        var deferred = $q.defer()
+          , data = {
+            athleteId: athlete._id,
+            medium: 1
+          };
 
-        if (!athlete.active){
-          $timeout(function (){
-            deferred.reject({
-              name: 'Invalid vote',
-              message: athlete.name.first + ' ' + athlete.name.last + ' is inactive.'
-            });
-          }, 250);
-        } else {
-          $timeout(function (){
-            $sessionStorage.lastVoted = {
-              ts: Date.now(),
-              athlete: athlete
-            };
-            deferred.resolve();
-          }, 250);
+        Ballots.active().then(function(ballot){
+          data.ballotId = ballot._id;
+          return Votes.create(data);
+        }).then(function (vote){
+          deferred.resolve(vote);
+        }, function (err){
+          deferred.reject(err);
+        });
 
-          // $http.post(baseUrl, athlete)
-          //   .success(function (){
-          //     $sessionStorage.lastVoted = {
-          //       ts: Date.now(),
-          //       athlete: athlete
-          //     };
-          //     deferred.resolve();
-          //   }).error(function(err){
-          //     deferred.reject(err);
-          //   });
-        }
         return deferred.promise;
       }
     };

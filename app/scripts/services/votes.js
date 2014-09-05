@@ -8,35 +8,41 @@
  * Factory in the nhhApp.
  */
 angular.module('nhhApp')
-  .factory('Votes', ['$q', '$timeout', '$sessionStorage', function ($q, $timeout, $sessionStorage) {
-    // Service logic
-    // ...
-
-    //var baseUrl = '/api/votes';
+  .factory('Votes', ['$q', '$http', '$timeout', 'localStorageService', function ($q, $http, $timeout, nhhLocalStorage) {
 
     // Public API here
     return {
-      // all: function () {
-      //   var deferred = $q.defer();
-      //
-      //   $http.get(baseUrl + '/index.json')
-      //     .success(function (links){
-      //       deferred.resolve(links);
-      //     }).error(function(err){
-      //       deferred.reject(err);
-      //     });
-      //
-      //   return deferred.promise;
-      // },
+      create: function (data) {
+        var deferred = $q.defer()
+          //, baseUrl = 'http://0.0.0.0:9001/api/votes';
+          , baseUrl = './api/votes/'
+          , _params = angular.extend({ '_method': 'POST' }, data);
+
+        $http.get(baseUrl, { params: _params })
+          .success(function (vote){
+            nhhLocalStorage.set('lastVoted', {
+              ts: Date.now(),
+              athlete: vote.athlete,
+              ballot: vote.ballot
+            });
+            deferred.resolve(vote);
+          }).error(function(err){
+            deferred.reject(err);
+          });
+
+        return deferred.promise;
+      },
       last: function (){
         var deferred = $q.defer();
-        $timeout(function(){
-          if ($sessionStorage.lastVoted){
-            deferred.resolve($sessionStorage.lastVoted);
+
+        $timeout(function (){
+          if (nhhLocalStorage.get('lastVoted')){
+            deferred.resolve(nhhLocalStorage.get('lastVoted'));
           } else {
-            deferred.reject();
+            deferred.reject(new Error('Last Vote Not Found'));
           }
-        }, 250);
+        }, 50);
+
         return deferred.promise;
       }
     };

@@ -11,6 +11,11 @@ angular.module('nhhApp')
   .controller('HeaderCtrl', ['$scope', 'Votes', '$moment', function ($scope, Votes, $moment) {
     var now = $moment();
 
+    $scope.dismissed = false;
+    $scope.dismiss = function (){
+      $scope.dismissed = !$scope.dismissed;
+    };
+
     Votes.last().then(function (vote){
       var last = $moment(vote.ts);
       var next = $moment(vote.ts).add('days', 1);

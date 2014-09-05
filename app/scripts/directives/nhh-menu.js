@@ -16,6 +16,14 @@ angular.module('nhhApp')
           element.parents('body').toggleClass('body-push body-push-to-right');
           element.toggleClass('menu-open');
         });
+
+        element.on('click', '.menu-link', function (){
+          if (element.hasClass('menu-open')){
+            element.find('#menu-toggle').toggleClass('active');
+            element.parents('body').toggleClass('body-push body-push-to-right');
+            element.toggleClass('menu-open');
+          }
+        });
       }
     };
   });

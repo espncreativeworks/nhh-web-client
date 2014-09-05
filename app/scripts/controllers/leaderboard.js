@@ -12,22 +12,18 @@ angular.module('nhhApp')
     Page.meta.set('title', 'Leaderboard');
     Page.body.set('class', 'info leaderboard');
 
-    $scope.sortPredicate = 'votes';
+    $scope.sortPredicate = 'totalVotes';
     $scope.reverse = true;
 
     Athletes.all().then(function (athletes){
-      var total = 0;
+      var _totalVotes = 0;
       angular.forEach(athletes, function(athlete){
-        total += athlete.votes;
+        _totalVotes += athlete.totalVotes;
       });
-      $scope.total = total;
+      angular.forEach(athletes, function(athlete){
+        athlete.sortPercentage = athlete.totalVotes / _totalVotes;
+        athlete.displayPercentage = Math.round(athlete.sortPercentage * 100);
+      });
       $scope.athletes = athletes;
-      $scope.getPercentage = function(athlete, display){
-        var percentage = athlete.votes / $scope.total;
-        if (display){
-          percentage = Math.round(percentage * 100);
-        }
-        return percentage;
-      };
     });
   }]);

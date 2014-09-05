@@ -1,0 +1,41 @@
+<div id="default-header-container" class="container full-width">
+  <div class="row padding-less">
+    <div class="col-xs-12 col-lg-4 padding-less">
+      <div class="welcome-container">
+        <div class="col-xs-12">
+          <a href="http://www.nissanusa.com/" class="logo-container nissan small text-hide" title="Nissan USA" target="_blank" analytics-on analytics-event="Click" analytics-category="Logos" analytics-label="Nissan">Nissan</a>
+          <div class="title title-large">Heisman House</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-lg-8 padding-less">
+      <div class="notification-container visible-lg" ng-show="!dismissed">
+        <div class="row margin-less voted" ng-if="lastVote">
+          <div class="hidden-lg col-xs-12 dismiss-container">
+            <a href="" class="btn pull-right btn-dismiss no-decoration" ng-click="dismiss()" title="Dismiss">
+              <i class="fa fa-times"></i>
+            </a>
+          </div>
+          <div class="hidden-lg col-xs-12 voted-for-container">
+            <div class="logo-container heisman small center-block text-hide">Heisman Trophy</div>
+          </div>
+          <div class="col-xs-12 col-lg-6 voted-for-container">
+            <div class="visible-lg logo-container heisman small text-hide pull-left">Heisman Trophy</div>
+            <div class="voted-for">You voted for <span class="athlete-name">{{athlete.name | fullName}}</span></div>
+          </div>
+          <div class="col-xs-12 col-lg-6 text-center vote-again-container">
+            <div class="vote-again">You can vote again <span class="time-ago">{{nextVote}}</span></div>
+          </div>
+        </div>
+        <div class="row margin-less vote visible-lg" ng-if="!nextVote">
+          <div class="col-xs-12 col-lg-6 vote-heading-container">
+            <div class="heading text-center">It's Time to Cast Your Vote!</div>
+          </div>
+          <div class="col-xs-12 col-lg-6 vote-controls-container">
+            <a href="#!/ballot" class="btn btn-nhh" title="Vote">Vote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

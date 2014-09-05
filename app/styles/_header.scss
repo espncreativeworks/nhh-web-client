@@ -1,5 +1,82 @@
+$default-header-height: 60px;
 $header-components-height: 599px;
+$logo-nissan-height: 86px;
+$logo-heisman-large-width: 365px;
 $logo-heisman-large-height: 351px;
+
+#default-header-container,
+#home-header-container {
+
+  .dismiss-container {
+    background-color: $nhh-grey;
+  }
+
+  .voted,
+  .vote {
+    font-size: 21px;
+    line-height: 30px;
+    color: $nhh-white;
+  }
+
+  .voted-for {
+    margin-left: 20px;
+  }
+
+  .athlete-name,
+  .time-ago {
+    color: $nhh-gold;
+  }
+
+  .voted-for-container,
+  .vote-again-container,
+  .vote-heading-container,
+  .vote-controls-container {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+  }
+
+  .voted-for-container,
+  .vote-again-container {
+    background-color: $nhh-grey;
+  }
+}
+
+#default-header-container {
+  height: $default-header-height;
+  background-color: #000;
+
+  .welcome-container {
+    float: left;
+    width: 100%;
+    height: $default-header-height;
+    padding-left: 80px;
+    text-align: right;
+  }
+
+  .logo-container.nissan {
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 0;
+    line-height: 50px;
+  }
+
+  .title {
+    width: auto;
+    display: inline;
+    margin-left: 12px;
+    font-size: 20px;
+    line-height: $default-header-height;
+    font-family: $nhh-font-family-headings;
+    color: $nhh-white;
+    text-transform: uppercase;
+  }
+
+  .voted-for-container .logo-container.heisman.small {
+    margin-top: -20px;
+  }
+
+}
 
 #home-header-container {
   .welcome-container,
@@ -25,10 +102,6 @@ $logo-heisman-large-height: 351px;
     padding-top: 18px;
     max-width: 384px;
     @include center-block();
-
-    hr {
-      border-top-color: transparentize($nhh-white, .5);
-    }
 
     .title {
       width: 100%;
@@ -72,61 +145,44 @@ $logo-heisman-large-height: 351px;
   }
 
   .hero-container {
+    padding-bottom: 40px;
+
     .heading {
-      font-size: 45px;
+      font-size: 40px;
     }
     .subheading {
       font-size: 16px;
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
   }
 
-  .hero-voted {
-    font-size: 21px;
-    line-height: 51px;
-    color: $nhh-white;
+  .hero-video-container {
 
-    .voted-for-container,
-    .vote-again-container {
-      padding-top: 3px;
-      padding-bottom: 3px;
+    .hero-video-heading {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      margin-left: 15px;
+      font-size: 29px;
+      font-style: italic;
+      text-align: left;
     }
 
-    .vote-again-container {
-      background-color: $nhh-grey;
-    }
-
-    .hero-video-container {
-      .hero-video {
-        width: 100%;
-        height: 240px;
-        background-size: cover;
-        background-position: center;
-      }
-      .btn-play {
-        position: absolute;
-        top: 50%;
-        margin-top: -42px;
-      }
-    }
-
-    .voted-for {
-      margin-left: 20px;
-    }
-
-    .athlete-name,
-    .time-ago {
-      color: $nhh-gold;
+    .hero-video {
+      width: 100%;
+      height: 240px;
+      background-size: 120%;
+      background-position: center;
     }
   }
 }
 
 @media (min-width: $screen-sm-min){
+
   #home-header-container {
     .welcome-container,
     .hero-container {
-      height: $header-components-height;
+      min-height: $header-components-height;
       background-size: cover;
     }
 
@@ -150,13 +206,18 @@ $logo-heisman-large-height: 351px;
 
     .hero-container {
       background-image: url($image-path + 'bg_marquee.png');
+
+      .headings-container {
+        max-width: $logo-heisman-large-width;
+        @include center-block();
+      }
     }
 
-    .hero-vote {
+    .vote {
       padding-top: ($header-components-height - $logo-heisman-large-height) / 2;
     }
 
-    .hero-voted .hero-video-container {
+    .voted .hero-video-container {
       .hero-video {
         height: 539px;
       }
@@ -164,10 +225,43 @@ $logo-heisman-large-height: 351px;
   }
 }
 
-@media (min-width: $screen-md-min){
+@media (min-width: $screen-lg-min){
+  #default-header-container,
   #home-header-container {
-/*     .hero-container {
-  padding-top: (\$header-components-height - \$logo-heisman-large-height) / 2;
-} */
+    .voted {
+      line-height: 51px;
+    }
+
+    .voted-for-container {
+      background-color: transparent;
+
+      .voted-for {
+        float: left;
+      }
+    }
+  }
+
+  #default-header-container {
+    .welcome-container {
+      text-align: left;
+    }
+
+    .voted-for-container,
+    .vote-again-container {
+      height: $default-header-height;
+    }
+
+    .vote-heading-container,
+    .vote-controls-container {
+      line-height: 50px;
+    }
+
+    .vote-controls-container {
+      text-align: left;
+    }
+
+    .voted-for-container .logo-container.heisman.small {
+      margin-top: 0px;
+    }
   }
 }

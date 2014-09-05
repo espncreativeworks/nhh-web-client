@@ -10,7 +10,13 @@
       <li class="ballot-detail experience-abbreviation">{{item.experience.abbreviation}}</li>
     </ul>
   </div>
-  <div class="col-xs-12 ballot-controls-container">
+  <div class="col-xs-12 ballot-controls-container" ng-if="disabled">
+    <button class="btn btn-nhh btn-danger">
+      <i class="fa fa-check" ng-if="item._id === lastVote.athlete._id"></i>
+      <i class="fa fa-ban" ng-if="item._id !== lastVote.athlete._id"></i>
+    </button>
+  </div>
+  <div class="col-xs-12 ballot-controls-container" ng-if="!disabled">
     <button class="btn btn-nhh" ng-click="vote(item)" title="Vote for {{item.name | fullName}}">
       Vote
     </button>

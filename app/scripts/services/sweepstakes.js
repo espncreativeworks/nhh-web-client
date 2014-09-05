@@ -8,7 +8,7 @@
  * Factory in the nhhApp.
  */
 angular.module('nhhApp')
-  .factory('Sweepstakes', ['$q', '$http', '$timeout', '$sessionStorage', function ($q, $http, $timeout, $sessionStorage) {
+  .factory('Sweepstakes', ['$q', '$http', '$timeout', 'localStorageService', function ($q, $http, $timeout, localStorageService) {
 
     var baseUrl = './api/sweepstakes';
     // Public API here
@@ -17,7 +17,7 @@ angular.module('nhhApp')
         var deferred = $q.defer();
 
         $timeout(function (){
-          $sessionStorage.lastEntry = new Date();
+          localStorageService.set('lastEntry', new Date());
           deferred.resolve();
         }, 250);
 
@@ -35,7 +35,7 @@ angular.module('nhhApp')
       status: function () {
         var deferred = $q.defer();
 
-        $http.get(baseUrl + '/status')
+        $http.get(baseUrl + '/status.json')
           .success(function (status){
             deferred.resolve(status);
           })

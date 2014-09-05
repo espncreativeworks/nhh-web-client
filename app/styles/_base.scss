@@ -1,8 +1,6 @@
 body {
   background-image: url($image-path + 'bg_house.png');
   background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
   background-color: #000;
   padding-bottom: 40px;
 }
@@ -22,6 +20,10 @@ body {
       margin-top: 3px;
     }
   }
+}
+
+hr {
+  border-top-color: transparentize($nhh-white, .5);
 }
 
 .container.full-width {
@@ -47,6 +49,22 @@ body {
   margin-right: 0;
 }
 
+.center-y {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.center-xy {
+  margin: 0 auto;
+  display: table;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 a.no-decoration {
   text-decoration: none;
 
@@ -55,9 +73,18 @@ a.no-decoration {
   }
 }
 
+.no-purchase {
+  text-transform: uppercase;
+}
+
 @media (min-width: $screen-sm-min){
   body.info {
     background-image: url($image-path + 'bg_house.png');
     background-size: cover;
+  }
+
+  body.rules {
+    background-size: 100%;
+    background-position: top center;
   }
 }

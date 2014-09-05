@@ -1,0 +1,63 @@
+<div id="home-header-container" class="container full-width">
+  <div class="row padding-less">
+    <div class="col-xs-12 col-lg-4 padding-less">
+      <div class="welcome-container text-center">
+        <div class="col-xs-12">
+          <a href="http://www.nissanusa.com/" class="logo-container nissan default text-hide" title="Nissan USA" target="_blank" analytics-on analytics-event="Click" analytics-category="Logos" analytics-label="Nissan">Nissan</a>
+        </div>
+        <div class="col-xs-12">
+          <div class="lockup-container">
+            <div class="title title-small">
+              <hr class="bookend"><span class="book">Welcome to the Nissan</span><hr class="bookend">
+            </div>
+            <div class="title title-large">Heisman House</div>
+            <hr class="bottom">
+          </div>
+        </div>
+        <div class="hidden-xs col-sm-12 car-container" ng-controller="CarsCtrl">
+          <a ng-href="{{car.href}}" target="_blank" class="car-thumbnail text-hide" title="{{car.name}}" data-car="{{car.cssName}}" analytics-on analytics-event="Click" analytics-category="Cars" analytics-label="{{car.name}} - {{car.href}}">{{car.name}}</a>
+          <a ng-href="{{car.href}}" target="_blank" class="car-caption no-decoration" title="{{car.name}}" analytics-on analytics-event="Click" analytics-category="Cars" analytics-label="{{car.name}} - {{car.href}}">{{car.name}}<sup class="reg">&reg;</sup></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-lg-8 padding-less">
+      <div class="hero-container">
+        <div class="row margin-less voted" ng-if="lastVote">
+          <div class="hidden-lg col-xs-12 voted-for-container visible-lg">
+            <div class="logo-container heisman small text-hide">Heisman Trophy</div>
+          </div>
+          <div class="col-xs-12 col-lg-6 voted-for-container visible-lg">
+            <div class="visible-lg logo-container heisman small text-hide pull-left">Heisman Trophy</div>
+            <div class="voted-for">You voted for <span class="athlete-name">{{athlete.name | fullName}}</span></div>
+          </div>
+          <div class="col-xs-12 col-lg-6 text-center vote-again-container visible-lg">
+            <div class="vote-again">You can vote again <span class="time-ago">{{nextVote}}</span></div>
+          </div>
+          <div class="col-xs-12 hero-video-container padding-less text-center">
+            <h2 class="hero-video-heading visible-xs">Featured Video</h2>
+            <div class="hero-video" ng-style="{ 'background-image': 'url({{heroThumbnailUrl}})' }">
+              <a class="btn btn-play fa-stack fa-stack-large center-xy" ng-href="#!/videos/{{heroVideo.youtubeId}}" title="{{heroVideo.name}}">
+                <i class="fa fa-stack-2x fa-circle"></i>
+                <i class="fa fa-stack-1x fa-play fa-inverse"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row margin-less vote" ng-if="!nextVote">
+          <div class="hidden-xs col-sm-12 col-lg-6">
+            <div class="logo-container heisman large text-hide">Heisman Trophy</div>
+          </div>
+          <div class="col-xs-12 col-lg-6">
+            <div class="headings-container">
+              <h1 class="heading text-center">Cast Your Vote!</h1>
+              <p class="subheading">As the Premier Partner of the Heisman Trophy, Nissan has the unique privilege of casting an official vote on behalf of you, the college football fan. So, cast your vote for the next Heisman Trophy winner and you could win a trip for you and three friends to the inaugural College Football Playoff in North Texas and get to meet a Heisman Trophy winner!</p>
+            </div>
+            <div class="heading-controls-container text-center">
+              <a href="#!/ballot" class="btn btn-nhh btn-lg" title="Enter and Vote">Enter and Vote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

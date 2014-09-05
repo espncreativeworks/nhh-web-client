@@ -1,0 +1,13 @@
+<ng-include ng-controller="HeaderCtrl" src="'partials/header_default'"></ng-include>
+
+<div id="tour-stop-detail-container" class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="page-heading-container text-right">
+        <h1 class="heading">{{stop.title}}</h1>
+        <hr class="narrow-top">
+        <p class="subheading" ng-bind-html="stop.site"></p>
+      </div>
+    </div>
+  </div>
+</div>

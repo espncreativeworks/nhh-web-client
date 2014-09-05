@@ -27,3 +27,50 @@
     }
   }
 }
+
+.btn-nhh.btn-lg {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 1.2em;
+}
+
+.btn-play {
+  //position: absolute;
+  //top: 50%;
+  //left: 50%;
+  //margin-top: -52px;
+  //margin-left: -42px;
+  font-size: 3em;
+
+  .fa-circle {
+    color: $nhh-gold;
+  }
+
+  .fa-play {
+    color: $nhh-white;
+    text-indent: 8px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active
+  &.active {
+    .fa-circle {
+      color: darken($nhh-gold, 15%);
+    }
+    .fa-play {
+      color: darken($nhh-white, 15%);
+    }
+  }
+}
+
+.btn-dismiss {
+  color: $nhh-white;
+
+  &:hover,
+  &:focus,
+  &:active
+  &.active {
+    color: darken($nhh-white, 15%);
+  }
+}

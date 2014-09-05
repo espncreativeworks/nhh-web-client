@@ -1,0 +1,39 @@
+<ng-include ng-controller="HeaderCtrl" src="'partials/header_default'"></ng-include>
+
+<div id="tour-stops-list-container" class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="page-heading-container text-center">
+        <h1 class="heading">Heisman House Tour</h1>
+        <hr class="narrow-top">
+        <p class="subheading">{{overview}}</p>
+        <hr>
+      </div>
+    </div>
+  </div>
+  <div class="row stop-list-item" ng-repeat="stop in stops">
+    <div class="hidden-xs col-sm-6 col-md-3">
+      <div class="stop-list-map-container">
+        <google-map
+          center='stop.map.center'
+          zoom='stop.map.zoom'
+          pan='stop.map.pan'
+          draggable='stop.map.draggable'>
+        </google-map>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-9">
+      <div class="stop-list-heading-container">
+        <h5 class="heading">Stop {{stop.stopNumber}} - {{stop.title}} - {{stop.venue.name}}</h5>
+        <div class="subheading date">{{stop.stopDate | date}}</div>
+        <div class="subheading location">{{stop.venue.suburb}}, {{stop.venue.state}}</div>
+      </div>
+      <div class="stop-list-summary-container">
+        <div class="summary" ng-bind-html="stop.summaryHtml"></div>
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <hr>
+    </div>
+  </div>
+</div>
