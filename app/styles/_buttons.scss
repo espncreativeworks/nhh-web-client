@@ -34,7 +34,20 @@
   font-size: 1.2em;
 }
 
-.btn-play {
+.btn-link-nhh {
+  color: $nhh-gold;
+  font-weight: inherit;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: darken($nhh-gold, 15%);
+  }
+}
+
+.btn-play,
+.btn-view-detail {
   //position: absolute;
   //top: 50%;
   //left: 50%;
@@ -42,11 +55,15 @@
   //margin-left: -42px;
   font-size: 3em;
 
-  .fa-circle {
+  .fa-circle,
+  .fa-square,
+  .fa-square-o {
     color: $nhh-gold;
   }
 
-  .fa-play {
+  .fa-play,
+  .fa-search-plus,
+  .fa-circle-o-notch {
     color: $nhh-white;
     text-indent: 8px;
   }
@@ -55,10 +72,14 @@
   &:focus,
   &:active
   &.active {
-    .fa-circle {
+    .fa-circle,
+    .fa-square,
+    .fa-square-o {
       color: darken($nhh-gold, 15%);
     }
-    .fa-play {
+    .fa-play,
+    .fa-search-plus,
+    .fa-circle-o-notch {
       color: darken($nhh-white, 15%);
     }
   }

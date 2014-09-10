@@ -5,8 +5,120 @@
     <div class="col-xs-12">
       <div class="page-heading-container text-right">
         <h1 class="heading">{{stop.title}}</h1>
+        <hr class="narrow-top hidden-xs">
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-9">
+      <div class="row" ng-if="stop.recapHtml">
+        <div class="col-xs-12">
+          <div class="section-heading-container">
+            <h3 class="heading">Recap</h1>
+            <hr class="narrow-top">
+          </div>
+          <div class="section-content-container">
+            <p ng-bind-html="stop.recapHtml"></p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="section-heading-container">
+            <h3 class="heading">Summary</h1>
+            <hr class="narrow-top">
+          </div>
+          <div class="section-content-container">
+            <p ng-bind-html="stop.summaryHtml"></p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="section-heading-container">
+            <h3 class="heading">Photos</h1>
+            <hr class="narrow-top">
+          </div>
+          <div class="section-content-container">
+            <div ng-if="stop.gallery.length" class="row gallery image-gallery">
+
+              <div class="col-xs-12 col-sm-6 col-md-3 gallery-item" ng-repeat="photo in stop.gallery">
+                <img src="" alt="" ng-src="{{photo.trustedUrl}}" class="img-responsive gallery-thumbnail">
+                <a class="btn btn-view-detail fa-stack fa-stack-large center-xy gallery-btn" ng-href="#!/tour-stops/{{stop.slug}}/photos/{{photo.public_id}}">
+                  <i class="fa fa-stack-2x fa-square"></i>
+                  <i class="fa fa-circle-o-notch fa-spin"></i>
+                  <i class="fa fa-stack-1x fa-search-plus fa-inverse"></i>
+                </a>
+              </div>
+
+            </div>
+            <div ng-if="!stop.gallery.length">
+              <p>No photos yet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="section-heading-container">
+            <h3 class="heading">Videos</h1>
+            <hr class="narrow-top">
+          </div>
+          <div class="section-content-container">
+            <div ng-if="stop.videos.length" class="row gallery video-gallery">
+
+              <div class="col-xs-12 col-sm-6 col-md-3 gallery-item" ng-repeat="video in stop.videos">
+                <img src="" alt="" ng-src="{{video.trustedThumbnailUrl}}" class="img-responsive gallery-thumbnail">
+                <a class="btn btn-play fa-stack fa-stack-large center-xy gallery-btn" ng-href="#!/tour-stops/{{stop.slug}}/videos/{{video.youtubeId}}" title="{{video.name}}">
+                  <i class="fa fa-stack-2x fa-circle"></i>
+                  <i class="fa fa-circle-o-notch fa-spin"></i>
+                  <i class="fa fa-stack-1x fa-play fa-inverse"></i>
+                </a>
+              </div>
+
+            </div>
+            <div ng-if="!stop.videos.length">
+              <p>No videos yet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-3 stop-details-container">
+
+      <div class="stop-detail-group">
+        <h3 class="stop-detail-heading">Details</h6>
         <hr class="narrow-top">
-        <p class="subheading" ng-bind-html="stop.site"></p>
+      </div>
+
+      <div class="stop-detail-group">
+        <h6 class="stop-detail-heading inline">Stop Number</h6>
+        <p class="stop-detail inline">{{stop.stopNumber}}</p>
+      </div>
+
+      <div class="stop-detail-group">
+        <h6 class="stop-detail-heading inline">Date</h6>
+        <p class="stop-detail inline">{{stop.stopDateFormatted}}</p>
+      </div>
+
+      <div class="stop-detail-group" ng-if="stop.site">
+        <h6 class="stop-detail-heading">Site</h6>
+        <p class="stop-detail" ng-bind-html="stop.site"></p>
+      </div>
+
+      <div class="stop-detail-group" ng-if="stop.map">
+        <h6 class="stop-detail-heading">Map</h6>
+        <div class="stop-detail stop-detail-map-container">
+          <google-map
+            center='stop.map.center'
+            zoom='stop.map.zoom'
+            pan='stop.map.pan'
+            draggable='stop.map.draggable'>
+          </google-map>
+        </div>
+      </div>
+
+      <div class="stop-detail-group">
+        <h6 class="stop-detail-heading inline">Last Updated</h6>
+        <p class="stop-detail inline">{{stop.stopUpdatedAtFromNow}}</p>
       </div>
     </div>
   </div>

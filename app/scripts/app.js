@@ -24,6 +24,7 @@ angular
     'angulartics.google.analytics',
     'google-maps'
   ])
+  .constant('Modernizr', Modernizr)
   .config(['$routeProvider', '$locationProvider', '$httpProvider', '$sceDelegateProvider', '$sceProvider', 'localStorageServiceProvider', function ($routeProvider, $locationProvider, $httpProvider, $sceDelegateProvider, $sceProvider, localStorageServiceProvider) {
     $routeProvider
       .when('/', {
@@ -57,6 +58,14 @@ angular
       .when('/tour-stops/:id', {
         templateUrl: 'views/tour_stop_detail',
         controller: 'TourStopDetailCtrl'
+      })
+      .when('/tour-stops/:stopId/photos/:photoId', {
+        templateUrl: 'views/tour_stop_image_detail',
+        controller: 'TourStopImageDetailCtrl'
+      })
+      .when('/tour-stops/:stopId/videos/:videoId', {
+        templateUrl: 'views/tour_stop_video_detail',
+        controller: 'TourStopVideoDetailCtrl'
       })
       .otherwise({
         redirectTo: '/'

@@ -20,7 +20,9 @@
     "fitvids": "~1.1.0",
     "angulartics": "~0.16.4",
     "angular-local-storage": "~0.0.7",
-    "angular-google-maps": "~1.2.1"
+    "angular-google-maps": "~1.2.1",
+    "moment-timezone": "~0.2.2",
+    "modernizr": "~2.8.3"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",

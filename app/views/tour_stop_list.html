@@ -24,7 +24,7 @@
     </div>
     <div class="col-xs-12 col-sm-6 col-md-9">
       <div class="stop-list-heading-container">
-        <h5 class="heading">Stop {{stop.stopNumber}} - {{stop.title}} - {{stop.venue.name}}</h5>
+        <h5 class="heading"><a ng-href="#!/tour-stops/{{stop.slug}}" class="btn-link btn-link-nhh no-decoration">Stop {{stop.stopNumber}} - {{stop.title}} - {{stop.venue.name}}</a></h5>
         <div class="subheading date">{{stop.stopDate | date}}</div>
         <div class="subheading location">{{stop.venue.suburb}}, {{stop.venue.state}}</div>
       </div>

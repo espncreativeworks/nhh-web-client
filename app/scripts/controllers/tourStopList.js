@@ -8,12 +8,12 @@
  * Controller of the nhhApp
  */
 angular.module('nhhApp')
-  .controller('TourStopListCtrl', ['$scope', 'Page', 'TourStops', '$sce', function ($scope,  Page, TourStops, $sce) {
+  .controller('TourStopListCtrl', ['$scope', 'Page', 'TourStops', '$sce', '$moment', function ($scope,  Page, TourStops, $sce, $moment) {
     var desc = '' +
-      'Nissan and ESPN invite fans to "Get to know the Heismans" during a ' +
+      'Nissan and ESPN invite fans to "Get to know the Heisman Winners" during a ' +
       'pre-game experience that celebrates college football\'s most outstanding players. ' +
       'The Nissan Heisman House Tour is making stop at 10 marquee matchups this season ' +
-      'including its ultimate destination of Pasadena for the 2014 National Championship Game. ' +
+      'including every playoff championship game. ' +
       'Admission to the tour is free! Come join us for fun interactives to win prizes and ' +
       'the opportunity to meet former Heisman winners.';
 
@@ -27,9 +27,13 @@ angular.module('nhhApp')
     TourStops.all().then(function (stops){
       $scope.stops = stops;
       $scope.overview = desc;
+      $scope.stops.sort(function (a,b){
+        return a.stopNumber - b.stopNumber;
+      });
       angular.forEach($scope.stops, function (stop){
+        // server TZ is UTC; force date to be displayed in local TZ equivalent 
+        stop.stopDate = $moment.tz($moment(stop.stopDate).endOf('day'), 'Europe/London').format('MMM D, YYYY');
         stop.summaryHtml = $sce.trustAsHtml(stop.summary);
-        stop.thumbnailUrl = $sce.trustAsResourceUrl(stop.thumbnailImage.secure_url);
         stop.map = {
           center: {
             latitude: stop.venue.geo[1],

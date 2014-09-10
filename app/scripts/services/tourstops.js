@@ -31,7 +31,7 @@ angular.module('nhhApp')
           //, baseUrl = 'http://0.0.0.0:9001/api/tour-stops';
           , baseUrl = './api/tour_stops/';
 
-        $http.get(baseUrl + '/?id=' + key)
+        $http.get(baseUrl + '/' + key)
           .success(function (stop){
             deferred.resolve(stop);
           }).error(function(err){

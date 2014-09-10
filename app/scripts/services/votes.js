@@ -8,17 +8,18 @@
  * Factory in the nhhApp.
  */
 angular.module('nhhApp')
-  .factory('Votes', ['$q', '$http', '$timeout', 'localStorageService', function ($q, $http, $timeout, nhhLocalStorage) {
+  .factory('Votes', ['$q', '$http', '$timeout', 'localStorageService', '$moment', function ($q, $http, $timeout, nhhLocalStorage, $moment) {
 
     // Public API here
     return {
       create: function (data) {
         var deferred = $q.defer()
-          //, baseUrl = 'http://0.0.0.0:9001/api/votes';
+          //, baseUrl = 'http://0.0.0.0:9001/api/votes'
           , baseUrl = './api/votes/'
           , _params = angular.extend({ '_method': 'POST' }, data);
 
         $http.get(baseUrl, { params: _params })
+        //$http.post(baseUrl, data)
           .success(function (vote){
             nhhLocalStorage.set('lastVoted', {
               ts: Date.now(),
@@ -36,9 +37,13 @@ angular.module('nhhApp')
         var deferred = $q.defer();
 
         $timeout(function (){
-          if (nhhLocalStorage.get('lastVoted')){
-            deferred.resolve(nhhLocalStorage.get('lastVoted'));
+          var lastVoted = nhhLocalStorage.get('lastVoted')
+            , now = Date.now()
+            , oneDayAgo = $moment(now).subtract('days', '1');
+          if (lastVoted && $moment(lastVoted.ts).isAfter(oneDayAgo)){
+            deferred.resolve(lastVoted);
           } else {
+            nhhLocalStorage.remove('lastVoted');
             deferred.reject(new Error('Last Vote Not Found'));
           }
         }, 50);

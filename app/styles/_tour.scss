@@ -1,7 +1,32 @@
-#tour-stops-list-container {
+.dynamic-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+
+  &.alpha-mask {
+    background-color: rgba(0,0,0,0.6);
+  }
+
+  &.image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+#tour-stops-list-container,
+#tour-stop-detail-container {
   .angular-google-map-container {
     height: 320px;
   }
+}
+
+#tour-stops-list-container {
 
   .stop-list-heading-container {
     .heading {
@@ -18,10 +43,110 @@
   }
 }
 
+#tour-stop-detail-container {
+  .gallery .gallery-item {
+    position: relative;
+    //width: 100%;
+    //min-height: 144px;
+    padding-bottom: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .gallery .gallery-btn {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+
+    &.btn-play {
+      -webkit-transform: translateX(-50%) translateY(-66%);
+      transform: translateX(-50%) translateY(-77%);
+    }
+
+    /*
+    &.btn-view-detail {
+      .fa-square {
+        display: none;
+      }
+
+      &:hover {
+        .fa-square-o {
+          display: none;
+        }
+        .fa-square {
+          display: inline-block;
+        }
+      }
+    }
+    */
+  }
+
+  .gallery-thumbnail[src=""] + .gallery-btn {
+    .fa-square,
+    .fa-circle,
+    .fa-play,
+    .fa-search-plus {
+      display: none;
+    }
+  }
+
+  .gallery-thumbnail[src*="http"] + .gallery-btn {
+    .fa-square,
+    .fa-circle,
+    .fa-play,
+    .fa-search-plus {
+      display: inline-block;
+    }
+    .fa-spin {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min){
+  #tour-stop-detail-container {
+    .gallery .gallery-item {
+      //min-height: 288px;
+    }
+  }
+}
+
 @media (min-width: $screen-md-min){
-  #tour-stops-list-container {
+  #tour-stops-list-container,
+  #tour-stop-detail-container {
     .angular-google-map-container {
       height: 220px;
+    }
+  }
+
+  body.tour.detail {
+    .dynamic-background {
+      //display: block;
+    }
+  }
+
+  #tour-stop-detail-container {
+    .gallery .gallery-item {
+      //min-height: 432px;
+    }
+
+    .stop-detail-group .inline {
+      display: inline-block;
+      &.stop-detail-heading {
+        margin-right: 6px;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-lg-min){
+  #tour-stop-detail-container {
+    .gallery .gallery-item {
+      //min-height: 576px;
     }
   }
 }

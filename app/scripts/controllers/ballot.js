@@ -19,7 +19,7 @@ angular.module('nhhApp')
       $scope.lastVote = vote;
       $scope.disabled = true;
     }).catch(function (){
-      
+
     });
 
     Page.meta.set('title', 'Cast Your Vote!');

@@ -43,6 +43,7 @@ $logo-heisman-large-height: 351px;
 }
 
 #default-header-container {
+  position: relative;
   height: $default-header-height;
   background-color: #000;
 
@@ -52,6 +53,10 @@ $logo-heisman-large-height: 351px;
     height: $default-header-height;
     padding-left: 80px;
     text-align: right;
+
+    .title {
+      font-size: 17px;
+    }
   }
 
   .logo-container.nissan {
@@ -145,7 +150,6 @@ $logo-heisman-large-height: 351px;
   }
 
   .hero-container {
-    padding-bottom: 40px;
 
     .heading {
       font-size: 40px;

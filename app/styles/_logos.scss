@@ -71,6 +71,7 @@ $logo-nissan-hires: $image-path + 'logo_nissan@2x.png';
     &.small {
       width: $logo-nissan-width / 2;
       height: $logo-nissan-height / 2;
+      background-size: contain;
       @include img-retina($logo-nissan-default, $logo-nissan-hires, $logo-nissan-width / 2, $logo-nissan-height / 2);
     }
   }

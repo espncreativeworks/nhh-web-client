@@ -8,7 +8,7 @@
  * Factory in the nhhApp.
  */
 angular.module('nhhApp')
-  .factory('Athletes', ['$q', '$http', '$timeout', 'underscore', 'Ballots', 'Votes', function ($q, $http, $timeout, underscore, Ballots, Votes) {
+  .factory('Athletes', ['$q', '$http', '$timeout', 'underscore', 'Ballots', 'Votes', 'Modernizr', function ($q, $http, $timeout, underscore, Ballots, Votes, Modernizr) {
 
     var _ = underscore
       //, baseUrl = 'http://0.0.0.0:9001/api/athletes';
@@ -46,6 +46,10 @@ angular.module('nhhApp')
             athleteId: athlete._id,
             medium: 1
           };
+
+        if (Modernizr.touch){
+          data.medium = 2;
+        }
 
         Ballots.active().then(function(ballot){
           data.ballotId = ballot._id;

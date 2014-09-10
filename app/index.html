@@ -23,9 +23,10 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <ng-include ng-controller="MenuCtrl" src="'partials/menu'"></ng-include>
+    <div class="dynamic-background image" ng-style='{ "background-image": "url(" + body.backgroundImage + ")" }'></div>
+    <div class="dynamic-background alpha-mask"></div>
 
-    <div class="dynamic-background-alpha-mask"></div>
+    <ng-include ng-controller="MenuCtrl" src="'partials/menu'"></ng-include>
 
     <!-- Main view here -->
     <div ng-view=""></div>
@@ -72,6 +73,7 @@
     <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyB5Isk6ZFFCMKoaCK3LroN1Bw-xvk9WHOw&sensor=false"></script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>
@@ -119,6 +121,7 @@
     <script src="bower_components/angular-local-storage/angular-local-storage.js"></script>
     <script src="bower_components/lodash/dist/lodash.compat.js"></script>
     <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+    <script src="bower_components/moment-timezone/builds/moment-timezone-with-data-2010-2020.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -152,6 +155,8 @@
     <script src="scripts/services/tourstops.js"></script>
     <script src="scripts/controllers/tourStopList.js"></script>
     <script src="scripts/controllers/tourStopDetail.js"></script>
+    <script src="scripts/controllers/tourStopImageDetail.js"></script>
+    <script src="scripts/controllers/tourStopVideoDetail.js"></script>
     <!-- endbuild -->
 </body>
 </html>

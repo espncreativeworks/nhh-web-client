@@ -1,0 +1,16 @@
+<ng-include ng-controller="HeaderCtrl" src="'partials/header_default'"></ng-include>
+
+<div id="video-container" class="container">
+  <div class="row">
+    <div class="col-xs-12 text-right">
+      <div class="page-title">
+        <h1>{{video.name}}</h1>
+        <p>{{video.description}}</p>
+        <hr class="narrow-top">
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <youtube id="video.youtubeId"></youtube>
+    </div>
+  </div>
+</div>

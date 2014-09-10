@@ -10,7 +10,7 @@
 angular.module('nhhApp')
   .factory('Videos', ['$q', '$http', function ($q, $http) {
 
-    //var baseUrl = 'http://0.0.0.0:9001/api/videos';
+    //var baseUrl = 'http://0.0.0.0:9001/api/videos/';
     var baseUrl = './api/videos/';
 
     // Public API here
@@ -20,8 +20,8 @@ angular.module('nhhApp')
         $http.get(baseUrl)
           .success(function (videos){
             deferred.resolve(videos);
-          }).error(function(){
-            deferred.reject();
+          }).error(function(err){
+            deferred.reject(err);
           });
         return deferred.promise;
       },
@@ -37,11 +37,17 @@ angular.module('nhhApp')
       },
       get: function (id){
         var deferred = $q.defer();
-        $http.get(baseUrl + '?id=' + id)
-          .success(function (video){
+        $http.get(baseUrl)
+          .success(function (videos){
+            var video;
+            angular.forEach(videos, function (_video){
+              if (_video.youtubeId === id){
+                video = _video;
+              }
+            });
             deferred.resolve(video);
-          }).error(function(){
-            deferred.reject();
+          }).error(function(err){
+            deferred.reject(err);
           });
         return deferred.promise;
       }
