@@ -6,7 +6,7 @@
       <div class="page-heading-container text-center">
         <h1 class="heading">Heisman House Tour</h1>
         <hr class="narrow-top">
-        <p class="subheading">{{overview}}</p>
+        <p class="subheading" ng-bind="overview"></p>
         <hr>
       </div>
     </div>
@@ -29,7 +29,19 @@
         <div class="subheading location">{{stop.venue.suburb}}, {{stop.venue.state}}</div>
       </div>
       <div class="stop-list-summary-container">
+        <div class="alert alert-info alert-dismissible" role="alert" ng-if="stop.shouldShowSite">
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true"><i class="fa fa-times"></i>
+            </span><span class="sr-only">Close</span>
+          </button>
+          <div class="alert-icon"><i class="fa fa-info"></i></div>
+          <div class="alert-content" ng-bind-html="stop.siteHtml"></div>
+          <div class="clearfix"></div>
+        </div>
         <div class="summary" ng-bind-html="stop.summaryHtml"></div>
+        <div class="view-more visible-xs">
+          <a ng-href="#!/tour-stops/{{stop.slug}}" class="btn btn-block btn-nhh">View More <i class="fa fa-angle-double-right"></i></a>
+        </div>
       </div>
     </div>
     <div class="col-xs-12">

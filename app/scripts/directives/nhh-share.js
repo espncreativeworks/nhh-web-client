@@ -11,7 +11,7 @@ angular.module('nhhApp')
 
     function onFacebookShare (e){
       e.preventDefault();
-      var url = $(e.target).attr('data-share-url');
+      var url = $(e.currentTarget).attr('data-share-url');
 
       FB.ui({
         method: 'share',
@@ -30,42 +30,36 @@ angular.module('nhhApp')
     }
 
     function onTwitterShare (e){
-      e.preventDefault();
+      //e.preventDefault();
 
-      var $this = $(e.target)
+      var $this = $(e.currentTarget)
         , params = {}
-        , baseUrl = 'https://twitter.com/share'
+        , baseUrl = 'https://twitter.com/intent/tweet'
         , tweetWindow = null
         , tweetWindowUrl = baseUrl + '?'
-        , tweetWindowOptions = 'width=320,height=568,left=' + ($(window).width() - 320) / 2 + ',top=' + ($(window).height() - 568) / 2
-        , url = $this.attr('data-tweet-url');
+        , tweetWindowOptions = 'width=550,height=426,left=' + ($(window).width() - 550) / 2 + ',top=' + ($(window).height() - 426) / 2
+        , url = $this.attr('data-share-url');
 
+      params['original_referer'] = window.location.href;
       params.url = url;
-      params.text = $this.attr('data-tweet-text');
-      params.hashtags = $this.attr('data-hashtags') || '';
+      params.text = $this.attr('data-share-text');
+      params.hashtags = $this.attr('data-share-hashtags') || '';
       params.related = $this.attr('data-related-accounts') || '';
-
       tweetWindowUrl += $.param(params);
-      tweetWindow = window.open(tweetWindowUrl, '_blank', tweetWindowOptions);
 
-      ga('send', {
-        hitType: 'social',
-        socialNetwork: 'Twitter',
-        socialAction: 'Tweet',
-        socialTarget: params.url,
-        page: document.title
-      });
+      $this.attr('href',tweetWindowUrl);
+      twttr.widgets.load();
+      //tweetWindow = window.open(tweetWindowUrl, '_blank', tweetWindowOptions);
     }
 
     return {
       restrict: 'A',
       link: function postLink(scope, element, attrs) {
-        element.on('click', function (e){
-          console.log(attrs);
-          if (attrs['share-action'] === 'share-facebook'){
+        $(element).on('click', function (e){
+          if (attrs.shareAction === 'share-facebook'){
             onFacebookShare(e);
           }
-          if (attrs['share-action'] === 'share-twitter'){
+          if (attrs.shareAction === 'share-twitter'){
             onTwitterShare(e);
           }
         });

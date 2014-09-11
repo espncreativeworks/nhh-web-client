@@ -12,14 +12,15 @@ angular.module('nhhApp')
     // Service logic
     // ...
 
-    var baseUrl = './api/cars';
+    var baseUrl = './api/cars/';
 
     // Public API here
     return {
       all: function () {
         var deferred = $q.defer();
 
-        $http.get(baseUrl + '/')
+        $http.get(baseUrl)
+        //$http.get(baseUrl + 'index.json')
           .success(function (cars){
             deferred.resolve(cars);
           }).error(function(err){
@@ -31,7 +32,8 @@ angular.module('nhhApp')
       random: function () {
         var deferred = $q.defer();
 
-        $http.get(baseUrl + '/')
+        $http.get(baseUrl)
+        //$http.get(baseUrl + 'index.json')
           .success(function (cars){
             var car = _.chain(cars).shuffle().first().value();
             deferred.resolve(car);

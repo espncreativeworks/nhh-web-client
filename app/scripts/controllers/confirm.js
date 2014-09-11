@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name nhhApp.controller:BodyCtrl
+ * @name nhhApp.controller:ConfirmCtrl
  * @description
- * # BodyCtrl
+ * # ConfirmCtrl
  * Controller of the nhhApp
  */
 angular.module('nhhApp')
-  .controller('BodyCtrl', function ($scope) {
+  .controller('ConfirmCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

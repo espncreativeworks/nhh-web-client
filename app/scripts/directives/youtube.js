@@ -9,7 +9,7 @@
 angular.module('nhhApp')
   .directive('youtube', ['$sce', function ($sce) {
     return {
-      template: '<div class="video-player-container"><iframe id="yt-player" class="player" width="100%" height="auto" src="{{url}}" frameborder="0" allowfullscreen></iframe></div>',
+      template: '<div class="video-player-container embed-responsive embed-responsive-16by9"><iframe id="yt-player" class="player embed-responsive-item" width="100%" height="auto" src="{{url}}" frameborder="0" allowfullscreen></iframe></div>',
       restrict: 'E',
       scope: {
         id: '='
@@ -20,7 +20,6 @@ angular.module('nhhApp')
         scope.$watch('id', function (newVal) {
           if (newVal) {
             scope.url = $sce.trustAsResourceUrl('//www.youtube.com/embed/' + newVal + params);
-            element.find('#yt-player').fitVids();
           }
         });
       }

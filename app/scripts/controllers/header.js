@@ -21,7 +21,7 @@ angular.module('nhhApp')
       var next = $moment(vote.ts).add('days', 1);
       $scope.athlete = vote.athlete;
       $scope.lastVote = last.from(now);
-      $scope.nextVote = next.from(last);
+      $scope.nextVote = next.from(now);
     }).catch(function (){
       $scope.lastVote = false;
     });

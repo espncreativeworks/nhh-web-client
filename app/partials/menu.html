@@ -3,10 +3,8 @@
     <i class="fa fa-times menu-close"></i>
     <a href="#!/" class="menu-link"><span class="logo-container espn text-hide">ESPN</span></a>
     <a ng-href="{{link.url}}" title="{{link.title}}" target="{{link.target}}" class="menu-link" ng-repeat="link in menuLinks">{{link.text}}</a>
-    <!--
-    <a href="" class="menu-link social-share" nhh-share share-action="share-facebook" share-url="{{facebookLink.shareUrl}}" title="{{facebookLink.title}}" ><i class="fa fa-facebook"></i></a>
-    <a href="" class="menu-link social-share" nhh-share share-action="share-twitter" share-url="{{twitterLink.shareUrl}}" share-text="{{twitterLink.text}}" share-hashtags="{{twitterLink.hashtags}}" title="{{twitterLink.title}}"><i class="fa fa-twitter"></i></a>
-    -->
+    <a href="javascript:void(0);" class="menu-link social-share" nhh-share share-action="share-facebook" data-share-url="{{facebookLink.shareUrl}}" title="{{facebookLink.title}}" ><i class="fa fa-facebook"></i></a>
+    <a href="javascript:void(0);" class="menu-link social-share" nhh-share share-action="share-twitter" data-share-url="{{twitterLink.shareUrl}}" data-share-text="{{twitterLink.text}}" data-share-hashtags="{{twitterLink.hashtags}}" title="{{twitterLink.title}}"><i class="fa fa-twitter"></i></a>
   </div>
   <div id="menu-toggle"><i class="fa fa-bars"></i></div>
 </nav>

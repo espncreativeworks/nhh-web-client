@@ -95,3 +95,18 @@
     color: darken($nhh-white, 15%);
   }
 }
+
+.share-vote {
+  font-size: 3em;
+
+  .social-share {
+    color: $nhh-gold;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: darken($nhh-gold, 15%);
+    }
+  }
+}

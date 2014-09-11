@@ -41,6 +41,27 @@
   .stop-list-summary-container {
     padding-top: 20px;
   }
+
+  .alert {
+    text-align: left;
+
+    .alert-icon,
+    .alert-content {
+      display: inline;
+    }
+    .alert-content {
+      padding-left: 8px;
+      > * {
+        margin: 0;
+        padding: 0;
+        display: inline;
+      }
+    }
+  }
+
+  .view-more {
+    padding-top: 22px;
+  }
 }
 
 #tour-stop-detail-container {
@@ -49,9 +70,9 @@
     //width: 100%;
     //min-height: 144px;
     padding-bottom: 20px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    //background-size: cover;
+    //background-position: center;
+    //background-repeat: no-repeat;
   }
 
   .gallery .gallery-btn {
@@ -94,7 +115,7 @@
     }
   }
 
-  .gallery-thumbnail[src*="http"] + .gallery-btn {
+  .gallery-thumbnail[src^="http"] + .gallery-btn {
     .fa-square,
     .fa-circle,
     .fa-play,
@@ -103,6 +124,33 @@
     }
     .fa-spin {
       display: none;
+    }
+  }
+
+}
+
+html.no-touch #tour-stop-detail-container .gallery-item {
+  .gallery-thumbnail[src^="http"] + .gallery-btn {
+    .fa-square,
+    .fa-circle,
+    .fa-play,
+    .fa-search-plus {
+      opacity: 0;
+      @include transition(opacity, .3s, linear);
+    }
+  }
+}
+
+html.no-touch #tour-stop-detail-container .gallery-item:hover,
+html.no-touch #tour-stop-detail-container .gallery-item:focus,
+html.no-touch #tour-stop-detail-container .gallery-item:active,
+html.no-touch #tour-stop-detail-container .gallery-item.active {
+  .gallery-thumbnail[src^="http"] + .gallery-btn {
+    .fa-square,
+    .fa-circle,
+    .fa-play,
+    .fa-search-plus {
+      opacity: 1;
     }
   }
 }

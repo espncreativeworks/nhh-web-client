@@ -16,11 +16,11 @@ angular.module('nhhApp')
       var next = $moment(vote.ts).add('days', 1);
       $scope.athlete = vote.athlete;
       $scope.lastVote = last.from(now);
-      $scope.nextVote = next.from(last);
+      $scope.nextVote = next.from(now);
       return Videos.featured();
     }).then(function (videos){
       $scope.heroVideo = _.chain(videos).shuffle().first().value();
-      $scope.heroThumbnailUrl = $sce.trustAsResourceUrl($scope.heroVideo.thumbnailUrl);
+      $scope.heroThumbnailUrl = $sce.trustAsResourceUrl($scope.heroVideo.thumbnailUrl || $scope.heroVideo.thumbnail);
     })
     .catch(function (){
       $scope.lastVote = false;

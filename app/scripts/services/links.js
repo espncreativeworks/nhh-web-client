@@ -20,6 +20,7 @@ angular.module('nhhApp')
         var deferred = $q.defer();
 
         $http.get(baseUrl + '/')
+        //$http.get(baseUrl + '/index.json')
           .success(function (links){
             deferred.resolve(links);
           }).error(function(err){
@@ -32,8 +33,23 @@ angular.module('nhhApp')
         var deferred = $q.defer();
 
         $http.get(baseUrl + '/social')
+        //$http.get(baseUrl + '/social.json')
           .success(function (links){
             deferred.resolve(links);
+          }).error(function(err){
+            deferred.reject(err);
+          });
+
+        return deferred.promise;
+      },
+      shorten: function (url){
+        //var baseUrl = 'http://0.0.0.0:9001/api/links';
+        var deferred = $q.defer();
+
+        $http.get(baseUrl + '/shorten', { longUrl: url, method: '_POST' })
+        //$http.post(baseUrl + '/shorten', { longUrl: url })
+          .success(function (shortenedUrlData){
+            deferred.resolve(shortenedUrlData);
           }).error(function(err){
             deferred.reject(err);
           });

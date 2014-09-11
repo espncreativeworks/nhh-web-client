@@ -13,13 +13,8 @@ angular.module('nhhApp')
     Votes.last().then(function(vote){
       var now = $moment();
       var next = $moment(vote.ts).add('days', 1);
-      if (now.isBefore(next)){
-        //$location.path('/');
-      }
       $scope.lastVote = vote;
       $scope.disabled = true;
-    }).catch(function (){
-
     });
 
     Page.meta.set('title', 'Cast Your Vote!');

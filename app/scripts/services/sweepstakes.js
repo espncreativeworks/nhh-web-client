@@ -10,7 +10,7 @@
 angular.module('nhhApp')
   .factory('Sweepstakes', ['$q', '$http', '$timeout', 'localStorageService', function ($q, $http, $timeout, localStorageService) {
 
-    var baseUrl = './api/sweepstakes';
+    var baseUrl = './api/sweepstakes/';
 
     // Public API here
     return {
@@ -36,7 +36,8 @@ angular.module('nhhApp')
       status: function () {
         var deferred = $q.defer();
 
-        $http.get(baseUrl + '/status')
+        $http.get(baseUrl + 'status')
+        //$http.get(baseUrl + 'status.json')
           .success(function (status){
             deferred.resolve(status);
           })

@@ -22,7 +22,8 @@ angular
     'angular-momentjs',
     'angulartics',
     'angulartics.google.analytics',
-    'google-maps'
+    'google-maps',
+    'ngProgress'
   ])
   .constant('Modernizr', Modernizr)
   .config(['$routeProvider', '$locationProvider', '$httpProvider', '$sceDelegateProvider', '$sceProvider', 'localStorageServiceProvider', function ($routeProvider, $locationProvider, $httpProvider, $sceDelegateProvider, $sceProvider, localStorageServiceProvider) {
@@ -43,10 +44,10 @@ angular
         templateUrl: 'views/leaderboard',
         controller: 'LeaderboardCtrl'
       })
-      // .when('/rules', {
-      //   templateUrl: 'views/rules.html',
-      //   controller: 'RulesCtrl'
-      // })
+      .when('/rules', {
+        templateUrl: 'views/rules',
+        controller: 'RulesCtrl'
+      })
       .when('/videos/:id', {
         templateUrl: 'views/video',
         controller: 'VideoCtrl'
@@ -66,6 +67,14 @@ angular
       .when('/tour-stops/:stopId/videos/:videoId', {
         templateUrl: 'views/tour_stop_video_detail',
         controller: 'TourStopVideoDetailCtrl'
+      })
+      .when('/confirm', {
+        templateUrl: 'views/confirm',
+        controller: 'ConfirmCtrl'
+      })
+      .when('/share-vote/:athleteId', {
+        templateUrl: 'views/share_vote',
+        controller: 'ShareVoteCtrl'
       })
       .otherwise({
         redirectTo: '/'

@@ -17,3 +17,7 @@ $bg-color: $nhh-bg-color;
 $text-color: $nhh-white;
 $font-family-sans-serif: $nhh-font-family-sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $headings-color: $nhh-gold;
+
+$state-info-text: $nhh-dark-gold;
+$state-info-bg: $nhh-grey;
+$state-info-border: darken(adjust-hue($state-info-bg, -10), 7%);
