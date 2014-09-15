@@ -8,9 +8,9 @@
  * Controller of the nhhApp
  */
 angular.module('nhhApp')
-  .controller('ThanksCtrl', ['$scope', 'Page', 'Sweepstakes', 'Votes', 'Links', '$moment', 'fullNameFilter', '$location', function ($scope, Page, Sweepstakes, Votes, Links, $moment, fullName, $location) {
+  .controller('ThanksCtrl', ['$scope', 'Page', 'Sweepstakes', 'Votes', 'Links', 'Auth', 'Users', '$moment', 'fullNameFilter', '$window', '$location', function ($scope, Page, Sweepstakes, Votes, Links, Auth, Users, $moment, fullName, $window, $location) {
     Page.meta.reset();
-    Page.meta.set('title', 'Thanks!');
+    Page.meta.set('title', 'Thanks For Voting');
     Page.body.set('class', 'info thanks');
 
     Sweepstakes.status().then(function (status){
@@ -18,8 +18,8 @@ angular.module('nhhApp')
     });
 
     Votes.last().then(function (vote){
-      var cacheBust = $moment().dayOfYear();
-      var baseUrl = $location.protocol() + '://' + $location.host() + ($location.port() ? ':' + $location.port() : '') + window.location.pathname;
+      var cacheBust = $moment().dayOfYear() + '' + $moment().hour(); // default cache for vote sharing to 1 hour
+      var baseUrl = $location.protocol() + '://' + $window.location.host + $window.location.pathname;
       $scope.votedFor = vote.athlete;
       $scope.shareUrl = baseUrl + '#!/share-vote/' + vote.athlete._id;
       $scope.fb = {};
@@ -35,6 +35,14 @@ angular.module('nhhApp')
       return Links.shorten($scope.tweet.url);
     }).then(function (tweetUrlData){
       $scope.tweet.url = tweetUrlData.url;
+    });
+
+    $scope.auth = {};
+    $scope.auth.globalReg = Auth.globalReg;
+    Auth.status().then(function (status){
+      $scope.auth.loggedIn = status.loggedIn;
+    }, function (){
+      $scope.auth.loggedIn = false;
     });
 
   }]);

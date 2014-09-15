@@ -1,26 +1,36 @@
-<ng-include ng-controller="HeaderCtrl" src="'partials/header_default'"></ng-include>
+<ng-include ng-controller="HeaderCtrl" src="'partials/header_default.html'"></ng-include>
 
 <div id="thanks-container" class="container">
   <div class="row">
     <div class="col-xs-12">
       <div class="page-heading-container text-center">
-        <h1 class="heading">Thanks</h1>
+        <h1 class="heading">Thanks for Voting</h1>
         <hr class="narrow-top">
-        <p class="subheading">Thank you for making your vote count.<br> Come back and vote each day for your Heisman candidate.</p>
-        <div class="share-vote text-center">
-          <a href="javascript:void(0);" class="social-share" nhh-share share-action="share-facebook" data-share-url="{{fb.url}}" title="Share your vote on Facebook" ><i class="fa fa-facebook"></i></a>
-          <a href="javascript:void(0);" class="social-share" nhh-share share-action="share-twitter" data-share-url="{{tweet.url}}" data-share-text="{{tweet.text}}" data-share-hashtags="{{tweet.hashtags}}" data-related-accounts="{{tweet.related}}" title="Share your vote on Twitter"><i class="fa fa-twitter"></i></a>
+        <div class="row">
+          <div class="col-xs-12" ng-class='{ "col-sm-6": eligibility }'>
+            <p class="subheading">Thank you for making your vote count.<br> Come back and vote each day for your Heisman candidate.</p>
+            <div class="share-vote text-center">
+              <a href="javascript:void(0);" class="social-share" nhh-share share-action="share-facebook" data-share-url="{{fb.url}}" title="Share your vote on Facebook" ><i class="fa fa-facebook"></i></a>
+              <a href="javascript:void(0);" class="social-share" nhh-share share-action="share-twitter" data-share-url="{{tweet.url}}" data-share-text="{{tweet.text}}" data-share-hashtags="{{tweet.hashtags}}" data-related-accounts="{{tweet.related}}" title="Share your vote on Twitter"><i class="fa fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="col-xs-12 visible-xs">
+            <hr>
+          </div>
+          <div class="col-xs-12 col-sm-6" ng-if="eligibility">
+            <p class="enter-label">You could win a trip for you and three friends to the inaugural College Football Playoff in North Texas and meet a Heisman Trophy Winner!</p>
+            <div class="enter-controls text-center" ng-if="eligibility">
+              <a href="#!/confirm" class="btn btn-nhh hidden-xs" title="Enter Now!" ng-if="auth.loggedIn">Enter Now</a>
+              <a href="#!/confirm" class="btn btn-nhh btn-block visible-xs" title="Enter Now!" ng-if="auth.loggedIn">Enter Now</a>
+              <a href="javascript:void(0);" class="btn btn-nhh hidden-xs cbOverlay" title="Login in to Enter" ng-if="!auth.loggedIn" data-language="en" data-affiliatename="espn_contests" data-regformid="espn_contests" tref="/members/v3_1/login" data-appRedirect="{{auth.globalReg.appRedirect}}">Login to Enter</a>
+              <a href="javascript:void(0);" class="btn btn-nhh btn-block visible-xs cbOverlay" title="Login in to Enter" ng-if="!auth.loggedIn" data-language="en" data-affiliatename="espn_contests" data-regformid="espn_contests" tref="/members/v3_1/login" data-appRedirect="{{auth.globalReg.appRedirect}}">Login to Enter</a>
+            </div>
+          </div>
         </div>
         <hr>
       </div>
     </div>
   </div>
-  <div class="row" ng-if="eligibility">
-    <div class="col-xs-12">
-      <a href="#!/enter" class="btn btn-nhh hidden-xs" title="Enter Now!">Enter Now</a>
-      <a href="#!/enter" class="btn btn-nhh btn-block visible-xs" title="Enter Now!">Enter Now</a>
-    </div>
-  </div>
 </div>
 
-<ng-include ng-controller="VideoShowcaseCtrl" src="'views/video_showcase'"></ng-include>
+<ng-include ng-controller="VideoShowcaseCtrl" src="'views/video_showcase.html'"></ng-include>

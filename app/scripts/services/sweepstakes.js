@@ -8,7 +8,7 @@
  * Factory in the nhhApp.
  */
 angular.module('nhhApp')
-  .factory('Sweepstakes', ['$q', '$http', '$timeout', 'localStorageService', function ($q, $http, $timeout, localStorageService) {
+  .factory('Sweepstakes', ['$q', '$http', 'localStorageService', function ($q, $http, localStorageService) {
 
     var baseUrl = './api/sweepstakes/';
 
@@ -17,28 +17,27 @@ angular.module('nhhApp')
       enter: function (){
         var deferred = $q.defer();
 
-        $timeout(function (){
-          localStorageService.set('lastEntry', new Date());
-          deferred.resolve();
-        }, 250);
-
-        // $http.post(baseUrl + '/entries')
-        //   .success(function (){
-        //     $sessionStorage.lastEntry = new Date();
-        //     deferred.resolve();
-        //   })
-        //   .error(function (err){
-        //     deferred.reject(err);
-        //   });
+        //$http.post(baseUrl + 'enter')
+        $http.post(baseUrl + 'enter.json')
+          .success(function (result){
+            // localStorageService.set('lastEntry', Date.now());
+            deferred.resolve(result);
+          })
+          .error(function (err){
+            deferred.reject(err);
+          });
 
         return deferred.promise;
       },
       status: function () {
         var deferred = $q.defer();
 
-        $http.get(baseUrl + 'status')
-        //$http.get(baseUrl + 'status.json')
+        //$http.get(baseUrl + 'status')
+        $http.get(baseUrl + 'status.json')
           .success(function (status){
+            // if (status.lastEntry){
+            //   localStorageService.set('lastEntry', status.lastEntry);
+            // }
             deferred.resolve(status);
           })
           .error(function (err){

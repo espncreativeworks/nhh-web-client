@@ -1,0 +1,25 @@
+<ng-include ng-controller="HeaderCtrl" src="'partials/header_default.html'"></ng-include>
+
+<div id="share-entry" class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="page-heading-container text-center">
+        <h1 class="heading">{{firstName}} has Entered... You should, too!</h1>
+        <hr class="narrow-top">
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <h4 class="enter-label" ng-if="eligibility">You could win a trip for you and three friends to the inagural College Football Playoff in North Texas and meet a Heisman Trophy Winner!</h4>
+      <h4 class="enter-label" ng-if="!eligibility">Sorry.. You're ineligible to participate. See <a href="" ng-href="#!/rules" title="Official Rules">official rules</a> for details.</h4>
+      <div class="enter-controls text-center" ng-if="eligibility">
+        <a href="#!/confirm" class="btn btn-nhh hidden-xs" title="Enter Now!" ng-if="auth.loggedIn">Enter Now</a>
+        <a href="#!/confirm" class="btn btn-nhh btn-block visible-xs" title="Enter Now!" ng-if="auth.loggedIn">Enter Now</a>
+        <a href="javascript:void(0);" class="btn btn-nhh hidden-xs cbOverlay" title="Login in to Enter" ng-if="!auth.loggedIn" data-language="en" data-affiliatename="espn_contests" data-regformid="espn_contests" tref="/members/v3_1/login" data-appRedirect="{{auth.globalReg.appRedirect}}">Login to Enter</a>
+        <a href="javascript:void(0);" class="btn btn-nhh btn-block visible-xs cbOverlay" title="Login in to Enter" ng-if="!auth.loggedIn" data-language="en" data-affiliatename="espn_contests" data-regformid="espn_contests" tref="/members/v3_1/login" data-appRedirect="{{auth.globalReg.appRedirect}}">Login to Enter</a>
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>
+
+<ng-include ng-controller="VideoShowcaseCtrl" src="'views/video_showcase.html'"></ng-include>

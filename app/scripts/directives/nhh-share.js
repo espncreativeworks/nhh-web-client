@@ -7,7 +7,7 @@
  * # nhhShare
  */
 angular.module('nhhApp')
-  .directive('nhhShare', function () {
+  .directive('nhhShare', ['jQuery', function ($) {
 
     function onFacebookShare (e){
       e.preventDefault();
@@ -65,4 +65,4 @@ angular.module('nhhApp')
         });
       }
     };
-  });
+  }]);

@@ -70,6 +70,7 @@ angular.module('nhhApp')
       Page.meta.set('description', description);
       Page.meta.set('twitter', twitterMeta);
       Page.meta.set('facebook', facebookMeta);
+      Page.body.set('class', 'info share');
     });
 
   }]);

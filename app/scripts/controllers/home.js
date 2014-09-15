@@ -8,9 +8,12 @@
  * Controller of the nhhApp
  */
 angular.module('nhhApp')
-  .controller('HomeCtrl', ['$scope', 'Votes', 'Videos', 'underscore', '$moment', '$sce', function ($scope, Votes, Videos, _, $moment, $sce) {
+  .controller('HomeCtrl', ['$scope', 'Page', 'Votes', 'Videos', 'underscore', '$moment', '$sce', function ($scope, Page, Votes, Videos, _, $moment, $sce) {
+    Page.meta.reset();
+    Page.meta.set('title', 'Home');
+    Page.body.set('class', 'home');
+    
     var now = $moment();
-
     Votes.last().then(function (vote){
       var last = $moment(vote.ts);
       var next = $moment(vote.ts).add('days', 1);

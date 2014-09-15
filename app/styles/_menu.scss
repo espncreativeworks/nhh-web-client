@@ -17,7 +17,7 @@
   position: absolute;
   top: 0;
   left: 0px;
-  background: #021016;
+  background: #000;
   width: 200px;
   height: 100%;
 }
@@ -118,7 +118,22 @@
   @include transition(all .1s ease-in-out);
 }
 
-#menu-toggle {
+#back {
+  display: none;
+}
+
+body.video,
+body.image {
+  #back {
+    display: block;
+  }
+  #menu-toggle {
+    display: none;
+  }
+}
+
+#menu-toggle,
+#back-toggle {
   position: absolute;
   top: 20px;
   right: 0;
@@ -135,7 +150,8 @@
   @include transition(all .1s ease-in-out);
 }
 
-#menu-toggle:hover {
+#menu-toggle:hover,
+#back-toggle:hover {
   color: #e24b30;
   background: rgba(0,0,0,0.5);
   @include transition(all .1s ease-in-out);

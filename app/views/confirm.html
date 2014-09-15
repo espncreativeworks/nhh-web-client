@@ -1,1 +1,54 @@
-<p>This is the confirm view.</p>
+<ng-include ng-controller="HeaderCtrl" src="'partials/header_default.html'"></ng-include>
+
+<div id="confirm-container" class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="page-heading-container text-center">
+        <h1 class="heading">Confirm Your Info</h1>
+        <hr class="narrow-top">
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <form action="" class="" role="form" ng-submit="confirm(lists)">
+        <div class="row">
+          <div class="col-xs-12">
+            <dl class="dl-horizontal">
+              <dt>Username</dt><dd>{{user.username}}</dd>
+              <dt>Email</dt><dd>{{user.emailAddress}}</dd>
+              <dt>Address</dt><dd>{{user.address | inlineAddress}}</dd>
+              <dt></dt>
+              <dd class="help-inline">Address incorrect?
+                <a class="no-decoration" tref="/members/v3_1/modifyAccount" href="" data-regformid="espn_contests" data-language="en" data-affiliatename="espn_contests" class="cbOverlay">Update it</a>.
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="control-group third-party-transfer">
+              <div class="controls">
+                <label class="checkbox" for="{{list.code}}" ng-repeat="list in lists">
+                  <input type="checkbox" class="optin-control" name="{{list.code}}" id="{{list.code}}" ng-model="list.subscribe">
+                  <span class="optin-copy" ng-bind-html="list.labelHtml"></span>
+                  <span class="optin-copy" ng-bind-html="list.disclaimerHtml" ng-show="list.subscribe"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="control-group main-controls text-center">
+              <div class="controls">
+                <button type="button" class="btn btn-nhh logout hidden-xs" ng-click="auth.logout()">Logout</button>
+                <button type="submit" class="btn btn-nhh hidden-xs">Confirm</a>
+                <button type="button" class="btn btn-nhh btn-block logout visible-xs" ng-click="auth.logout()">Logout</button>
+                <button type="submit" class="btn btn-nhh btn-block visible-xs">Confirm</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -15,12 +15,12 @@ angular.module('nhhApp')
 
       Page.meta.set('description', stop.pageDescription);
       Page.meta.set('keywords', stop.keywords);
-      Page.body.set('class', 'info tour-video detail');
+      Page.body.set('class', 'info tour-video video detail');
 
       angular.forEach($scope.stop.videos, function (video){
         if (video.youtubeId === $routeParams.videoId || video._id === $routeParams.videoId){
           $scope.video = video;
-          Page.meta.set('title', 'Video ' + $routeParams.videoId + ' | ' + $scope.stop.pageTitle);
+          Page.meta.set('title', 'Video ' + $routeParams.videoId + ' - ' + $scope.stop.pageTitle + ' | Nissan Heisman House Tour', { suffix: false });
         }
       });
 

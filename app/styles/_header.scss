@@ -150,15 +150,22 @@ $logo-heisman-large-height: 351px;
   }
 
   .hero-container {
+    max-width: 384px;
+    margin: 0 auto;
 
     .heading {
       font-size: 40px;
     }
     .subheading {
+      text-align: center;
       font-size: 16px;
       padding-top: 20px;
       padding-bottom: 20px;
     }
+  }
+
+  .vote {
+    padding-bottom: 40px;
   }
 
   .hero-video-container {
@@ -208,17 +215,19 @@ $logo-heisman-large-height: 351px;
       }
     }
 
+    .vote {
+      padding-top: 40px;
+    }
+
     .hero-container {
+      max-width: none;
       background-image: url($image-path + 'bg_marquee.png');
 
       .headings-container {
         max-width: $logo-heisman-large-width;
         @include center-block();
       }
-    }
 
-    .vote {
-      padding-top: ($header-components-height - $logo-heisman-large-height) / 2;
     }
 
     .voted .hero-video-container {
@@ -266,6 +275,18 @@ $logo-heisman-large-height: 351px;
 
     .voted-for-container .logo-container.heisman.small {
       margin-top: 0px;
+    }
+  }
+
+  #home-header-container {
+    .vote {
+      padding-top: ($header-components-height - $logo-heisman-large-height) / 2;
+    }
+
+    .hero-container {
+      .subheading {
+        text-align: left;
+      }
     }
   }
 }

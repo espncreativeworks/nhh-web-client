@@ -1,0 +1,20 @@
+<ng-include ng-controller="HeaderCtrl" src="'partials/header_default.html'"></ng-include>
+
+<div id="entered-container" class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="page-heading-container text-center">
+        <h1 class="heading">Thanks for Entering</h1>
+        <hr class="narrow-top">
+        <p class="subheading">You are now entered to win a trip for you and three friends to the inaugural College Football Playoff in North Texas.<br> Come back and vote each day for your Heisman candidate.</p>
+        <div class="share-vote text-center">
+          <a href="javascript:void(0);" class="social-share" nhh-share share-action="share-facebook" data-share-url="{{fb.url}}" title="Share your vote on Facebook" ><i class="fa fa-facebook"></i></a>
+          <a href="javascript:void(0);" class="social-share" nhh-share share-action="share-twitter" data-share-url="{{tweet.url}}" data-share-text="{{tweet.text}}" data-share-hashtags="{{tweet.hashtags}}" data-related-accounts="{{tweet.related}}" title="Share your vote on Twitter"><i class="fa fa-twitter"></i></a>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-include ng-controller="VideoShowcaseCtrl" src="'views/video_showcase.html'"></ng-include>

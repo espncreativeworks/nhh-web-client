@@ -15,13 +15,13 @@ angular.module('nhhApp')
 
       Page.meta.set('description', stop.pageDescription);
       Page.meta.set('keywords', stop.keywords);
-      Page.body.set('class', 'info tour-image detail');
+      Page.body.set('class', 'info tour-image image detail');
 
       angular.forEach($scope.stop.gallery, function (photo){
         if (photo.public_id === $routeParams.photoId || photo._id === $routeParams.photoId){
           $scope.photo = photo;
           $scope.photo.trustedUrl = $sce.trustAsResourceUrl(photo.secure_url);
-          Page.meta.set('title', 'Photo ' + photo.public_id + ' | ' + $scope.stop.pageTitle);
+          Page.meta.set('title', 'Photo ' + photo.public_id + ' - ' + $scope.stop.pageTitle + ' | Nissan Heisman House Tour', { suffix: false });
         }
       });
 

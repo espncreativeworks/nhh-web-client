@@ -12,7 +12,7 @@ angular.module('nhhApp')
     Videos.get($routeParams.id).then(function (video){
       Page.meta.set('title', video.name);
       Page.meta.set('description', video.description);
-      Page.body.set('class', 'video info');
+      Page.body.set('class', 'video info detail');
       $scope.video = video;
     }).catch(function(){
       $location.path('/');

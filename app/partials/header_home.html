@@ -34,8 +34,8 @@
             <div class="vote-again">You can vote again <span class="time-ago">{{nextVote}}</span></div>
           </div>
           <div class="col-xs-12 hero-video-container padding-less text-center">
-            <h2 class="hero-video-heading visible-xs">Featured Video</h2>
-            <div class="hero-video" ng-style="{ 'background-image': 'url({{heroThumbnailUrl}})' }">
+            <h2 class="hero-video-heading hidden-lg">Featured Video</h2>
+            <div class="hero-video" ng-style="{ 'background-image': 'url(' + heroThumbnailUrl + ')' }">
               <a class="btn btn-play fa-stack fa-stack-large center-xy" ng-href="#!/videos/{{heroVideo.youtubeId}}" title="{{heroVideo.name}}">
                 <i class="fa fa-stack-2x fa-circle"></i>
                 <i class="fa fa-stack-1x fa-play fa-inverse"></i>
@@ -55,6 +55,7 @@
             <div class="heading-controls-container text-center">
               <a href="#!/ballot" class="btn btn-nhh btn-lg" title="Vote Now">Vote Now</a>
             </div>
+            <hr class="visible-xs">
           </div>
         </div>
       </div>

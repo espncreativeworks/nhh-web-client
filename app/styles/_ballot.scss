@@ -13,6 +13,7 @@ $ballot-item-padding-bottom: $ballot-item-padding-top;
     font-family: $nhh-font-family-sans-serif;
     background-color: $nhh-grey;
     color: $nhh-white;
+    max-width: 384px;
 
     .ballot-heading-container {
       .ballot-heading {

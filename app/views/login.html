@@ -1,0 +1,17 @@
+<ng-include ng-controller="HeaderCtrl" src="'partials/header_default.html'"></ng-include>
+
+<div id="login-container" class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="page-heading-container text-center">
+        <h1 class="heading">{{title}}</h1>
+        <hr class="narrow-top">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <ng-include src="'partials/login_form.html'"></ng-include>
+    </div>
+  </div>
+</div>

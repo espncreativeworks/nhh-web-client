@@ -1,0 +1,50 @@
+label {
+  font-weight: normal;
+}
+
+#thanks-container {
+  .enter-controls {
+    padding-top: 22px;
+  }
+}
+
+#confirm-container {
+  .optin-control {
+    margin-left: 0;
+    z-index: 55;
+  }
+  .optin-copy {
+    margin-left: 20px;
+  }
+  .main-controls .btn {
+    margin-top: 12px;
+  }
+}
+
+#login-form {
+  .form-control {
+    border-radius: 0;
+  }
+  .auth-help {
+    font-size: smaller;
+  }
+  .main-controls {
+    padding-top: 12px;
+  }
+  .btn.submit {
+    width: 100%;
+  }
+}
+
+@media (min-width: $screen-sm-min){
+  #confirm-container {
+    .main-controls .btn {
+      margin-right: 12px;
+    }
+  }
+  #login-form {
+    .btn.submit {
+      width: auto;
+    }
+  }
+}

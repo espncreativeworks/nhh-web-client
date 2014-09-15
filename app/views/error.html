@@ -1,0 +1,16 @@
+<ng-include ng-controller="HeaderCtrl" src="'partials/header_default.html'"></ng-include>
+
+<div id="error-container" class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="page-heading-container text-center">
+        <h1 class="heading">{{title}}</h1>
+        <hr class="narrow-top">
+        <p class="subheading">{{message}}</p>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-include ng-controller="VideoShowcaseCtrl" src="'views/video_showcase.html'"></ng-include>

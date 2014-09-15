@@ -8,13 +8,18 @@
  * Controller of the nhhApp
  */
 angular.module('nhhApp')
-  .controller('HeaderCtrl', ['$scope', 'Votes', '$moment', function ($scope, Votes, $moment) {
+  .controller('HeaderCtrl', ['$scope', '$location', 'Votes', '$moment', function ($scope, $location, Votes, $moment) {
     var now = $moment();
 
     $scope.dismissed = false;
     $scope.dismiss = function (){
       $scope.dismissed = !$scope.dismissed;
     };
+
+    $scope.isBallot = false;
+    if ($location.path() === '/ballot'){
+      $scope.isBallot = true;
+    }
 
     Votes.last().then(function (vote){
       var last = $moment(vote.ts);

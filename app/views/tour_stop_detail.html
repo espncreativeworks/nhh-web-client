@@ -1,4 +1,4 @@
-<ng-include ng-controller="HeaderCtrl" src="'partials/header_default'"></ng-include>
+<ng-include ng-controller="HeaderCtrl" src="'partials/header_default.html'"></ng-include>
 
 <div id="tour-stop-detail-container" class="container">
   <div class="row">
@@ -23,7 +23,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="section-heading-container">
-            <h3 class="heading">Summary</h1>
+            <h3 class="heading">Preview</h1>
             <hr class="narrow-top">
           </div>
           <div class="section-content-container">
@@ -88,15 +88,52 @@
         <h3 class="stop-detail-heading">Details</h6>
         <hr class="narrow-top">
       </div>
-
+      
+      <!--
       <div class="stop-detail-group">
         <h6 class="stop-detail-heading inline">Stop Number</h6>
         <p class="stop-detail inline">{{stop.stopNumber}}</p>
       </div>
+      -->
 
       <div class="stop-detail-group">
         <h6 class="stop-detail-heading inline">Date</h6>
-        <p class="stop-detail inline">{{stop.stopDateFormatted}}</p>
+        <p class="stop-detail inline">{{stop.stopDateFormatted}} </p>
+      </div>
+
+      <div class="stop-detail-group">
+        <h6 class="stop-detail-heading inline">Time</h6>
+        <p class="stop-detail inline">{{stop.startsAtFormatted}} - {{stop.endsAtFormatted}}</p>
+      </div>
+
+      <div class="stop-detail-group">
+        <h6 class="stop-detail-heading inline">
+          <ng-pluralize count="stop.hosts.length" when="{ '1': 'Host', 'other': 'Hosts' }"></ng-pluralize>
+        </h6>
+        <p class="stop-detail inline">
+          <ng-pluralize count="stop.hosts.length" offset="2" when="{
+            '0': 'TBD',
+            '1': '{{stop.hosts[0].name | fullName}}',
+            '2': '{{stop.hosts[0].name | fullName}} and {{stop.hosts[1].name | fullName}}',
+            'two': '{{stop.hosts[0].name | fullName}}, {{stop.hosts[1].name | fullName}} and one other',
+             'other': '{{stop.hosts[0].name | fullName}}, {{stop.hosts[1].name | fullName}} and {} others'}"
+           ></ng-pluralize>
+        </p>
+      </div>
+
+      <div class="stop-detail-group">
+        <h6 class="stop-detail-heading inline">
+          <ng-pluralize count="stop.guests.length" when="{ '1': 'Guest', 'other': 'Guests' }"></ng-pluralize>
+        </h6>
+        <p class="stop-detail inline">
+          <ng-pluralize count="stop.guests.length" offset="2" when="{
+            '0': 'TBD',
+            '1': '{{stop.guests[0].name | fullName}}',
+            '2': '{{stop.guests[0].name | fullName}} and {{stop.guests[1].name | fullName}}',
+            'two': '{{stop.guests[0].name | fullName}}, {{stop.guests[1].name | fullName}} and one other',
+             'other': '{{stop.guests[0].name | fullName}}, {{stop.guests[1].name | fullName}} and {} others'}"
+           ></ng-pluralize>
+        </p>
       </div>
 
       <div class="stop-detail-group" ng-if="stop.site">

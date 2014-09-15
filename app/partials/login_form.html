@@ -1,0 +1,43 @@
+<form method="post" action="{{auth.globalRegActionUrl}}" novalidate="" id="login-form" name="lf">
+  <div class="form-group">
+    <label for="username">ESPN Member Name or Email</label>
+    <input type="text" name="username" id="username" class="form-control" ng-model="credentials.username" required autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+    <div class="help-block" ng-show="lf.username.$dirty && lf.username.$invalid">
+      <span class="text-danger" ng-show="lf.username.$error.required">Your Member name or email address are required.</span>
+    </div>
+    <div class="help-block" ng-if="failed && lf.$pristine">
+      <span class="text-danger">{{message}}</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" class="form-control" ng-model="credentials.password" required autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+    <div class="help-block" ng-show="lf.password.$dirty && lf.password.$invalid">
+      <span class="text-danger" ng-show="lf.password.$error.required">Your password is required.</span>
+    </div>
+  </div>
+  <div class="form-group auth-help">
+    <div class="hidden-xs row text-center">
+      <div class="col-sm-6">
+        <p><a href="" tabindex="-1" class="btn-link btn-link-nhh no-decoration cbOverlay" tref="{{auth.globalReg.desktop.register}}" data-reg-formid="{{auth.globalReg.registrationFormId}}" data-language="en" data-affiliate-name="{{auth.globalReg.aff_code}}">Create an Account</a></p>
+      </div>
+      <div class="col-sm-6">
+        <p><a href="" tabindex="-1" class="btn-link btn-link-nhh no-decoration cbOverlay" tref="{{auth.globalReg.desktop.recover}}" data-reg-formid="{{auth.globalReg.registrationFormId}}" data-language="en" data-affiliate-name="{{auth.globalReg.aff_code}}">Recover Your Password</a></p>
+      </div>
+    </div>
+    <div class="visible-xs row text-center">
+      <div class="col-xs-6">
+        <a ng-href="{{auth.globalReg.mobile.register}}" tabindex="-1" class="btn-link btn-link-nhh no-decoration" target="_blank">Create an Account</a>
+      </div>
+      <div class="col-xs-6">
+        <a ng-href="{{auth.globalReg.mobile.recover}}" tabindex="-1" class="btn-link btn-link-nhh no-decoration" target="_blank">Recover Your Password</a>
+      </div>
+    </div>
+  </div>
+  <div class="form-group hide">
+    <input type="hidden" name="{{name}}" value="{{value}}" ng-repeat="(name, value) in auth.globalReg">
+  </div>
+  <div class="form-group main-controls text-center">
+    <button type="submit" class="btn btn-nhh btn-lg submit" ng-disabled="lf.$invalid">Sign In</button>
+  </div>
+</form>

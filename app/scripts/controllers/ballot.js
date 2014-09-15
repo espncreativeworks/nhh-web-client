@@ -8,7 +8,9 @@
  * Controller of the nhhApp
  */
 angular.module('nhhApp')
-  .controller('BallotCtrl', ['$scope', '$location', 'Page', 'Athletes', 'Votes', '$moment', function ($scope, $location, Page, Athletes, Votes, $moment) {
+  .controller('BallotCtrl', ['$scope', '$location', 'Page', 'Athletes', 'Votes', 'fullNameFilter', '$moment', function ($scope, $location, Page, Athletes, Votes, fullName, $moment) {
+
+    var title = 'Ballot';
 
     Votes.last().then(function(vote){
       var now = $moment();
@@ -17,22 +19,41 @@ angular.module('nhhApp')
       $scope.disabled = true;
     });
 
-    Page.meta.set('title', 'Cast Your Vote!');
+    Page.meta.set('title', title);
     Page.body.set('class', 'info ballot');
 
     Athletes.active().then(function (_athletes){
       $scope.athletes = _athletes;
-      var desc = 'And the nominees are: '
+      var description = 'Current Nissan Heisman House Ballot: '
         , keywords = ''
-        , comma = '';
+        , comma = ''
+        , pipe = '';
 
       angular.forEach(_athletes, function (athlete){
-        desc += (comma + athlete.name.first + ' ' + athlete.name.last);
-        keywords += (comma + athlete.name.first.toLowerCase() + ' ' + athlete.name.last.toLowerCase() + ' heisman');
+        description += (pipe + fullName(athlete.name) + ', ' + athlete.position.abbreviation + ', ' + athlete.school.name);
+        keywords += (comma + fullName(athlete.name).toLowerCase() + ' heisman');
         comma = ', ';
+        pipe = ' | '
       });
 
-      Page.meta.set('description', desc);
+      var twitterMeta = {
+        'twitter:title': title,
+        'twitter:description': description
+      };
+
+      var facebookMeta = {
+        'og:title': title,
+        'og:description': description
+      };
+
+      twitterMeta = angular.extend({}, Page.meta.get('twitter'), twitterMeta);
+      facebookMeta = angular.extend({}, Page.meta.get('facebook'), facebookMeta);
+      Page.meta.set('description', description);
+      Page.meta.set('keywords', keywords);
+      Page.meta.set('twitter', twitterMeta);
+      Page.meta.set('facebook', facebookMeta);
+
+      Page.meta.set('description', description);
       Page.meta.set('keywords', keywords);
     });
 

@@ -10,8 +10,8 @@
 angular.module('nhhApp')
   .factory('Videos', ['$q', '$http', function ($q, $http) {
 
-    //var baseUrl = 'http://0.0.0.0:9001/api/videos/';
-    var baseUrl = './api/videos/';
+    var baseUrl = 'http://0.0.0.0:9001/api/videos/';
+    //var baseUrl = './api/videos/';
 
     // Public API here
     return {
