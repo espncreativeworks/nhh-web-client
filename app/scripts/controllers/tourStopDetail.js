@@ -8,7 +8,7 @@
  * Controller of the nhhApp
  */
 angular.module('nhhApp')
-  .controller('TourStopDetailCtrl', ['$scope', 'Page', 'TourStops', '$sce', '$moment', '$routeParams', function ($scope,  Page, TourStops, $sce, $moment, $routeParams) {
+  .controller('TourStopDetailCtrl', ['$scope', 'Page', 'TourStops', '$sce', '$moment', '$routeParams', 'fullNameFilter', function ($scope,  Page, TourStops, $sce, $moment, $routeParams, fullName) {
     var now = $moment();
     TourStops.get($routeParams.id).then(function (stop){
       var title = stop.pageTitle + ' | Nissan Heisman House Tour';
@@ -26,16 +26,22 @@ angular.module('nhhApp')
       $scope.stop.stopDateFromNow = $scope.stop.stopDateMoment.from(now);
       $scope.stop.stopDateCalendar = $scope.stop.stopDateMoment.calendar(now);
 
-      $scope.stop.startsAtMoment = $moment.tz(stop.startsAt, stop.timezone.name);
+      $scope.stop.startsAtMoment = $moment.tz(stop.startsAt, 'Europe/London').tz(stop.timezone.name);
       $scope.stop.startsAtFormatted = $scope.stop.startsAtMoment.format('h:mm a');
-      $scope.stop.endsAtMoment = $moment.tz(stop.endsAt, stop.timezone.name);
+      $scope.stop.endsAtMoment = $moment.tz(stop.endsAt, 'Europe/London').tz(stop.timezone.name);
       $scope.stop.endsAtFormatted = $scope.stop.endsAtMoment.format('h:mm a [(]z[)]');
 
-      $scope.stop.stopUpdatedAtMoment = $moment.tz($moment(stop.updatedAt), 'America/New_York');
+      $scope.stop.stopUpdatedAtMoment = $moment.tz(stop.updatedAt, 'Europe/London').tz('America/New_York');
       $scope.stop.stopUpdatedAtFromNow = $scope.stop.stopUpdatedAtMoment.from(now);
       $scope.stop.siteHtml = $sce.trustAsHtml(stop.site);
       $scope.stop.summaryHtml = $sce.trustAsHtml(stop.summary);
       $scope.stop.recapHtml = $sce.trustAsHtml(stop.recap);
+
+      $scope.stop.firstHostName = stop.hosts[0] ? fullName(stop.hosts[0].name) : '';
+      $scope.stop.secondHostName = stop.hosts[1] ? fullName(stop.hosts[1].name) : '';
+
+      $scope.stop.firstGuestName = stop.guests[0] ? fullName(stop.guests[0].name) : '';
+      $scope.stop.secondGuestName = stop.guests[1] ? fullName(stop.guests[1].name) : '';
 
       angular.forEach($scope.stop.gallery, function (photo){
         photo.trustedUrl = $sce.trustAsResourceUrl(photo.secure_url);

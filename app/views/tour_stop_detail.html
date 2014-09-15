@@ -88,7 +88,7 @@
         <h3 class="stop-detail-heading">Details</h6>
         <hr class="narrow-top">
       </div>
-      
+
       <!--
       <div class="stop-detail-group">
         <h6 class="stop-detail-heading inline">Stop Number</h6>
@@ -113,10 +113,10 @@
         <p class="stop-detail inline">
           <ng-pluralize count="stop.hosts.length" offset="2" when="{
             '0': 'TBD',
-            '1': '{{stop.hosts[0].name | fullName}}',
-            '2': '{{stop.hosts[0].name | fullName}} and {{stop.hosts[1].name | fullName}}',
-            'two': '{{stop.hosts[0].name | fullName}}, {{stop.hosts[1].name | fullName}} and one other',
-             'other': '{{stop.hosts[0].name | fullName}}, {{stop.hosts[1].name | fullName}} and {} others'}"
+            '1': '{{stop.firstHostName}}',
+            '2': '{{stop.firstHostName}} and {{stop.secondHostName}}',
+            'two': '{{stop.firstHostName}}, {{stop.secondHostName}} and one other',
+             'other': '{{stop.firstHostName}}, {{stop.secondHostName}} and {} others'}"
            ></ng-pluralize>
         </p>
       </div>
@@ -128,10 +128,10 @@
         <p class="stop-detail inline">
           <ng-pluralize count="stop.guests.length" offset="2" when="{
             '0': 'TBD',
-            '1': '{{stop.guests[0].name | fullName}}',
-            '2': '{{stop.guests[0].name | fullName}} and {{stop.guests[1].name | fullName}}',
-            'two': '{{stop.guests[0].name | fullName}}, {{stop.guests[1].name | fullName}} and one other',
-             'other': '{{stop.guests[0].name | fullName}}, {{stop.guests[1].name | fullName}} and {} others'}"
+            '1': '{{stop.firstGuestName}}',
+            '2': '{{stop.firstGuestName}} and {{stop.secondGuestName}}',
+            'two': '{{stop.firstGuestName}}, {{stop.secondGuestName}} and one other',
+             'other': '{{stop.firstGuestName}}, {{stop.secondGuestName}} and {} others'}"
            ></ng-pluralize>
         </p>
       </div>
