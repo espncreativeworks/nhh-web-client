@@ -19,8 +19,8 @@ angular.module('nhhApp')
       all: function () {
         var deferred = $q.defer();
 
-        $http.get(baseUrl + 'index.json')
-        //$http.get(baseUrl)
+        //$http.get(baseUrl + 'index.json')
+        $http.get(baseUrl)
           .success(function (lists){
             deferred.resolve(lists);
           }).error(function (err){
@@ -32,8 +32,8 @@ angular.module('nhhApp')
       subscribe: function (id) {
         var deferred = $q.defer();
         var params = { id: id };
-        $http.get(baseUrl + 'subscribe.json', params)
-        //$http.get(baseUrl + 'subscribe', params)
+        //$http.get(baseUrl + 'subscribe.json', params)
+        $http.get(baseUrl + 'subscribe', params)
           .success(function (result){
             deferred.resolve(result);
           }).error(function (err){

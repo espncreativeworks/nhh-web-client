@@ -10,7 +10,7 @@ angular.module('nhhApp')
   .directive('showcaseCarousel', ['underscore', function (underscore) {
     var _ = underscore;
     return {
-      templateUrl: 'partials/showcase_carousel.html',
+      templateUrl: 'partials/showcase_carousel',
       restrict: 'E',
       scope: true,
       link: function postLink(scope, element, attrs) {

@@ -35,10 +35,10 @@ angular.module('nhhApp')
 
     // Public API here
     return {
-      'status': function () {
+      status: function () {
         var deferred = $q.defer();
 
-        $http.get(baseUrl + 'status.json')
+        $http.get(baseUrl + 'status')
           .success(function (status){
             deferred.resolve(status);
           }).error(function (err){
@@ -50,7 +50,7 @@ angular.module('nhhApp')
       validateLoginKey: function (key) {
         var deferred = $q.defer();
 
-        $http.get(baseUrl + 'validateLoginKey.json', { cache: false })
+        $http.get(baseUrl + 'validateLoginKey', { cache: false })
           .success(function (result){
             deferred.resolve(result);
           }).error(function (err){

@@ -14,12 +14,12 @@ angular.module('nhhApp')
     return {
       create: function (data) {
         var deferred = $q.defer()
-          , baseUrl = 'http://0.0.0.0:9001/api/votes'
-          //, baseUrl = './api/votes/'
+          //, baseUrl = 'http://0.0.0.0:9001/api/votes'
+          , baseUrl = './api/votes/'
           , _params = angular.extend({ '_method': 'POST' }, data);
 
-        //$http.get(baseUrl, { params: _params })
-        $http.post(baseUrl, data)
+        $http.get(baseUrl, { params: _params })
+        //$http.post(baseUrl, data)
           .success(function (vote){
             nhhLocalStorage.set('lastVoted', {
               ts: Date.now(),

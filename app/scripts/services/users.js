@@ -12,15 +12,15 @@ angular.module('nhhApp')
     // Service logic
     // ...
 
-    var baseUrl = './api/user/';
+    //var baseUrl = './api/user/';
 
     // Public API here
     return {
       get: function () {
         var deferred = $q.defer();
 
-        $http.get(baseUrl + 'index.json', { cache: false })
-        //$http.get(baseUrl, { cache: false })
+        //$http.get(baseUrl + 'index.json', { cache: false })
+        $http.get(baseUrl, { cache: false })
           .success(function (user){
             deferred.resolve(user);
           }).error(function (err){

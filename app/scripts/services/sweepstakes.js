@@ -17,8 +17,8 @@ angular.module('nhhApp')
       enter: function (){
         var deferred = $q.defer();
 
-        //$http.post(baseUrl + 'enter')
-        $http.post(baseUrl + 'enter.json')
+        $http.post(baseUrl + 'enter')
+        //$http.post(baseUrl + 'enter.json')
           .success(function (result){
             // localStorageService.set('lastEntry', Date.now());
             deferred.resolve(result);
@@ -32,8 +32,8 @@ angular.module('nhhApp')
       status: function () {
         var deferred = $q.defer();
 
-        //$http.get(baseUrl + 'status')
-        $http.get(baseUrl + 'status.json')
+        $http.get(baseUrl + 'status')
+        //$http.get(baseUrl + 'status.json')
           .success(function (status){
             // if (status.lastEntry){
             //   localStorageService.set('lastEntry', status.lastEntry);

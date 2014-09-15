@@ -30,47 +30,47 @@ angular
   .config(['$routeProvider', '$locationProvider', '$httpProvider', '$sceDelegateProvider', '$sceProvider', 'localStorageServiceProvider', function ($routeProvider, $locationProvider, $httpProvider, $sceDelegateProvider, $sceProvider, localStorageServiceProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/home.html',
+        templateUrl: 'views/home',
         controller: 'HomeCtrl'
       })
       .when('/ballot', {
-        templateUrl: 'views/ballot.html',
+        templateUrl: 'views/ballot',
         controller: 'BallotCtrl'
       })
       .when('/thanks', {
-        templateUrl: 'views/thanks.html',
+        templateUrl: 'views/thanks',
         controller: 'ThanksCtrl'
       })
       .when('/leaderboard', {
-        templateUrl: 'views/leaderboard.html',
+        templateUrl: 'views/leaderboard',
         controller: 'LeaderboardCtrl'
       })
       .when('/rules', {
-        templateUrl: 'views/rules.html',
+        templateUrl: 'views/rules',
         controller: 'RulesCtrl'
       })
       .when('/videos/:id', {
-        templateUrl: 'views/video.html',
+        templateUrl: 'views/video',
         controller: 'VideoCtrl'
       })
       .when('/tour', {
-        templateUrl: 'views/tour_stop_list.html',
+        templateUrl: 'views/tour_stop_list',
         controller: 'TourStopListCtrl'
       })
       .when('/tour-stops/:id', {
-        templateUrl: 'views/tour_stop_detail.html',
+        templateUrl: 'views/tour_stop_detail',
         controller: 'TourStopDetailCtrl'
       })
       .when('/tour-stops/:stopId/photos/:photoId', {
-        templateUrl: 'views/tour_stop_image_detail.html',
+        templateUrl: 'views/tour_stop_image_detail',
         controller: 'TourStopImageDetailCtrl'
       })
       .when('/tour-stops/:stopId/videos/:videoId', {
-        templateUrl: 'views/tour_stop_video_detail.html',
+        templateUrl: 'views/tour_stop_video_detail',
         controller: 'TourStopVideoDetailCtrl'
       })
       .when('/confirm', {
-        templateUrl: 'views/confirm.html',
+        templateUrl: 'views/confirm',
         controller: 'ConfirmCtrl',
         resolve: {
           user: ['$q', 'Auth', 'Users', function ($q, Auth, Users){
@@ -99,7 +99,7 @@ angular
         }
       })
       .when('/entered', {
-        templateUrl: 'views/entered.html',
+        templateUrl: 'views/entered',
         controller: 'EnteredCtrl',
         resolve: {
           user: ['$q', 'Auth', 'Users', function ($q, Auth, Users){
@@ -128,19 +128,19 @@ angular
         }
       })
       .when('/login', {
-        templateUrl: 'views/login.html',
+        templateUrl: 'views/login',
         controller: 'LoginCtrl'
       })
       .when('/share-vote/:athleteId', {
-        templateUrl: 'views/share_vote.html',
+        templateUrl: 'views/share_vote',
         controller: 'ShareVoteCtrl'
       })
       .when('/share-entry/:accountId', {
-        templateUrl: 'views/share_entry.html',
+        templateUrl: 'views/share_entry',
         controller: 'ShareEntryCtrl'
       })
       .when('/error', {
-        templateUrl: 'views/error.html',
+        templateUrl: 'views/error',
         controller: 'ErrorCtrl'
       })
       .otherwise({
@@ -150,8 +150,8 @@ angular
     $locationProvider.html5Mode(false);
     $locationProvider.hashPrefix('!');
 
-    $httpProvider.defaults.useXDomain = true;
-    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+    //$httpProvider.defaults.useXDomain = true;
+    //delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
     $sceDelegateProvider.resourceUrlWhitelist([
       'self', // Allow same origin resource loads
