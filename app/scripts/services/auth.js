@@ -30,7 +30,7 @@ angular.module('nhhApp')
         logout: 'http://m.espn.go.com/wireless/login?logout'
       }
     };
-    var _globalRegActionUrl = $sce.trustAsResourceUrl('https://r.espn.go.com/espn/members/login');
+    var _globalRegActionUrl = $sce.trustAsResourceUrl('https://r.espn.go.com/members/login');
     var baseUrl = './api/auth/';
 
     // Public API here
