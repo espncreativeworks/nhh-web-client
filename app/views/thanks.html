@@ -22,8 +22,14 @@
             <div class="enter-controls text-center" ng-if="eligibility">
               <a href="#!/confirm" class="btn btn-nhh hidden-xs" title="Enter Now!" ng-if="auth.loggedIn">Enter Now</a>
               <a href="#!/confirm" class="btn btn-nhh btn-block visible-xs" title="Enter Now!" ng-if="auth.loggedIn">Enter Now</a>
+
+              <a ng-href="#!/login?to={{auth.globalReg.appRedirectPath}}" class="btn btn-nhh hidden-xs" title="Login to Enter!" ng-if="!auth.loggedIn">Login to Enter</a>
+              <a ng-href="#!/login?to={{auth.globalReg.appRedirectPath}}" class="btn btn-nhh btn-block visible-xs" title="Login to Enter!" ng-if="!auth.loggedIn">Login to Enter</a>
+
+              <!--
               <a href="javascript:void(0);" class="btn btn-nhh hidden-xs cbOverlay" title="Login in to Enter" ng-if="!auth.loggedIn" data-language="en" data-affiliatename="espn_contests" data-regformid="espn_contests" tref="/members/v3_1/login" data-appRedirect="{{auth.globalReg.appRedirect}}">Login to Enter</a>
               <a href="javascript:void(0);" class="btn btn-nhh btn-block visible-xs cbOverlay" title="Login in to Enter" ng-if="!auth.loggedIn" data-language="en" data-affiliatename="espn_contests" data-regformid="espn_contests" tref="/members/v3_1/login" data-appRedirect="{{auth.globalReg.appRedirect}}">Login to Enter</a>
+              -->
             </div>
           </div>
         </div>

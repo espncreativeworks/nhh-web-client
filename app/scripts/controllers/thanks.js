@@ -37,8 +37,11 @@ angular.module('nhhApp')
       $scope.tweet.url = tweetUrlData.url;
     });
 
+    var _appRedirectPath = '/confirm' // use for inline login
+      , _appRedirectUrl = $location.protocol() + '://' + $location.host() + window.location.pathname + '#!' + _appRedirectPath;
+
     $scope.auth = {};
-    $scope.auth.globalReg = Auth.globalReg;
+    $scope.auth.globalReg = angular.extend({}, Auth.globalReg, { appRedirect: _appRedirectUrl, appRedirectPath: encodeURIComponent(_appRedirectPath) });
     Auth.status().then(function (status){
       $scope.auth.loggedIn = status.loggedIn;
     }, function (){
