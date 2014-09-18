@@ -49,13 +49,30 @@ angular.module('nhhApp')
       $scope.stops = stops;
       $scope.overview = description;
       angular.forEach($scope.stops, function (stop){
-        // server TZ is UTC; force date to be displayed in local TZ equivalent
         var viewMoreBtn = $('<a>', { 'class': 'btn-link btn-link-nhh hidden-xs no-decoration', 'href': '#!/tour-stops/' + stop.slug, 'title': 'View More' }).html('View More ');
         var iconHtml = $('<i>', { 'class': 'fa fa-angle-double-right' });
         viewMoreBtn.append(iconHtml);
         var _summary = $(stop.summary).append(' ').append(viewMoreBtn);
-        stop.stopDateMoment = $moment.tz($moment(stop.stopDate).endOf('day'), 'Europe/London');
-        stop.stopDate = $moment.tz($moment(stop.stopDate).endOf('day'), 'Europe/London').format('MMM D, YYYY');
+        var _stopDate = $moment(stop.stopDate).endOf('day')
+          , _stopDateBegin = $moment(stop.beginsAt)
+          , _stopDateYear = _stopDate.year().toString()
+          , _stopDateMonth = (_stopDate.month() + 1) < 10 ? '0' + (_stopDate.month() + 1).toString() : (_stopDate.month() + 1).toString()
+          , _stopDateDay = _stopDate.date() < 10 ? '0' + _stopDate.date().toString() : _stopDate.date().toString()
+          , _stopDateBeginHours = _stopDateBegin.hours() < 10 ? '0' + _stopDateBegin.hours().toString() : _stopDateBegin.hours().toString()
+          , _stopDateBeginMinutes = _stopDateBegin.minutes() < 10 ? '0' + _stopDateBegin.minutes().toString() : _stopDateBegin.minutes().toString()
+          , _stopDateBeginSeconds = _stopDateBegin.seconds() < 10 ? '0' + _stopDateBegin.seconds().toString() : _stopDateBegin.seconds().toString()
+          , _offset = $moment.tz(stop.timezone.name).format('Z')
+          , _stopDateString = _stopDateYear + '-' + _stopDateMonth + '-' + _stopDateDay + 'T' + _stopDateBeginHours + ':' + _stopDateBeginMinutes + ':' + _stopDateBeginSeconds + _offset;
+
+        // server TZ is UTC; force date to be displayed in local TZ equivalent
+        console.group('Stop - ' + stop.title);
+        console.log('Date String: ' + _stopDateString);
+        console.groupEnd();
+
+        stop.stopDateMoment = $moment(_stopDateString).tz(stop.timezone.name);
+        stop.stopDateIso = stop.stopDateMoment.format('YYYY-MM-DD');
+        stop.stopDate = stop.stopDateMoment.format('MMM D, YYYY');
+
         stop.summaryHtml = $sce.trustAsHtml(_summary.html());
         stop.siteHtml = $sce.trustAsHtml(stop.site);
         stop.shouldShowSite = $(stop.site).text() && now.isBefore(stop.stopDateMoment);

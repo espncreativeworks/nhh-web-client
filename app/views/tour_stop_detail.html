@@ -1,10 +1,10 @@
 <ng-include ng-controller="HeaderCtrl" src="'partials/header_default.html'"></ng-include>
 
-<div id="tour-stop-detail-container" class="container">
+<div id="tour-stop-detail-container" class="container" itemscope itemtype="http://schema.org/Event">
   <div class="row">
     <div class="col-xs-12">
       <div class="page-heading-container text-right">
-        <h1 class="heading">{{stop.title}}</h1>
+        <h1 class="heading" itemprop="name">{{stop.title}}</h1>
         <hr class="narrow-top hidden-xs">
       </div>
     </div>
@@ -27,32 +27,7 @@
             <hr class="narrow-top">
           </div>
           <div class="section-content-container">
-            <p ng-bind-html="stop.summaryHtml"></p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="section-heading-container">
-            <h3 class="heading">Photos</h1>
-            <hr class="narrow-top">
-          </div>
-          <div class="section-content-container">
-            <div ng-if="stop.gallery.length" class="row gallery image-gallery">
-
-              <div class="col-xs-12 col-sm-6 col-md-3 gallery-item" ng-repeat="photo in stop.gallery">
-                <img src="" alt="" ng-src="{{photo.trustedUrl}}" class="img-responsive gallery-thumbnail">
-                <a class="btn btn-view-detail fa-stack fa-stack-large center-xy gallery-btn" ng-href="#!/tour-stops/{{stop.slug}}/photos/{{photo.public_id}}">
-                  <i class="fa fa-stack-2x fa-square"></i>
-                  <i class="fa fa-circle-o-notch fa-spin"></i>
-                  <i class="fa fa-stack-1x fa-search-plus fa-inverse"></i>
-                </a>
-              </div>
-
-            </div>
-            <div ng-if="!stop.gallery.length">
-              <p>No photos yet.</p>
-            </div>
+            <p ng-bind-html="stop.summaryHtml" itemprop="description"></p>
           </div>
         </div>
       </div>
@@ -81,6 +56,31 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="section-heading-container">
+            <h3 class="heading">Photos</h1>
+            <hr class="narrow-top">
+          </div>
+          <div class="section-content-container">
+            <div ng-if="stop.gallery.length" class="row gallery image-gallery">
+
+              <div class="col-xs-12 col-sm-6 col-md-3 gallery-item" ng-repeat="photo in stop.gallery">
+                <img src="" alt="" ng-src="{{photo.trustedUrl}}" class="img-responsive gallery-thumbnail">
+                <a class="btn btn-view-detail fa-stack fa-stack-large center-xy gallery-btn" ng-href="#!/tour-stops/{{stop.slug}}/photos/{{photo.public_id}}">
+                  <i class="fa fa-stack-2x fa-square"></i>
+                  <i class="fa fa-circle-o-notch fa-spin"></i>
+                  <i class="fa fa-stack-1x fa-search-plus fa-inverse"></i>
+                </a>
+              </div>
+
+            </div>
+            <div ng-if="!stop.gallery.length">
+              <p>No photos yet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="col-xs-12 col-md-3 stop-details-container">
 
@@ -98,12 +98,12 @@
 
       <div class="stop-detail-group">
         <h6 class="stop-detail-heading inline">Date</h6>
-        <p class="stop-detail inline">{{stop.stopDateFormatted}} </p>
+        <p class="stop-detail inline" itemprop="startDate" content="{{stop.stopDateIso}}">{{stop.stopDateFormatted}}</p>
       </div>
 
       <div class="stop-detail-group">
         <h6 class="stop-detail-heading inline">Time</h6>
-        <p class="stop-detail inline">{{stop.startsAtFormatted}} - {{stop.endsAtFormatted}}</p>
+        <p class="stop-detail inline">{{stop.beginsAtFormatted}} - {{stop.endsAtFormatted}}</p>
       </div>
 
       <div class="stop-detail-group">
@@ -115,8 +115,8 @@
             '0': 'TBD',
             '1': '{{stop.firstHostName}}',
             '2': '{{stop.firstHostName}} and {{stop.secondHostName}}',
-            'two': '{{stop.firstHostName}}, {{stop.secondHostName}} and one other',
-             'other': '{{stop.firstHostName}}, {{stop.secondHostName}} and {} others'}"
+            'one': '{{stop.firstHostName}}, {{stop.secondHostName}} and one other',
+            'other': '{{stop.firstHostName}}, {{stop.secondHostName}} and {} others'}"
            ></ng-pluralize>
         </p>
       </div>
@@ -130,8 +130,8 @@
             '0': 'TBD',
             '1': '{{stop.firstGuestName}}',
             '2': '{{stop.firstGuestName}} and {{stop.secondGuestName}}',
-            'two': '{{stop.firstGuestName}}, {{stop.secondGuestName}} and one other',
-             'other': '{{stop.firstGuestName}}, {{stop.secondGuestName}} and {} others'}"
+            'one': '{{stop.firstGuestName}}, {{stop.secondGuestName}} and one other',
+            'other': '{{stop.firstGuestName}}, {{stop.secondGuestName}} and {} others'}"
            ></ng-pluralize>
         </p>
       </div>
@@ -157,6 +157,72 @@
         <h6 class="stop-detail-heading inline">Last Updated</h6>
         <p class="stop-detail inline">{{stop.stopUpdatedAtFromNow}}</p>
       </div>
+
+      <!-- Hidden event microdata -->
+      <img src="" alt="{{stop.title}}" ng-src="{{stop.trustedHeroImageUrl}}" class="hide">
+
+      <div class="stop-detail-group hide" itemprop="location" itemscope itemtype="http://schema.org/Place">
+        <h6 class="stop-detail-heading">Address</h6>
+        <div class="stop-detail">
+          <span itemprop="name">{{stop.venue.name}}</span>
+          <a itemprop="url" href="{{stop.venueUrl}}">{{stop.venueUrl}}</a>
+          <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="addressLocality">{{stop.venue.suburb}}</span>, <span itemprop="addressRegion">{{stop.venue.state}}</span>
+            <span itemprop="postalCode">{{stop.venue.postcode}}</span>
+          </div>
+          <div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+            <span itemprop="latitude">{{stop.venue.geo[1]}}</span>
+            <span itemprop="longitude">{{stop.venue.geo[0]}}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop-detail-group hide" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        <h6 class="stop-detail-heading">Admission</h6>
+        <p class="stop-detail">
+          <span class="admission-price" itemprop="price" content="0.00">free</span>
+          <span itemprop="priceCurrency" content="USD"></span>
+        </p>
+      </div>
+
+      <div class="stop-detail-group hide">
+        <h6 class="stop-detail-heading">Organizer</h6>
+        <div class="stop-detail">
+          <div itemprop="organizer" itemscope itemtype="http://schema.org/Organization">
+            <a href="http://en.wikipedia.org/wiki/ESPN" itemprop="sameAs" target="_blank">
+              <span itemprop="name">ESPN</span>
+            </a>
+          </div>
+          <div itemprop="organizer" itemscope itemtype="http://schema.org/Organization">
+            <a href="http://en.wikipedia.org/wiki/Nissan" itemprop="sameAs" target="_blank">
+              <span itemprop="name">Nissan USA</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop-detail-group hide">
+        <h6 class="stop-detail-heading">Performers</h6>
+        <div class="stop-detail">
+          <div itemprop="performer" itemscope itemtype="http://schema.org/Organization" ng-repeat="school in stop.schools">
+            <a ng-href="{{school.url}}" itemprop="sameAs" target="_blank">
+              <span itemprop="name">{{school.name}}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop-detail-group hide">
+        <h6 class="stop-detail-heading">Attendees</h6>
+        <div class="stop-detail">
+          <div itemprop="attendee" itemscope itemtype="http://schema.org/Person" ng-repeat="attendee in stop.attendees">
+            <a ng-href="{{attendee.webpage}}" itemprop="sameAs" target="_blank">
+              <span itemprop="name">{{attendee.name | fullName}}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

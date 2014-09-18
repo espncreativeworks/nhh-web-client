@@ -19,7 +19,7 @@ angular.module('nhhApp')
       all: function () {
         var deferred = $q.defer();
 
-        $http.get(baseUrl + '/')
+        http.get(baseUrl + '/')
         //$http.get(baseUrl + '/index.json')
           .success(function (links){
             deferred.resolve(links);

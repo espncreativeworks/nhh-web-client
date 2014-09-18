@@ -11,7 +11,7 @@
       </div>
     </div>
   </div>
-  <div class="row stop-list-item" ng-repeat="stop in stops">
+  <div itemscope itemtype="http://schema.org/Event" class="row stop-list-item" ng-repeat="stop in stops">
     <div class="hidden-xs col-sm-6 col-md-3">
       <div class="stop-list-map-container">
         <google-map
@@ -24,9 +24,20 @@
     </div>
     <div class="col-xs-12 col-sm-6 col-md-9">
       <div class="stop-list-heading-container">
-        <h5 class="heading"><a ng-href="#!/tour-stops/{{stop.slug}}" class="btn-link btn-link-nhh no-decoration">Stop {{stop.stopNumber}} - {{stop.title}} - {{stop.venue.name}}</a></h5>
-        <div class="subheading date">{{stop.stopDate | date}}</div>
-        <div class="subheading location">{{stop.venue.suburb}}, {{stop.venue.state}}</div>
+        <h5 class="heading"><a itemprop="url" ng-href="#!/tour-stops/{{stop.slug}}" class="btn-link btn-link-nhh no-decoration">Stop {{stop.stopNumber}} - <span itemprop="name">{{stop.title}}</span> - {{stop.venue.name}}</a></h5>
+        <div class="subheading date" itemprop="startDate" content="{{stop.stopDateIso}}">{{stop.stopDate | date}}</div>
+        <div class="subheading location" itemprop="location" itemscope itemtype="http://schema.org/Place">
+          <span class="hide" itemprop="name">{{stop.venue.name}}</span>
+          <a class="hide" itemprop="url" href="{{stop.venueUrl}}">{{stop.venueUrl}}</a>
+          <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="addressLocality">{{stop.venue.suburb}}</span>, <span itemprop="addressRegion">{{stop.venue.state}}</span>
+            <span class="hide" itemprop="postalCode">{{stop.venue.postcode}}</span>
+          </div>
+          <div class="hide" itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+            <span itemprop="latitude">{{stop.venue.geo[1]}}</span>
+            <span itemprop="longitude">{{stop.venue.geo[0]}}</span>
+          </div>
+        </div>
       </div>
       <div class="stop-list-summary-container">
         <div class="alert alert-info alert-dismissible" role="alert" ng-if="stop.shouldShowSite">

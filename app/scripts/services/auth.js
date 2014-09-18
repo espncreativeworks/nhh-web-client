@@ -50,7 +50,7 @@ angular.module('nhhApp')
       validateLoginKey: function (key) {
         var deferred = $q.defer();
 
-        $http.get(baseUrl + 'validateLoginKey', { cache: false })
+        $http.get(baseUrl + 'validateLoginKey', { cache: false, params: { key: key } })
           .success(function (result){
             deferred.resolve(result);
           }).error(function (err){
