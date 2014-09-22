@@ -24,11 +24,12 @@
     </div>
     <div class="col-xs-12 col-sm-6 col-md-9">
       <div class="stop-list-heading-container">
-        <h5 class="heading"><a itemprop="url" ng-href="#!/tour-stops/{{stop.slug}}" class="btn-link btn-link-nhh no-decoration">Stop {{stop.stopNumber}} - <span itemprop="name">{{stop.title}}</span> - {{stop.venue.name}}</a></h5>
+        <h5 class="heading"><a ng-href="#!/tour-stops/{{stop.slug}}" class="btn-link btn-link-nhh no-decoration">Stop {{stop.stopNumber}} - <span itemprop="name">{{stop.title}}</span> - {{stop.venue.name}}</a></h5>
+        <a ng-href="{{stop.absUrl}}" class="hide" itemprop="url">{{stop.absUrl}}</a>
         <div class="subheading date" itemprop="startDate" content="{{stop.stopDateIso}}">{{stop.stopDate | date}}</div>
         <div class="subheading location" itemprop="location" itemscope itemtype="http://schema.org/Place">
           <span class="hide" itemprop="name">{{stop.venue.name}}</span>
-          <a class="hide" itemprop="url" href="{{stop.venueUrl}}">{{stop.venueUrl}}</a>
+          <a class="hide" itemprop="url" ng-href="{{stop.venueUrl}}">{{stop.venueUrl}}</a>
           <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
             <span itemprop="addressLocality">{{stop.venue.suburb}}</span>, <span itemprop="addressRegion">{{stop.venue.state}}</span>
             <span class="hide" itemprop="postalCode">{{stop.venue.postcode}}</span>

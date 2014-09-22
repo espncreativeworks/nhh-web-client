@@ -7,15 +7,15 @@
     <ul class="nhh-carousel" rn-carousel rn-carousel-control>
       <li class="nhh-slide" ng-repeat="slide in slides[category]">
         <div class="nhh-slide-item" ng-repeat="video in slide">
-          <a class="thumbnail-link" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name}} - {{video.description}}" ng-style="{ 'background-image': 'url(' + (video.thumbnail || video.thumbnailUrl) + ')' }">
-            <span class="text-hide">{{video.description}}</span>
+          <a class="thumbnail-link" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}" ng-style="{ 'background-image': 'url(' + (video.thumbnail || video.thumbnailUrl || video.meta.thumbnailUrl) + ')' }">
+            <span class="text-hide">{{video.description || video.meta.description}}</span>
           </a>
           <div class="backdrop">
-            <a class="btn btn-play fa-stack fa-stack-large center-xy" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name}} - {{video.description}}">
+            <a class="btn btn-play fa-stack fa-stack-large center-xy" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}">
               <i class="fa fa-stack-2x fa-circle"></i>
               <i class="fa fa-stack-1x fa-play fa-inverse"></i>
             </a>
-            <p class="caption">{{video.description}}</p>
+            <p class="caption">{{video.description || video.meta.description}}</p>
           </div>
         </div>
       </li>
@@ -32,10 +32,10 @@
     <ul class="nhh-carousel" rn-carousel rn-carousel-control>
       <li class="nhh-slide" ng-repeat="video in videos">
         <div class="nhh-slide-item">
-          <a class="thumbnail-link" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name}} - {{video.description}}" ng-style="{ 'background-image': 'url(' + (video.thumbnail || video.thumbnailUrl) + ')' }">
-            <span class="text-hide">{{video.description}}</span>
+          <a class="thumbnail-link" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}" ng-style="{ 'background-image': 'url(' + (video.thumbnail || video.thumbnailUrl || video.meta.thumbnailUrl) + ')' }">
+            <span class="text-hide">{{video.description || video.meta.description}}</span>
           </a>
-          <a class="btn btn-play fa-stack fa-stack-large center-xy" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name}} - {{video.description}}">
+          <a class="btn btn-play fa-stack fa-stack-large center-xy" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}">
             <i class="fa fa-stack-2x fa-circle"></i>
             <i class="fa fa-stack-1x fa-play fa-inverse"></i>
           </a>

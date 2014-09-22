@@ -21,6 +21,8 @@ angular.module('nhhApp')
       Page.body.set('class', 'info tour detail');
       //Page.body.set('backgroundImage', $sce.trustAsResourceUrl(stop.heroImage.secure_url));
 
+      // Perform conversion in CMS instead...
+      // server TZ is UTC; force date to be displayed in local TZ equivalent
       // var _stopDate = $moment(stop.stopDate).endOf('day')
       //   , _stopDateBegin = $moment(stop.beginsAt)
       //   , _stopDateEnd = $moment(stop.endsAt)
@@ -41,7 +43,7 @@ angular.module('nhhApp')
       // console.log('Begin String: ' + _stopDateBeginString);
       // console.log('End String: ' + _stopDateEndString);
       // console.groupEnd();
-      // server TZ is UTC; force date to be displayed in local TZ equivalent
+
       $scope.stop.stopDateMoment = $moment(stop.beginsAt).tz(stop.timezone.name);
       $scope.stop.stopDateIso = stop.stopDateMoment.format('YYYY-MM-DD');
       $scope.stop.stopDateFormatted = stop.stopDateMoment.format('MMM D, YYYY');

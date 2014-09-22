@@ -8,7 +8,7 @@
  * Controller of the nhhApp
  */
 angular.module('nhhApp')
-  .controller('TourStopListCtrl', ['$scope', 'Page', 'TourStops', '$sce', '$moment', 'jQuery', function ($scope,  Page, TourStops, $sce, $moment, $) {
+  .controller('TourStopListCtrl', ['$scope', '$location', 'Page', 'TourStops', '$sce', '$moment', 'jQuery', function ($scope, $location, Page, TourStops, $sce, $moment, $) {
     var now = $moment();
     var title = 'Heisman House Tour';
     var description = '' +
@@ -53,6 +53,9 @@ angular.module('nhhApp')
         var iconHtml = $('<i>', { 'class': 'fa fa-angle-double-right' });
         viewMoreBtn.append(iconHtml);
         var _summary = $(stop.summary).append(' ').append(viewMoreBtn);
+
+        // Perform conversion in CMS instead...
+        // server TZ is UTC; force date to be displayed in local TZ equivalent
         // var _stopDate = $moment(stop.stopDate).endOf('day')
         //   , _stopDateBegin = $moment(stop.beginsAt)
         //   , _stopDateYear = _stopDate.year().toString()
@@ -74,6 +77,7 @@ angular.module('nhhApp')
         stop.stopDate = stop.stopDateMoment.format('MMM D, YYYY');
 
         stop.summaryHtml = $sce.trustAsHtml(_summary.html());
+        stop.absUrl = $location.protocol() + '://' + $location.host() + window.location.pathname + '#!/tour-stops/' + stop.slug;
         stop.siteHtml = $sce.trustAsHtml(stop.site);
         stop.shouldShowSite = $(stop.site).text() && now.isBefore(stop.stopDateMoment);
         stop.map = {

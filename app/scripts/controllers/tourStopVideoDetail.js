@@ -20,7 +20,7 @@ angular.module('nhhApp')
       angular.forEach($scope.stop.videos, function (video){
         if (video.youtubeId === $routeParams.videoId || video._id === $routeParams.videoId){
           $scope.video = video;
-          Page.meta.set('title', 'Video ' + $routeParams.videoId + ' - ' + $scope.stop.pageTitle + ' | Nissan Heisman House Tour', { suffix: false });
+          Page.meta.set('title', 'Video ' + ($scope.video.name || $scope.video.title || $scope.video.meta.title) + ' - ' + $scope.stop.pageTitle + ' | Nissan Heisman House Tour', { suffix: false });
         }
       });
 
