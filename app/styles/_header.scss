@@ -156,11 +156,26 @@ $logo-heisman-large-height: 351px;
     .heading {
       font-size: 40px;
     }
+
     .subheading {
       text-align: center;
       font-size: 16px;
       padding-top: 20px;
       padding-bottom: 20px;
+    }
+
+    .subhead {
+      color: $nhh-gold;
+      font-size: 14px;
+      line-height: 18px;
+
+      &.cta {
+        font-weight: bold;
+      }
+    }
+
+    .heading-controls-container {
+      padding-top: 22px;
     }
   }
 
@@ -280,7 +295,7 @@ $logo-heisman-large-height: 351px;
 
   #home-header-container {
     .vote {
-      padding-top: ($header-components-height - $logo-heisman-large-height) / 2;
+      padding-top: 62px;
     }
 
     .hero-container {

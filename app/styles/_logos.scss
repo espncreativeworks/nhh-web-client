@@ -19,6 +19,11 @@ $logo-nissan-height: 86px;
 $logo-nissan-default: $image-path + 'logo_nissan.png';
 $logo-nissan-hires: $image-path + 'logo_nissan@2x.png';
 
+$logo-cfp-width: 156px;
+$logo-cfp-height: 176px;
+$logo-cfp-default: $image-path + 'logo_cfp.png';
+$logo-cfp-hires: $image-path + 'logo_cfp@2x.png';
+
 .logo-container {
   @include center-block();
   background-repeat: no-repeat;
@@ -76,4 +81,24 @@ $logo-nissan-hires: $image-path + 'logo_nissan@2x.png';
     }
   }
 
+  &.cfp {
+
+    &.default {
+      width: $logo-cfp-width;
+      height: $logo-cfp-height;
+      @include img-retina($logo-cfp-default, $logo-cfp-hires, $logo-cfp-width, $logo-cfp-height);
+    }
+
+  }
+
+}
+
+@media (min-width: $screen-lg-min){
+  .logo-container {
+    &.heisman {
+      &.large {
+        margin-top: 62px;
+      }
+    }
+  }
 }
