@@ -31,9 +31,15 @@ angular.module('nhhApp')
       });
       _slides = {};
       _.each(_categories, function (category){
+        var vids = _videos[category];
+
+        vids.sort(function(a,b){
+          return (new Date(a.updatedAt).valueOf()) - (new Date(b.updatedAt).valueOf());
+        });
+        
         _slides[category] = [];
-        var _first = _videos[category].slice(0,3);
-        var _rest = _videos[category].slice(3);
+        var _first = vids.slice(0,3);
+        var _rest = vids.slice(3);
         _slides[category].push(_first);
         for ( var i = 0, len = _rest.length; i < len; i += 6 ){
           _slides[category].push(_rest.slice(i, 6));
