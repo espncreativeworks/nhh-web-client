@@ -54,24 +54,6 @@ angular.module('nhhApp')
         viewMoreBtn.append(iconHtml);
         var _summary = $(stop.summary).append(' ').append(viewMoreBtn);
 
-        // Perform conversion in CMS instead...
-        // server TZ is UTC; force date to be displayed in local TZ equivalent
-        // var _stopDate = $moment(stop.stopDate).endOf('day')
-        //   , _stopDateBegin = $moment(stop.beginsAt)
-        //   , _stopDateYear = _stopDate.year().toString()
-        //   , _stopDateMonth = (_stopDate.month() + 1) < 10 ? '0' + (_stopDate.month() + 1).toString() : (_stopDate.month() + 1).toString()
-        //   , _stopDateDay = _stopDate.date() < 10 ? '0' + _stopDate.date().toString() : _stopDate.date().toString()
-        //   , _stopDateBeginHours = _stopDateBegin.hours() < 10 ? '0' + _stopDateBegin.hours().toString() : _stopDateBegin.hours().toString()
-        //   , _stopDateBeginMinutes = _stopDateBegin.minutes() < 10 ? '0' + _stopDateBegin.minutes().toString() : _stopDateBegin.minutes().toString()
-        //   , _stopDateBeginSeconds = _stopDateBegin.seconds() < 10 ? '0' + _stopDateBegin.seconds().toString() : _stopDateBegin.seconds().toString()
-        //   , _offset = $moment.tz(stop.timezone.name).format('Z')
-        //   , _stopDateString = _stopDateYear + '-' + _stopDateMonth + '-' + _stopDateDay + 'T' + _stopDateBeginHours + ':' + _stopDateBeginMinutes + ':' + _stopDateBeginSeconds + _offset;
-
-        // server TZ is UTC; force date to be displayed in local TZ equivalent
-        // console.group('Stop - ' + stop.title);
-        // console.log('Date String: ' + _stopDateString);
-        // console.groupEnd();
-
         stop.stopDateMoment = $moment(stop.beginsAt).tz(stop.timezone.name);
         stop.stopDateIso = stop.stopDateMoment.format('YYYY-MM-DD');
         stop.stopDate = stop.stopDateMoment.format('MMM D, YYYY');

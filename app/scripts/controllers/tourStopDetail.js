@@ -21,29 +21,6 @@ angular.module('nhhApp')
       Page.body.set('class', 'info tour detail');
       //Page.body.set('backgroundImage', $sce.trustAsResourceUrl(stop.heroImage.secure_url));
 
-      // Perform conversion in CMS instead...
-      // server TZ is UTC; force date to be displayed in local TZ equivalent
-      // var _stopDate = $moment(stop.stopDate).endOf('day')
-      //   , _stopDateBegin = $moment(stop.beginsAt)
-      //   , _stopDateEnd = $moment(stop.endsAt)
-      //   , _stopDateYear = _stopDate.year().toString()
-      //   , _stopDateMonth = (_stopDate.month() + 1) < 10 ? '0' + (_stopDate.month() + 1).toString() : (_stopDate.month() + 1).toString()
-      //   , _stopDateDay = _stopDate.date() < 10 ? '0' + _stopDate.date().toString() : _stopDate.date().toString()
-      //   , _stopDateBeginHours = _stopDateBegin.hours() < 10 ? '0' + _stopDateBegin.hours().toString() : _stopDateBegin.hours().toString()
-      //   , _stopDateBeginMinutes = _stopDateBegin.minutes() < 10 ? '0' + _stopDateBegin.minutes().toString() : _stopDateBegin.minutes().toString()
-      //   , _stopDateBeginSeconds = _stopDateBegin.seconds() < 10 ? '0' + _stopDateBegin.seconds().toString() : _stopDateBegin.seconds().toString()
-      //   , _stopDateEndHours = _stopDateEnd.hours() < 10 ? '0' + _stopDateEnd.hours().toString() : _stopDateEnd.hours().toString()
-      //   , _stopDateEndMinutes = _stopDateEnd.minutes() < 10 ? '0' + _stopDateEnd.minutes().toString() : _stopDateEnd.minutes().toString()
-      //   , _stopDateEndSeconds = _stopDateEnd.seconds() < 10 ? '0' + _stopDateEnd.seconds().toString() : _stopDateEnd.seconds().toString()
-      //   , _offset = $moment.tz(stop.timezone.name).format('Z')
-      //   , _stopDateBeginString = _stopDateYear + '-' + _stopDateMonth + '-' + _stopDateDay + 'T' + _stopDateBeginHours + ':' + _stopDateBeginMinutes + ':' + _stopDateBeginSeconds + _offset
-      //   , _stopDateEndString = _stopDateYear + '-' + _stopDateMonth + '-' + _stopDateDay + 'T' + _stopDateEndHours + ':' + _stopDateEndMinutes + ':' + _stopDateEndSeconds + _offset;
-      //
-      // console.group('Stop - ' + stop.title);
-      // console.log('Begin String: ' + _stopDateBeginString);
-      // console.log('End String: ' + _stopDateEndString);
-      // console.groupEnd();
-
       $scope.stop.stopDateMoment = $moment(stop.beginsAt).tz(stop.timezone.name);
       $scope.stop.stopDateIso = stop.stopDateMoment.format('YYYY-MM-DD');
       $scope.stop.stopDateFormatted = stop.stopDateMoment.format('MMM D, YYYY');
@@ -75,7 +52,6 @@ angular.module('nhhApp')
       });
 
       $scope.stop.attendees = _.union(stop.hosts, stop.guests);
-      console.log(_.union(stop.hosts, stop.guests));
 
       $scope.stop.trustedHeroImageUrl = $sce.trustAsResourceUrl(stop.heroImage.secure_url);
 
