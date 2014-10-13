@@ -45,15 +45,20 @@ angular.module('nhhApp')
       shorten: function (url){
         //var baseUrl = 'http://0.0.0.0:9001/api/links';
         var deferred = $q.defer()
-          , _params = { longUrl: url, '_method': 'POST' };
+          , _params;
 
-        $http.get(baseUrl + '/shorten', { params: _params })
-        //$http.post(baseUrl + '/shorten', { longUrl: url })
-          .success(function (shortenedUrlData){
-            deferred.resolve(shortenedUrlData);
-          }).error(function(err){
-            deferred.reject(err);
-          });
+        if (url !== 'http://promo.espn.go.com/espn/contests/nissan/heisman/2014/'){
+          _params = { longUrl: url, '_method': 'POST' };
+          $http.get(baseUrl + '/shorten', { params: _params })
+          //$http.post(baseUrl + '/shorten', { longUrl: url })
+            .success(function (shortenedUrlData){
+              deferred.resolve(shortenedUrlData);
+            }).error(function(err){
+              deferred.reject(err);
+            });
+        } else {
+          deferred.resolve({ url: url });
+        }
 
         return deferred.promise;
       }
