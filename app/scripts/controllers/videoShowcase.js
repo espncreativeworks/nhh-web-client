@@ -33,10 +33,14 @@ angular.module('nhhApp')
       _.each(_categories, function (category){
         var vids = _videos[category];
 
-        vids.sort(function(a,b){
-          return (new Date(a.updatedAt).valueOf()) - (new Date(b.updatedAt).valueOf());
-        });
-        
+        if (category === 'Heisman House Tour'){
+          vids.sort(function(a,b){
+            return (new Date(b.updatedAt).valueOf()) - (new Date(a.updatedAt).valueOf());
+          });
+        } else {
+          vids = _.shuffle(vids);
+        }
+
         _slides[category] = [];
         var _first = vids.slice(0,3);
         var _rest = vids.slice(3);
