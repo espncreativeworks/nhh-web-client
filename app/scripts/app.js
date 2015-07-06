@@ -37,6 +37,10 @@ angular
         templateUrl: 'views/ballot',
         controller: 'BallotCtrl'
       })
+      .when('/write-in', {
+        templateUrl: 'views/write_in',
+        controller: 'WriteInCtrl'
+      })
       .when('/thanks', {
         templateUrl: 'views/thanks',
         controller: 'ThanksCtrl'

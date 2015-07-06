@@ -1,0 +1,1673 @@
+{
+  "sports": [{
+    "name": "football",
+    "id": 20,
+    "uid": "s:20",
+    "leagues": [{
+      "name": "NCAA Football",
+      "abbreviation": "college-football",
+      "id": 23,
+      "uid": "s:20~l:23",
+      "groupId": 99,
+      "shortName": "NCAA Football",
+      "teams": [{
+        "id": 52,
+        "uid": "s:20~l:23~t:52",
+        "location": "Florida State",
+        "name": "Seminoles",
+        "nickname": "FSU",
+        "abbreviation": "FSU",
+        "color": "7f001b",
+        "logos": {
+          "full": {
+            "href": "http://a.espncdn.com/i/teamlogos/ncaa/500/52.png",
+            "width": 500,
+            "height": 500,
+            "dark": {
+              "href": "http://a.espncdn.com/i/teamlogos/ncaa/500-dark/52.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          "large": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/52.png&w=110&h=110",
+            "width": 110,
+            "height": 110,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/52.png&w=110&h=110",
+              "width": 110,
+              "height": 110
+            }
+          },
+          "medium": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/52.png&w=80&h=80",
+            "width": 80,
+            "height": 80,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/52.png&w=80&h=80",
+              "width": 80,
+              "height": 80
+            }
+          },
+          "small": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/52.png&w=50&h=50",
+            "width": 50,
+            "height": 50,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/52.png&w=50&h=50",
+              "width": 50,
+              "height": 50
+            }
+          },
+          "xsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/52.png&w=40&h=40",
+            "width": 40,
+            "height": 40,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/52.png&w=40&h=40",
+              "width": 40,
+              "height": 40
+            }
+          },
+          "xxsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/52.png&w=25&h=25",
+            "width": 25,
+            "height": 25,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/52.png&w=25&h=25",
+              "width": 25,
+              "height": 25
+            }
+          }
+        },
+        "record": {
+          "summary": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "overtimeLosses": 0,
+          "ties": 0,
+          "season": {
+            "year": 2015,
+            "type": 2,
+            "description": "regular",
+            "startDate": "2015-07-28T07:00:00Z",
+            "endDate": "2015-12-15T07:59:59Z"
+          }
+        },
+        "links": {
+          "api": {
+            "teams": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/52"
+            },
+            "news": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/52/news"
+            },
+            "notes": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/52/news/notes"
+            }
+          },
+          "web": {
+            "teams": {
+              "href": "http://espn.go.com/college-football/team/_/id/52/florida-state-seminoles?ex_cid=espnapi_internal"
+            },
+            "roster": {
+              "href": "http://espn.go.com/college-football/team/roster/_/id/52/florida-state-seminoles?ex_cid=espnapi_internal"
+            },
+            "schedule": {
+              "href": "http://espn.go.com/college-football/team/schedule/_/id/52/florida-state-seminoles?ex_cid=espnapi_internal"
+            }
+          },
+          "mobile": {
+            "teams": {
+              "href": "http://m.espn.go.com/ncf/clubhouse?teamId=52&ex_cid=espnapi_internal"
+            }
+          },
+          "app": {
+            "sportscenter": {
+              "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:23~t:52"
+            }
+          }
+        }
+      }, {
+        "id": 59,
+        "uid": "s:20~l:23~t:59",
+        "location": "Georgia Tech",
+        "name": "Yellow Jackets",
+        "nickname": "Georgia Tech",
+        "abbreviation": "GT",
+        "color": "001a38",
+        "logos": {
+          "full": {
+            "href": "http://a.espncdn.com/i/teamlogos/ncaa/500/59.png",
+            "width": 500,
+            "height": 500,
+            "dark": {
+              "href": "http://a.espncdn.com/i/teamlogos/ncaa/500-dark/59.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          "large": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/59.png&w=110&h=110",
+            "width": 110,
+            "height": 110,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/59.png&w=110&h=110",
+              "width": 110,
+              "height": 110
+            }
+          },
+          "medium": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/59.png&w=80&h=80",
+            "width": 80,
+            "height": 80,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/59.png&w=80&h=80",
+              "width": 80,
+              "height": 80
+            }
+          },
+          "small": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/59.png&w=50&h=50",
+            "width": 50,
+            "height": 50,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/59.png&w=50&h=50",
+              "width": 50,
+              "height": 50
+            }
+          },
+          "xsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/59.png&w=40&h=40",
+            "width": 40,
+            "height": 40,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/59.png&w=40&h=40",
+              "width": 40,
+              "height": 40
+            }
+          },
+          "xxsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/59.png&w=25&h=25",
+            "width": 25,
+            "height": 25,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/59.png&w=25&h=25",
+              "width": 25,
+              "height": 25
+            }
+          }
+        },
+        "record": {
+          "summary": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "overtimeLosses": 0,
+          "ties": 0,
+          "season": {
+            "year": 2015,
+            "type": 2,
+            "description": "regular",
+            "startDate": "2015-07-28T07:00:00Z",
+            "endDate": "2015-12-15T07:59:59Z"
+          }
+        },
+        "links": {
+          "api": {
+            "teams": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/59"
+            },
+            "news": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/59/news"
+            },
+            "notes": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/59/news/notes"
+            }
+          },
+          "web": {
+            "teams": {
+              "href": "http://espn.go.com/college-football/team/_/id/59/georgia-tech-yellow-jackets?ex_cid=espnapi_internal"
+            },
+            "roster": {
+              "href": "http://espn.go.com/college-football/team/roster/_/id/59/georgia-tech-yellow-jackets?ex_cid=espnapi_internal"
+            },
+            "schedule": {
+              "href": "http://espn.go.com/college-football/team/schedule/_/id/59/georgia-tech-yellow-jackets?ex_cid=espnapi_internal"
+            }
+          },
+          "mobile": {
+            "teams": {
+              "href": "http://m.espn.go.com/ncf/clubhouse?teamId=59&ex_cid=espnapi_internal"
+            }
+          },
+          "app": {
+            "sportscenter": {
+              "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:23~t:59"
+            }
+          }
+        }
+      }, {
+        "id": 97,
+        "uid": "s:20~l:23~t:97",
+        "location": "Louisville",
+        "name": "Cardinals",
+        "nickname": "Louisville",
+        "abbreviation": "LOU",
+        "color": "ad000a",
+        "logos": {
+          "full": {
+            "href": "http://a.espncdn.com/i/teamlogos/ncaa/500/97.png",
+            "width": 500,
+            "height": 500,
+            "dark": {
+              "href": "http://a.espncdn.com/i/teamlogos/ncaa/500-dark/97.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          "large": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/97.png&w=110&h=110",
+            "width": 110,
+            "height": 110,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/97.png&w=110&h=110",
+              "width": 110,
+              "height": 110
+            }
+          },
+          "medium": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/97.png&w=80&h=80",
+            "width": 80,
+            "height": 80,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/97.png&w=80&h=80",
+              "width": 80,
+              "height": 80
+            }
+          },
+          "small": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/97.png&w=50&h=50",
+            "width": 50,
+            "height": 50,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/97.png&w=50&h=50",
+              "width": 50,
+              "height": 50
+            }
+          },
+          "xsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/97.png&w=40&h=40",
+            "width": 40,
+            "height": 40,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/97.png&w=40&h=40",
+              "width": 40,
+              "height": 40
+            }
+          },
+          "xxsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/97.png&w=25&h=25",
+            "width": 25,
+            "height": 25,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/97.png&w=25&h=25",
+              "width": 25,
+              "height": 25
+            }
+          }
+        },
+        "record": {
+          "summary": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "overtimeLosses": 0,
+          "ties": 0,
+          "season": {
+            "year": 2015,
+            "type": 2,
+            "description": "regular",
+            "startDate": "2015-07-28T07:00:00Z",
+            "endDate": "2015-12-15T07:59:59Z"
+          }
+        },
+        "links": {
+          "api": {
+            "teams": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/97"
+            },
+            "news": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/97/news"
+            },
+            "notes": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/97/news/notes"
+            }
+          },
+          "web": {
+            "teams": {
+              "href": "http://espn.go.com/college-football/team/_/id/97/louisville-cardinals?ex_cid=espnapi_internal"
+            },
+            "roster": {
+              "href": "http://espn.go.com/college-football/team/roster/_/id/97/louisville-cardinals?ex_cid=espnapi_internal"
+            },
+            "schedule": {
+              "href": "http://espn.go.com/college-football/team/schedule/_/id/97/louisville-cardinals?ex_cid=espnapi_internal"
+            }
+          },
+          "mobile": {
+            "teams": {
+              "href": "http://m.espn.go.com/ncf/clubhouse?teamId=97&ex_cid=espnapi_internal"
+            }
+          },
+          "app": {
+            "sportscenter": {
+              "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:23~t:97"
+            }
+          }
+        }
+      }, {
+        "id": 103,
+        "uid": "s:20~l:23~t:103",
+        "location": "Boston College",
+        "name": "Eagles",
+        "nickname": "Boston College",
+        "abbreviation": "BC",
+        "color": "88001a",
+        "logos": {
+          "full": {
+            "href": "http://a.espncdn.com/i/teamlogos/ncaa/500/103.png",
+            "width": 500,
+            "height": 500,
+            "dark": {
+              "href": "http://a.espncdn.com/i/teamlogos/ncaa/500-dark/103.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          "large": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/103.png&w=110&h=110",
+            "width": 110,
+            "height": 110,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/103.png&w=110&h=110",
+              "width": 110,
+              "height": 110
+            }
+          },
+          "medium": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/103.png&w=80&h=80",
+            "width": 80,
+            "height": 80,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/103.png&w=80&h=80",
+              "width": 80,
+              "height": 80
+            }
+          },
+          "small": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/103.png&w=50&h=50",
+            "width": 50,
+            "height": 50,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/103.png&w=50&h=50",
+              "width": 50,
+              "height": 50
+            }
+          },
+          "xsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/103.png&w=40&h=40",
+            "width": 40,
+            "height": 40,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/103.png&w=40&h=40",
+              "width": 40,
+              "height": 40
+            }
+          },
+          "xxsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/103.png&w=25&h=25",
+            "width": 25,
+            "height": 25,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/103.png&w=25&h=25",
+              "width": 25,
+              "height": 25
+            }
+          }
+        },
+        "record": {
+          "summary": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "overtimeLosses": 0,
+          "ties": 0,
+          "season": {
+            "year": 2015,
+            "type": 2,
+            "description": "regular",
+            "startDate": "2015-07-28T07:00:00Z",
+            "endDate": "2015-12-15T07:59:59Z"
+          }
+        },
+        "links": {
+          "api": {
+            "teams": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/103"
+            },
+            "news": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/103/news"
+            },
+            "notes": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/103/news/notes"
+            }
+          },
+          "web": {
+            "teams": {
+              "href": "http://espn.go.com/college-football/team/_/id/103/boston-college-eagles?ex_cid=espnapi_internal"
+            },
+            "roster": {
+              "href": "http://espn.go.com/college-football/team/roster/_/id/103/boston-college-eagles?ex_cid=espnapi_internal"
+            },
+            "schedule": {
+              "href": "http://espn.go.com/college-football/team/schedule/_/id/103/boston-college-eagles?ex_cid=espnapi_internal"
+            }
+          },
+          "mobile": {
+            "teams": {
+              "href": "http://m.espn.go.com/ncf/clubhouse?teamId=103&ex_cid=espnapi_internal"
+            }
+          },
+          "app": {
+            "sportscenter": {
+              "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:23~t:103"
+            }
+          }
+        }
+      }, {
+        "id": 150,
+        "uid": "s:20~l:23~t:150",
+        "location": "Duke",
+        "name": "Blue Devils",
+        "nickname": "Duke",
+        "abbreviation": "DUKE",
+        "color": "004582",
+        "logos": {
+          "full": {
+            "href": "http://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
+            "width": 500,
+            "height": 500,
+            "dark": {
+              "href": "http://a.espncdn.com/i/teamlogos/ncaa/500-dark/150.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          "large": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/150.png&w=110&h=110",
+            "width": 110,
+            "height": 110,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/150.png&w=110&h=110",
+              "width": 110,
+              "height": 110
+            }
+          },
+          "medium": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/150.png&w=80&h=80",
+            "width": 80,
+            "height": 80,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/150.png&w=80&h=80",
+              "width": 80,
+              "height": 80
+            }
+          },
+          "small": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/150.png&w=50&h=50",
+            "width": 50,
+            "height": 50,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/150.png&w=50&h=50",
+              "width": 50,
+              "height": 50
+            }
+          },
+          "xsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/150.png&w=40&h=40",
+            "width": 40,
+            "height": 40,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/150.png&w=40&h=40",
+              "width": 40,
+              "height": 40
+            }
+          },
+          "xxsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/150.png&w=25&h=25",
+            "width": 25,
+            "height": 25,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/150.png&w=25&h=25",
+              "width": 25,
+              "height": 25
+            }
+          }
+        },
+        "record": {
+          "summary": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "overtimeLosses": 0,
+          "ties": 0,
+          "season": {
+            "year": 2015,
+            "type": 2,
+            "description": "regular",
+            "startDate": "2015-07-28T07:00:00Z",
+            "endDate": "2015-12-15T07:59:59Z"
+          }
+        },
+        "links": {
+          "api": {
+            "teams": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/150"
+            },
+            "news": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/150/news"
+            },
+            "notes": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/150/news/notes"
+            }
+          },
+          "web": {
+            "teams": {
+              "href": "http://espn.go.com/college-football/team/_/id/150/duke-blue-devils?ex_cid=espnapi_internal"
+            },
+            "roster": {
+              "href": "http://espn.go.com/college-football/team/roster/_/id/150/duke-blue-devils?ex_cid=espnapi_internal"
+            },
+            "schedule": {
+              "href": "http://espn.go.com/college-football/team/schedule/_/id/150/duke-blue-devils?ex_cid=espnapi_internal"
+            }
+          },
+          "mobile": {
+            "teams": {
+              "href": "http://m.espn.go.com/ncf/clubhouse?teamId=150&ex_cid=espnapi_internal"
+            }
+          },
+          "app": {
+            "sportscenter": {
+              "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:23~t:150"
+            }
+          }
+        }
+      }, {
+        "id": 152,
+        "uid": "s:20~l:23~t:152",
+        "location": "NC State",
+        "name": "Wolfpack",
+        "nickname": "NC State",
+        "abbreviation": "NCST",
+        "color": "d61a1a",
+        "logos": {
+          "full": {
+            "href": "http://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
+            "width": 500,
+            "height": 500,
+            "dark": {
+              "href": "http://a.espncdn.com/i/teamlogos/ncaa/500-dark/152.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          "large": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/152.png&w=110&h=110",
+            "width": 110,
+            "height": 110,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/152.png&w=110&h=110",
+              "width": 110,
+              "height": 110
+            }
+          },
+          "medium": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/152.png&w=80&h=80",
+            "width": 80,
+            "height": 80,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/152.png&w=80&h=80",
+              "width": 80,
+              "height": 80
+            }
+          },
+          "small": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/152.png&w=50&h=50",
+            "width": 50,
+            "height": 50,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/152.png&w=50&h=50",
+              "width": 50,
+              "height": 50
+            }
+          },
+          "xsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/152.png&w=40&h=40",
+            "width": 40,
+            "height": 40,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/152.png&w=40&h=40",
+              "width": 40,
+              "height": 40
+            }
+          },
+          "xxsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/152.png&w=25&h=25",
+            "width": 25,
+            "height": 25,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/152.png&w=25&h=25",
+              "width": 25,
+              "height": 25
+            }
+          }
+        },
+        "record": {
+          "summary": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "overtimeLosses": 0,
+          "ties": 0,
+          "season": {
+            "year": 2015,
+            "type": 2,
+            "description": "regular",
+            "startDate": "2015-07-28T07:00:00Z",
+            "endDate": "2015-12-15T07:59:59Z"
+          }
+        },
+        "links": {
+          "api": {
+            "teams": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/152"
+            },
+            "news": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/152/news"
+            },
+            "notes": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/152/news/notes"
+            }
+          },
+          "web": {
+            "teams": {
+              "href": "http://espn.go.com/college-football/team/_/id/152/nc-state-wolfpack?ex_cid=espnapi_internal"
+            },
+            "roster": {
+              "href": "http://espn.go.com/college-football/team/roster/_/id/152/nc-state-wolfpack?ex_cid=espnapi_internal"
+            },
+            "schedule": {
+              "href": "http://espn.go.com/college-football/team/schedule/_/id/152/nc-state-wolfpack?ex_cid=espnapi_internal"
+            }
+          },
+          "mobile": {
+            "teams": {
+              "href": "http://m.espn.go.com/ncf/clubhouse?teamId=152&ex_cid=espnapi_internal"
+            }
+          },
+          "app": {
+            "sportscenter": {
+              "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:23~t:152"
+            }
+          }
+        }
+      }, {
+        "id": 153,
+        "uid": "s:20~l:23~t:153",
+        "location": "North Carolina",
+        "name": "Tar Heels",
+        "nickname": "UNC",
+        "abbreviation": "UNC",
+        "color": "99bfe5",
+        "logos": {
+          "full": {
+            "href": "http://a.espncdn.com/i/teamlogos/ncaa/500/153.png",
+            "width": 500,
+            "height": 500,
+            "dark": {
+              "href": "http://a.espncdn.com/i/teamlogos/ncaa/500-dark/153.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          "large": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/153.png&w=110&h=110",
+            "width": 110,
+            "height": 110,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/153.png&w=110&h=110",
+              "width": 110,
+              "height": 110
+            }
+          },
+          "medium": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/153.png&w=80&h=80",
+            "width": 80,
+            "height": 80,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/153.png&w=80&h=80",
+              "width": 80,
+              "height": 80
+            }
+          },
+          "small": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/153.png&w=50&h=50",
+            "width": 50,
+            "height": 50,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/153.png&w=50&h=50",
+              "width": 50,
+              "height": 50
+            }
+          },
+          "xsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/153.png&w=40&h=40",
+            "width": 40,
+            "height": 40,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/153.png&w=40&h=40",
+              "width": 40,
+              "height": 40
+            }
+          },
+          "xxsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/153.png&w=25&h=25",
+            "width": 25,
+            "height": 25,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/153.png&w=25&h=25",
+              "width": 25,
+              "height": 25
+            }
+          }
+        },
+        "record": {
+          "summary": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "overtimeLosses": 0,
+          "ties": 0,
+          "season": {
+            "year": 2015,
+            "type": 2,
+            "description": "regular",
+            "startDate": "2015-07-28T07:00:00Z",
+            "endDate": "2015-12-15T07:59:59Z"
+          }
+        },
+        "links": {
+          "api": {
+            "teams": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/153"
+            },
+            "news": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/153/news"
+            },
+            "notes": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/153/news/notes"
+            }
+          },
+          "web": {
+            "teams": {
+              "href": "http://espn.go.com/college-football/team/_/id/153/north-carolina-tar-heels?ex_cid=espnapi_internal"
+            },
+            "roster": {
+              "href": "http://espn.go.com/college-football/team/roster/_/id/153/north-carolina-tar-heels?ex_cid=espnapi_internal"
+            },
+            "schedule": {
+              "href": "http://espn.go.com/college-football/team/schedule/_/id/153/north-carolina-tar-heels?ex_cid=espnapi_internal"
+            }
+          },
+          "mobile": {
+            "teams": {
+              "href": "http://m.espn.go.com/ncf/clubhouse?teamId=153&ex_cid=espnapi_internal"
+            }
+          },
+          "app": {
+            "sportscenter": {
+              "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:23~t:153"
+            }
+          }
+        }
+      }, {
+        "id": 154,
+        "uid": "s:20~l:23~t:154",
+        "location": "Wake Forest",
+        "name": "Demon Deacons",
+        "nickname": "Wake Forest",
+        "abbreviation": "WAKE",
+        "color": "000000",
+        "logos": {
+          "full": {
+            "href": "http://a.espncdn.com/i/teamlogos/ncaa/500/154.png",
+            "width": 500,
+            "height": 500,
+            "dark": {
+              "href": "http://a.espncdn.com/i/teamlogos/ncaa/500-dark/154.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          "large": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/154.png&w=110&h=110",
+            "width": 110,
+            "height": 110,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/154.png&w=110&h=110",
+              "width": 110,
+              "height": 110
+            }
+          },
+          "medium": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/154.png&w=80&h=80",
+            "width": 80,
+            "height": 80,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/154.png&w=80&h=80",
+              "width": 80,
+              "height": 80
+            }
+          },
+          "small": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/154.png&w=50&h=50",
+            "width": 50,
+            "height": 50,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/154.png&w=50&h=50",
+              "width": 50,
+              "height": 50
+            }
+          },
+          "xsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/154.png&w=40&h=40",
+            "width": 40,
+            "height": 40,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/154.png&w=40&h=40",
+              "width": 40,
+              "height": 40
+            }
+          },
+          "xxsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/154.png&w=25&h=25",
+            "width": 25,
+            "height": 25,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/154.png&w=25&h=25",
+              "width": 25,
+              "height": 25
+            }
+          }
+        },
+        "record": {
+          "summary": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "overtimeLosses": 0,
+          "ties": 0,
+          "season": {
+            "year": 2015,
+            "type": 2,
+            "description": "regular",
+            "startDate": "2015-07-28T07:00:00Z",
+            "endDate": "2015-12-15T07:59:59Z"
+          }
+        },
+        "links": {
+          "api": {
+            "teams": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/154"
+            },
+            "news": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/154/news"
+            },
+            "notes": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/154/news/notes"
+            }
+          },
+          "web": {
+            "teams": {
+              "href": "http://espn.go.com/college-football/team/_/id/154/wake-forest-demon-deacons?ex_cid=espnapi_internal"
+            },
+            "roster": {
+              "href": "http://espn.go.com/college-football/team/roster/_/id/154/wake-forest-demon-deacons?ex_cid=espnapi_internal"
+            },
+            "schedule": {
+              "href": "http://espn.go.com/college-football/team/schedule/_/id/154/wake-forest-demon-deacons?ex_cid=espnapi_internal"
+            }
+          },
+          "mobile": {
+            "teams": {
+              "href": "http://m.espn.go.com/ncf/clubhouse?teamId=154&ex_cid=espnapi_internal"
+            }
+          },
+          "app": {
+            "sportscenter": {
+              "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:23~t:154"
+            }
+          }
+        }
+      }, {
+        "id": 183,
+        "uid": "s:20~l:23~t:183",
+        "location": "Syracuse",
+        "name": "Orange",
+        "nickname": "Syracuse",
+        "abbreviation": "SYR",
+        "color": "002045",
+        "logos": {
+          "full": {
+            "href": "http://a.espncdn.com/i/teamlogos/ncaa/500/183.png",
+            "width": 500,
+            "height": 500,
+            "dark": {
+              "href": "http://a.espncdn.com/i/teamlogos/ncaa/500-dark/183.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          "large": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/183.png&w=110&h=110",
+            "width": 110,
+            "height": 110,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/183.png&w=110&h=110",
+              "width": 110,
+              "height": 110
+            }
+          },
+          "medium": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/183.png&w=80&h=80",
+            "width": 80,
+            "height": 80,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/183.png&w=80&h=80",
+              "width": 80,
+              "height": 80
+            }
+          },
+          "small": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/183.png&w=50&h=50",
+            "width": 50,
+            "height": 50,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/183.png&w=50&h=50",
+              "width": 50,
+              "height": 50
+            }
+          },
+          "xsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/183.png&w=40&h=40",
+            "width": 40,
+            "height": 40,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/183.png&w=40&h=40",
+              "width": 40,
+              "height": 40
+            }
+          },
+          "xxsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/183.png&w=25&h=25",
+            "width": 25,
+            "height": 25,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/183.png&w=25&h=25",
+              "width": 25,
+              "height": 25
+            }
+          }
+        },
+        "record": {
+          "summary": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "overtimeLosses": 0,
+          "ties": 0,
+          "season": {
+            "year": 2015,
+            "type": 2,
+            "description": "regular",
+            "startDate": "2015-07-28T07:00:00Z",
+            "endDate": "2015-12-15T07:59:59Z"
+          }
+        },
+        "links": {
+          "api": {
+            "teams": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/183"
+            },
+            "news": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/183/news"
+            },
+            "notes": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/183/news/notes"
+            }
+          },
+          "web": {
+            "teams": {
+              "href": "http://espn.go.com/college-football/team/_/id/183/syracuse-orange?ex_cid=espnapi_internal"
+            },
+            "roster": {
+              "href": "http://espn.go.com/college-football/team/roster/_/id/183/syracuse-orange?ex_cid=espnapi_internal"
+            },
+            "schedule": {
+              "href": "http://espn.go.com/college-football/team/schedule/_/id/183/syracuse-orange?ex_cid=espnapi_internal"
+            }
+          },
+          "mobile": {
+            "teams": {
+              "href": "http://m.espn.go.com/ncf/clubhouse?teamId=183&ex_cid=espnapi_internal"
+            }
+          },
+          "app": {
+            "sportscenter": {
+              "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:23~t:183"
+            }
+          }
+        }
+      }, {
+        "id": 221,
+        "uid": "s:20~l:23~t:221",
+        "location": "Pittsburgh",
+        "name": "Panthers",
+        "nickname": "Pitt",
+        "abbreviation": "PITT",
+        "color": "00224a",
+        "logos": {
+          "full": {
+            "href": "http://a.espncdn.com/i/teamlogos/ncaa/500/221.png",
+            "width": 500,
+            "height": 500,
+            "dark": {
+              "href": "http://a.espncdn.com/i/teamlogos/ncaa/500-dark/221.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          "large": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/221.png&w=110&h=110",
+            "width": 110,
+            "height": 110,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/221.png&w=110&h=110",
+              "width": 110,
+              "height": 110
+            }
+          },
+          "medium": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/221.png&w=80&h=80",
+            "width": 80,
+            "height": 80,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/221.png&w=80&h=80",
+              "width": 80,
+              "height": 80
+            }
+          },
+          "small": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/221.png&w=50&h=50",
+            "width": 50,
+            "height": 50,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/221.png&w=50&h=50",
+              "width": 50,
+              "height": 50
+            }
+          },
+          "xsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/221.png&w=40&h=40",
+            "width": 40,
+            "height": 40,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/221.png&w=40&h=40",
+              "width": 40,
+              "height": 40
+            }
+          },
+          "xxsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/221.png&w=25&h=25",
+            "width": 25,
+            "height": 25,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/221.png&w=25&h=25",
+              "width": 25,
+              "height": 25
+            }
+          }
+        },
+        "record": {
+          "summary": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "overtimeLosses": 0,
+          "ties": 0,
+          "season": {
+            "year": 2015,
+            "type": 2,
+            "description": "regular",
+            "startDate": "2015-07-28T07:00:00Z",
+            "endDate": "2015-12-15T07:59:59Z"
+          }
+        },
+        "links": {
+          "api": {
+            "teams": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/221"
+            },
+            "news": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/221/news"
+            },
+            "notes": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/221/news/notes"
+            }
+          },
+          "web": {
+            "teams": {
+              "href": "http://espn.go.com/college-football/team/_/id/221/pittsburgh-panthers?ex_cid=espnapi_internal"
+            },
+            "roster": {
+              "href": "http://espn.go.com/college-football/team/roster/_/id/221/pittsburgh-panthers?ex_cid=espnapi_internal"
+            },
+            "schedule": {
+              "href": "http://espn.go.com/college-football/team/schedule/_/id/221/pittsburgh-panthers?ex_cid=espnapi_internal"
+            }
+          },
+          "mobile": {
+            "teams": {
+              "href": "http://m.espn.go.com/ncf/clubhouse?teamId=221&ex_cid=espnapi_internal"
+            }
+          },
+          "app": {
+            "sportscenter": {
+              "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:23~t:221"
+            }
+          }
+        }
+      }, {
+        "id": 228,
+        "uid": "s:20~l:23~t:228",
+        "location": "Clemson",
+        "name": "Tigers",
+        "nickname": "Clemson",
+        "abbreviation": "CLEM",
+        "color": "f35b0f",
+        "logos": {
+          "full": {
+            "href": "http://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
+            "width": 500,
+            "height": 500,
+            "dark": {
+              "href": "http://a.espncdn.com/i/teamlogos/ncaa/500-dark/228.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          "large": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/228.png&w=110&h=110",
+            "width": 110,
+            "height": 110,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/228.png&w=110&h=110",
+              "width": 110,
+              "height": 110
+            }
+          },
+          "medium": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/228.png&w=80&h=80",
+            "width": 80,
+            "height": 80,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/228.png&w=80&h=80",
+              "width": 80,
+              "height": 80
+            }
+          },
+          "small": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/228.png&w=50&h=50",
+            "width": 50,
+            "height": 50,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/228.png&w=50&h=50",
+              "width": 50,
+              "height": 50
+            }
+          },
+          "xsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/228.png&w=40&h=40",
+            "width": 40,
+            "height": 40,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/228.png&w=40&h=40",
+              "width": 40,
+              "height": 40
+            }
+          },
+          "xxsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/228.png&w=25&h=25",
+            "width": 25,
+            "height": 25,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/228.png&w=25&h=25",
+              "width": 25,
+              "height": 25
+            }
+          }
+        },
+        "record": {
+          "summary": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "overtimeLosses": 0,
+          "ties": 0,
+          "season": {
+            "year": 2015,
+            "type": 2,
+            "description": "regular",
+            "startDate": "2015-07-28T07:00:00Z",
+            "endDate": "2015-12-15T07:59:59Z"
+          }
+        },
+        "links": {
+          "api": {
+            "teams": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/228"
+            },
+            "news": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/228/news"
+            },
+            "notes": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/228/news/notes"
+            }
+          },
+          "web": {
+            "teams": {
+              "href": "http://espn.go.com/college-football/team/_/id/228/clemson-tigers?ex_cid=espnapi_internal"
+            },
+            "roster": {
+              "href": "http://espn.go.com/college-football/team/roster/_/id/228/clemson-tigers?ex_cid=espnapi_internal"
+            },
+            "schedule": {
+              "href": "http://espn.go.com/college-football/team/schedule/_/id/228/clemson-tigers?ex_cid=espnapi_internal"
+            }
+          },
+          "mobile": {
+            "teams": {
+              "href": "http://m.espn.go.com/ncf/clubhouse?teamId=228&ex_cid=espnapi_internal"
+            }
+          },
+          "app": {
+            "sportscenter": {
+              "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:23~t:228"
+            }
+          }
+        }
+      }, {
+        "id": 258,
+        "uid": "s:20~l:23~t:258",
+        "location": "Virginia",
+        "name": "Cavaliers",
+        "nickname": "UVA",
+        "abbreviation": "UVA",
+        "color": "00204e",
+        "logos": {
+          "full": {
+            "href": "http://a.espncdn.com/i/teamlogos/ncaa/500/258.png",
+            "width": 500,
+            "height": 500,
+            "dark": {
+              "href": "http://a.espncdn.com/i/teamlogos/ncaa/500-dark/258.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          "large": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/258.png&w=110&h=110",
+            "width": 110,
+            "height": 110,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/258.png&w=110&h=110",
+              "width": 110,
+              "height": 110
+            }
+          },
+          "medium": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/258.png&w=80&h=80",
+            "width": 80,
+            "height": 80,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/258.png&w=80&h=80",
+              "width": 80,
+              "height": 80
+            }
+          },
+          "small": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/258.png&w=50&h=50",
+            "width": 50,
+            "height": 50,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/258.png&w=50&h=50",
+              "width": 50,
+              "height": 50
+            }
+          },
+          "xsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/258.png&w=40&h=40",
+            "width": 40,
+            "height": 40,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/258.png&w=40&h=40",
+              "width": 40,
+              "height": 40
+            }
+          },
+          "xxsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/258.png&w=25&h=25",
+            "width": 25,
+            "height": 25,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/258.png&w=25&h=25",
+              "width": 25,
+              "height": 25
+            }
+          }
+        },
+        "record": {
+          "summary": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "overtimeLosses": 0,
+          "ties": 0,
+          "season": {
+            "year": 2015,
+            "type": 2,
+            "description": "regular",
+            "startDate": "2015-07-28T07:00:00Z",
+            "endDate": "2015-12-15T07:59:59Z"
+          }
+        },
+        "links": {
+          "api": {
+            "teams": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/258"
+            },
+            "news": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/258/news"
+            },
+            "notes": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/258/news/notes"
+            }
+          },
+          "web": {
+            "teams": {
+              "href": "http://espn.go.com/college-football/team/_/id/258/virginia-cavaliers?ex_cid=espnapi_internal"
+            },
+            "roster": {
+              "href": "http://espn.go.com/college-football/team/roster/_/id/258/virginia-cavaliers?ex_cid=espnapi_internal"
+            },
+            "schedule": {
+              "href": "http://espn.go.com/college-football/team/schedule/_/id/258/virginia-cavaliers?ex_cid=espnapi_internal"
+            }
+          },
+          "mobile": {
+            "teams": {
+              "href": "http://m.espn.go.com/ncf/clubhouse?teamId=258&ex_cid=espnapi_internal"
+            }
+          },
+          "app": {
+            "sportscenter": {
+              "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:23~t:258"
+            }
+          }
+        }
+      }, {
+        "id": 259,
+        "uid": "s:20~l:23~t:259",
+        "location": "Virginia Tech",
+        "name": "Hokies",
+        "nickname": "VT",
+        "abbreviation": "VT",
+        "color": "64081d",
+        "logos": {
+          "full": {
+            "href": "http://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
+            "width": 500,
+            "height": 500,
+            "dark": {
+              "href": "http://a.espncdn.com/i/teamlogos/ncaa/500-dark/259.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          "large": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/259.png&w=110&h=110",
+            "width": 110,
+            "height": 110,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/259.png&w=110&h=110",
+              "width": 110,
+              "height": 110
+            }
+          },
+          "medium": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/259.png&w=80&h=80",
+            "width": 80,
+            "height": 80,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/259.png&w=80&h=80",
+              "width": 80,
+              "height": 80
+            }
+          },
+          "small": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/259.png&w=50&h=50",
+            "width": 50,
+            "height": 50,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/259.png&w=50&h=50",
+              "width": 50,
+              "height": 50
+            }
+          },
+          "xsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/259.png&w=40&h=40",
+            "width": 40,
+            "height": 40,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/259.png&w=40&h=40",
+              "width": 40,
+              "height": 40
+            }
+          },
+          "xxsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/259.png&w=25&h=25",
+            "width": 25,
+            "height": 25,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/259.png&w=25&h=25",
+              "width": 25,
+              "height": 25
+            }
+          }
+        },
+        "record": {
+          "summary": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "overtimeLosses": 0,
+          "ties": 0,
+          "season": {
+            "year": 2015,
+            "type": 2,
+            "description": "regular",
+            "startDate": "2015-07-28T07:00:00Z",
+            "endDate": "2015-12-15T07:59:59Z"
+          }
+        },
+        "links": {
+          "api": {
+            "teams": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/259"
+            },
+            "news": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/259/news"
+            },
+            "notes": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/259/news/notes"
+            }
+          },
+          "web": {
+            "teams": {
+              "href": "http://espn.go.com/college-football/team/_/id/259/virginia-tech-hokies?ex_cid=espnapi_internal"
+            },
+            "roster": {
+              "href": "http://espn.go.com/college-football/team/roster/_/id/259/virginia-tech-hokies?ex_cid=espnapi_internal"
+            },
+            "schedule": {
+              "href": "http://espn.go.com/college-football/team/schedule/_/id/259/virginia-tech-hokies?ex_cid=espnapi_internal"
+            }
+          },
+          "mobile": {
+            "teams": {
+              "href": "http://m.espn.go.com/ncf/clubhouse?teamId=259&ex_cid=espnapi_internal"
+            }
+          },
+          "app": {
+            "sportscenter": {
+              "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:23~t:259"
+            }
+          }
+        }
+      }, {
+        "id": 2390,
+        "uid": "s:20~l:23~t:2390",
+        "location": "Miami (FL)",
+        "name": "Hurricanes",
+        "nickname": "Miami (FL)",
+        "abbreviation": "MIA",
+        "color": "004325",
+        "logos": {
+          "full": {
+            "href": "http://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
+            "width": 500,
+            "height": 500,
+            "dark": {
+              "href": "http://a.espncdn.com/i/teamlogos/ncaa/500-dark/2390.png",
+              "width": 500,
+              "height": 500
+            }
+          },
+          "large": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/2390.png&w=110&h=110",
+            "width": 110,
+            "height": 110,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/2390.png&w=110&h=110",
+              "width": 110,
+              "height": 110
+            }
+          },
+          "medium": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/2390.png&w=80&h=80",
+            "width": 80,
+            "height": 80,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/2390.png&w=80&h=80",
+              "width": 80,
+              "height": 80
+            }
+          },
+          "small": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/2390.png&w=50&h=50",
+            "width": 50,
+            "height": 50,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/2390.png&w=50&h=50",
+              "width": 50,
+              "height": 50
+            }
+          },
+          "xsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/2390.png&w=40&h=40",
+            "width": 40,
+            "height": 40,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/2390.png&w=40&h=40",
+              "width": 40,
+              "height": 40
+            }
+          },
+          "xxsmall": {
+            "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/2390.png&w=25&h=25",
+            "width": 25,
+            "height": 25,
+            "dark": {
+              "href": "http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500-dark/2390.png&w=25&h=25",
+              "width": 25,
+              "height": 25
+            }
+          }
+        },
+        "record": {
+          "summary": "0-0",
+          "wins": 0,
+          "losses": 0,
+          "overtimeLosses": 0,
+          "ties": 0,
+          "season": {
+            "year": 2015,
+            "type": 2,
+            "description": "regular",
+            "startDate": "2015-07-28T07:00:00Z",
+            "endDate": "2015-12-15T07:59:59Z"
+          }
+        },
+        "links": {
+          "api": {
+            "teams": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/2390"
+            },
+            "news": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/2390/news"
+            },
+            "notes": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/teams/2390/news/notes"
+            }
+          },
+          "web": {
+            "teams": {
+              "href": "http://espn.go.com/college-football/team/_/id/2390/miami-fl-hurricanes?ex_cid=espnapi_internal"
+            },
+            "roster": {
+              "href": "http://espn.go.com/college-football/team/roster/_/id/2390/miami-fl-hurricanes?ex_cid=espnapi_internal"
+            },
+            "schedule": {
+              "href": "http://espn.go.com/college-football/team/schedule/_/id/2390/miami-fl-hurricanes?ex_cid=espnapi_internal"
+            }
+          },
+          "mobile": {
+            "teams": {
+              "href": "http://m.espn.go.com/ncf/clubhouse?teamId=2390&ex_cid=espnapi_internal"
+            }
+          },
+          "app": {
+            "sportscenter": {
+              "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:23~t:2390"
+            }
+          }
+        }
+      }]
+    }]
+  }],
+  "resultsOffset": 0,
+  "resultsLimit": 50,
+  "resultsCount": 14,
+  "timestamp": "2015-07-06T15:21:52Z",
+  "status": "success"
+}
