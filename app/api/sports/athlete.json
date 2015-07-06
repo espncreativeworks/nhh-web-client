@@ -1,0 +1,74 @@
+{
+  "sports": [{
+    "name": "football",
+    "id": 20,
+    "uid": "s:20",
+    "leagues": [{
+      "name": "NCAA Football",
+      "abbreviation": "college-football",
+      "id": 23,
+      "uid": "s:20~l:23",
+      "groupId": 99,
+      "shortName": "NCAA Football",
+      "athletes": [{
+        "id": 535422,
+        "alternateId": 2978887,
+        "firstName": "Roberto",
+        "lastName": "Aguayo",
+        "fullName": "Roberto Aguayo",
+        "displayName": "Roberto Aguayo",
+        "shortName": "R. Aguayo",
+        "weight": 204,
+        "height": 73,
+        "jersey": 19,
+        "birthPlace": {
+          "city": "Mascotte",
+          "state": "FL",
+          "country": "USA"
+        },
+        "schools": [{
+          "id": 52,
+          "name": "Florida State"
+        }],
+        "experience": 2,
+        "athleteStatusId": 1,
+        "athleteStatus": "active",
+        "injuryStatusId": 0,
+        "injuryStatus": "active",
+        "positions": [{
+          "id": 22,
+          "abbreviation": "PK",
+          "name": "Place kicker"
+        }],
+        "links": {
+          "api": {
+            "athletes": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/athletes/535422"
+            },
+            "news": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/athletes/535422/news"
+            },
+            "notes": {
+              "href": "http://api-partners.espn.com/v1/sports/football/college-football/athletes/535422/news/notes"
+            }
+          },
+          "web": {
+            "athletes": {
+              "href": "http://espn.go.com/college-football/player/_/id/535422/roberto-aguayo?ex_cid=espnapi_internal"
+            }
+          },
+          "mobile": {
+            "athletes": {
+              "href": "http://m.espn.go.com/ncf/playercard?playerId=535422&ex_cid=espnapi_internal"
+            }
+          }
+        }
+      }]
+    }]
+  }],
+  "resultsOffset": 0,
+  "resultsLimit": 50,
+  "resultsCount": 1,
+  "timestamp": "2015-07-06T17:56:48Z",
+  "status": "success"
+}
