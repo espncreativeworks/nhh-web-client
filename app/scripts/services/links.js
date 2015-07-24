@@ -19,8 +19,8 @@ angular.module('nhhApp')
       all: function () {
         var deferred = $q.defer();
 
-        $http.get(baseUrl + '/')
-        //$http.get(baseUrl + '/index.json')
+        //$http.get(baseUrl + '/')
+        $http.get(baseUrl + '/index.json')
           .success(function (links){
             deferred.resolve(links);
           }).error(function(err){
@@ -32,8 +32,8 @@ angular.module('nhhApp')
       social: function () {
         var deferred = $q.defer();
 
-        $http.get(baseUrl + '/social')
-        //$http.get(baseUrl + '/social.json')
+        //$http.get(baseUrl + '/social')
+        $http.get(baseUrl + '/social.json')
           .success(function (links){
             deferred.resolve(links);
           }).error(function(err){
@@ -43,7 +43,7 @@ angular.module('nhhApp')
         return deferred.promise;
       },
       shorten: function (url){
-        //var baseUrl = 'http://0.0.0.0:9001/api/links';
+        var baseUrl = 'http://0.0.0.0:9000/api/links';
         var deferred = $q.defer()
           , _params;
 

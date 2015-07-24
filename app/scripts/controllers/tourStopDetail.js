@@ -10,6 +10,7 @@
 angular.module('nhhApp')
   .controller('TourStopDetailCtrl', ['$scope', 'Page', 'TourStops', '$sce', '$moment', '$routeParams', 'underscore', 'fullNameFilter', function ($scope,  Page, TourStops, $sce, $moment, $routeParams, _, fullName) {
     var now = $moment();
+    
     TourStops.get($routeParams.id).then(function (stop){
       var title = stop.pageTitle + ' | Nissan Heisman House Tour';
       var description = stop.pageDescription;

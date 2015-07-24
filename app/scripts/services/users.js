@@ -12,6 +12,7 @@ angular.module('nhhApp')
     // Service logic
     // ...
 
+
     var baseUrl = './api/user/';
 
     // Public API here

@@ -5,21 +5,24 @@
     "category": "Game Openers",
     "description": "Roger Staubach and Johnny Manziel share more than a room.",
     "youtubeId": "GgLdVLw9Fns",
-    "thumbnail": "https://i.ytimg.com/vi/GgLdVLw9Fns/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/GgLdVLw9Fns/hqdefault.jpg",
+    "featured": true
   },{
     "id": 2,
     "name": "Backyard Football",
     "category": "Game Openers",
     "description": "The guys play a casual game of touch football.",
     "youtubeId": "z1f2U2HpGDQ",
-    "thumbnail": "https://i.ytimg.com/vi/z1f2U2HpGDQ/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/z1f2U2HpGDQ/hqdefault.jpg",
+    "featured": true
   },{
     "id": 3,
     "name": "Mini Johnny",
     "category": "Game Openers",
     "description": "Batteries not included or necessary.",
     "youtubeId": "3Dl7G2rKY1Y",
-    "thumbnail": "https://i.ytimg.com/vi/3Dl7G2rKY1Y/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/3Dl7G2rKY1Y/hqdefault.jpg",
+    "featured": false
   },{
     "id": 4,
     "name": "Trademarked",
@@ -27,118 +30,135 @@
     "description": "RG3 has trademarked a lot of phrases.",
     "more": "For real: <a href=\"http://www.sportsgrid.com/nfl/rgiii-trademarked-phrases/\" target=\"_blank\">http://www.sportsgrid.com/nfl/rgiii-trademarked-phrases/</a>",
     "youtubeId": "lJB82VoSc1g",
-    "thumbnail": "https://i.ytimg.com/vi/lJB82VoSc1g/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/lJB82VoSc1g/hqdefault.jpg",
+    "featured": false
   },{
     "id": 5,
     "name": "Flutie Flakes",
     "category": "Game Openers",
     "description": "Some Heismans like their cereal more than others.",
     "youtubeId": "wzKDw-jX-VM",
-    "thumbnail": "https://i.ytimg.com/vi/wzKDw-jX-VM/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/wzKDw-jX-VM/hqdefault.jpg",
+    "featured": true
   },{
     "id": 60,
     "name": "Acting Class",
     "category": "Game Openers",
     "description": "Watch the Heisman winners tackle acting.",
     "youtubeId": "y6Nx6BuxVcY",
-    "thumbnail": "https://i.ytimg.com/vi/y6Nx6BuxVcY/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/y6Nx6BuxVcY/hqdefault.jpg",
+    "featured": false
   },{
     "id": 6,
     "name": "Heisman to Heisman",
     "category": "Heisman to Heisman",
     "description": "Robert Griffin III, Johnny Manziel",
     "youtubeId": "4CGFkU1huWw",
-    "thumbnail": "https://i.ytimg.com/vi/4CGFkU1huWw/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/4CGFkU1huWw/hqdefault.jpg",
+    "featured": true
   },{
     "id": 7,
     "name": "Heisman to Heisman",
     "category": "Heisman to Heisman",
     "description": "Ricky Williams, Robert Griffin III, Andre Ware",
     "youtubeId": "8yov3jCuUiI",
-    "thumbnail": "https://i.ytimg.com/vi/8yov3jCuUiI/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/8yov3jCuUiI/hqdefault.jpg",
+    "featured": false
   },{
     "id": 8,
     "name": "Heisman to Heisman",
     "category": "Heisman to Heisman",
     "description": "Andre Ware, Johnny Manziel",
     "youtubeId": "b-V7D8ReiaY",
-    "thumbnail": "https://i.ytimg.com/vi/b-V7D8ReiaY/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/b-V7D8ReiaY/hqdefault.jpg",
+    "featured": false
   },{
     "id": 9,
     "name": "Heisman to Heisman",
     "category": "Heisman to Heisman",
     "description": "Marcus Allen, Tony Dorsett",
     "youtubeId": "fieFgvjusaA",
-    "thumbnail": "https://i.ytimg.com/vi/fieFgvjusaA/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/fieFgvjusaA/hqdefault.jpg",
+    "featured": false
   },{
     "id": 10,
     "name": "Heisman to Heisman",
     "category": "Heisman to Heisman",
     "description": "Tony Dorsett, George Rogers, Marcus Allen, Billy Sims, John David Crow",
     "youtubeId": "wULRi7vO4-U",
-    "thumbnail": "https://i.ytimg.com/vi/wULRi7vO4-U/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/wULRi7vO4-U/hqdefault.jpg",
+    "featured": false
   },{
     "id": 11,
     "name": "Behind the Scenes",
     "category": "Heisman to Heisman",
     "description": "Flutie Flakes",
     "youtubeId": "pErhwnFQfVM",
-    "thumbnail": "https://i.ytimg.com/vi/pErhwnFQfVM/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/pErhwnFQfVM/hqdefault.jpg",
+    "featured": false
   },{
     "id": 12,
     "name": "Behind the Scenes",
     "category": "Heisman to Heisman",
     "description": "John David Crow, Johnny Manziel",
     "youtubeId": "mmKxs-MZEHs",
-    "thumbnail": "https://i.ytimg.com/vi/mmKxs-MZEHs/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/mmKxs-MZEHs/hqdefault.jpg",
+    "featured": false
   },{
     "id": 13,
     "name": "Teaser",
     "category": "Heisman to Heisman",
     "description": "Shasta, Andre Ware",
     "youtubeId": "E_QFnluasys",
-    "thumbnail": "https://i.ytimg.com/vi/E_QFnluasys/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/E_QFnluasys/hqdefault.jpg",
+    "featured": false
   },{
     "id": 15,
     "name": "Heisman Highlights",
     "category": "Heisman Highlights",
     "description": "Andre Ware",
     "youtubeId": "xqba1VyDqcI",
-    "thumbnail": "https://i.ytimg.com/vi/xqba1VyDqcI/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/xqba1VyDqcI/hqdefault.jpg",
+    "featured": false
   },{
     "id": 16,
     "name": "Heisman Highlights",
     "category": "Heisman Highlights",
     "description": "Billy Sims",
     "youtubeId": "sum_hSnMO3c",
-    "thumbnail": "https://i.ytimg.com/vi/sum_hSnMO3c/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/sum_hSnMO3c/hqdefault.jpg",
+    "featured": false
   },{
     "id": 17,
     "name": "Heisman Highlights",
     "category": "Heisman Highlights",
     "description": "George Rogers",
     "youtubeId": "lPgGMaKm6YA",
-    "thumbnail": "https://i.ytimg.com/vi/lPgGMaKm6YA/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/lPgGMaKm6YA/hqdefault.jpg",
+    "featured": false
   },{
     "id": 18,
     "name": "Heisman Highlights",
     "category": "Heisman Highlights",
     "description": "John David Crow",
     "youtubeId": "hLbX2-9WIXY",
-    "thumbnail": "https://i.ytimg.com/vi/hLbX2-9WIXY/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/hLbX2-9WIXY/hqdefault.jpg",
+    "featured": false
   },{
     "id": 19,
     "name": "Heisman Highlights",
     "category": "Heisman Highlights",
     "description": "Johnny Manziel",
     "youtubeId": "2rh3wYygyQo",
-    "thumbnail": "https://i.ytimg.com/vi/2rh3wYygyQo/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/2rh3wYygyQo/hqdefault.jpg",
+    "featured": false
   },{
     "id": 20,
     "name": "Heisman Highlights",
     "category": "Heisman Highlights",
     "description": "Roger Staubach",
     "youtubeId": "SZLdCU3DM88",
-    "thumbnail": "https://i.ytimg.com/vi/SZLdCU3DM88/hqdefault.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/SZLdCU3DM88/hqdefault.jpg",
+    "featured": false
   }
 ]

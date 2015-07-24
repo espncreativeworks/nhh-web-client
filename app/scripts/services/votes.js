@@ -14,8 +14,8 @@ angular.module('nhhApp')
     return {
       create: function (data) {
         var deferred = $q.defer()
-          //, baseUrl = 'http://0.0.0.0:9001/api/votes'
-          , baseUrl = './api/votes/'
+          , baseUrl = 'http://nhh-admin.herokuapp.com/api/votes'
+          //, baseUrl = './api/votes/'
           , _params = angular.extend({ '_method': 'POST' }, data);
 
         $http.get(baseUrl, { params: _params })

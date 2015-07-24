@@ -30,47 +30,47 @@ angular
   .config(['$routeProvider', '$locationProvider', '$httpProvider', '$sceDelegateProvider', '$sceProvider', 'localStorageServiceProvider', function ($routeProvider, $locationProvider, $httpProvider, $sceDelegateProvider, $sceProvider, localStorageServiceProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/home',
+        templateUrl: 'views/home.html',
         controller: 'HomeCtrl'
       })
       .when('/ballot', {
-        templateUrl: 'views/ballot',
+        templateUrl: 'views/ballot.html',
         controller: 'BallotCtrl'
       })
       .when('/thanks', {
-        templateUrl: 'views/thanks',
+        templateUrl: 'views/thanks.html',
         controller: 'ThanksCtrl'
       })
       .when('/leaderboard', {
-        templateUrl: 'views/leaderboard',
+        templateUrl: 'views/leaderboard.html',
         controller: 'LeaderboardCtrl'
       })
       .when('/rules', {
-        templateUrl: 'views/rules',
+        templateUrl: 'views/rules.html',
         controller: 'RulesCtrl'
       })
       .when('/videos/:id', {
-        templateUrl: 'views/video',
+        templateUrl: 'views/video.html',
         controller: 'VideoCtrl'
       })
       .when('/tour', {
-        templateUrl: 'views/tour_stop_list',
+        templateUrl: 'views/tour_stop_list.html',
         controller: 'TourStopListCtrl'
       })
       .when('/tour-stops/:id', {
-        templateUrl: 'views/tour_stop_detail',
+        templateUrl: 'views/tour_stop_detail.html',
         controller: 'TourStopDetailCtrl'
       })
       .when('/tour-stops/:stopId/photos/:photoId', {
-        templateUrl: 'views/tour_stop_image_detail',
+        templateUrl: 'views/tour_stop_image_detail.html',
         controller: 'TourStopImageDetailCtrl'
       })
       .when('/tour-stops/:stopId/videos/:videoId', {
-        templateUrl: 'views/tour_stop_video_detail',
+        templateUrl: 'views/tour_stop_video_detail.html',
         controller: 'TourStopVideoDetailCtrl'
       })
       .when('/confirm', {
-        templateUrl: 'views/confirm',
+        templateUrl: 'views/confirm.html',
         controller: 'ConfirmCtrl',
         resolve: {
           user: ['$q', 'Auth', 'Users', function ($q, Auth, Users){
@@ -99,7 +99,7 @@ angular
         }
       })
       .when('/entered', {
-        templateUrl: 'views/entered',
+        templateUrl: 'views/entered.html',
         controller: 'EnteredCtrl',
         resolve: {
           user: ['$q', 'Auth', 'Users', function ($q, Auth, Users){
@@ -128,19 +128,19 @@ angular
         }
       })
       .when('/login', {
-        templateUrl: 'views/login',
+        templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })
       .when('/share-vote/:athleteId', {
-        templateUrl: 'views/share_vote',
+        templateUrl: 'views/share_vote.html',
         controller: 'ShareVoteCtrl'
       })
       .when('/share-entry/:accountId', {
-        templateUrl: 'views/share_entry',
+        templateUrl: 'views/share_entry.html',
         controller: 'ShareEntryCtrl'
       })
       .when('/error', {
-        templateUrl: 'views/error',
+        templateUrl: 'views/error.html',
         controller: 'ErrorCtrl'
       })
       .otherwise({

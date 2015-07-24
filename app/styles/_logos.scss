@@ -71,6 +71,7 @@ $logo-cfp-hires: $image-path + 'logo_cfp@2x.png';
       width: $logo-nissan-width;
       height: $logo-nissan-height;
       @include img-retina($logo-nissan-default, $logo-nissan-hires, $logo-nissan-width, $logo-nissan-height);
+      margin-bottom: 10px;
     }
 
     &.small {

@@ -9,7 +9,7 @@
 angular.module('nhhApp')
   .directive('ballotItem', function () {
     return {
-      templateUrl: 'partials/ballot_item',
+      templateUrl: 'partials/ballot_item.html',
       restrict: 'E',
       replace: true,
       link: function postLink() {

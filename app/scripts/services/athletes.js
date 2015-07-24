@@ -10,8 +10,8 @@
 angular.module('nhhApp')
   .factory('Athletes', ['$q', '$http', '$timeout', 'Ballots', 'Votes', 'Modernizr', function ($q, $http, $timeout, Ballots, Votes, Modernizr) {
 
-    //var baseUrl = 'http://0.0.0.0:9001/api/athletes/';
-    var baseUrl = './api/athletes/';
+    var baseUrl = 'http://nhh-admin.herokuapp.com/api/athletes';
+    //var baseUrl = './api/athletes/';
 
     // Public API here
     return {
@@ -30,8 +30,8 @@ angular.module('nhhApp')
       get: function (key) {
         var deferred = $q.defer();
 
-        $http.get(baseUrl + '?id=' + key + '&populate=school,position,experience')
-        //$http.get(baseUrl + key + '?populate=school,position,experience')
+        //$http.get(baseUrl + '?id=' + key + '&populate=school,position,experience')
+        $http.get(baseUrl + key + '?populate=school,position,experience')
           .success(function (athlete){
             deferred.resolve(athlete);
           }).error(function(err){

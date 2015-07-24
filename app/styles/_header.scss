@@ -203,17 +203,32 @@ $logo-heisman-large-height: 351px;
   }
 }
 
+.tour-update-container {
+
+	.container {
+		padding: 10px 0 10px 0;
+	}
+	
+	p {
+		margin-bottom: 0;
+	}
+	
+	.title {
+		color: $headings-color;
+	}
+}
+
 @media (min-width: $screen-sm-min){
 
   #home-header-container {
     .welcome-container,
     .hero-container {
-      min-height: $header-components-height;
+      //min-height: $header-components-height;
       background-size: cover;
     }
 
     .welcome-container {
-      background-image: url($image-path + 'bg_header.png')
+      /* background-image: url($image-path + 'bg_header.png') */
     }
 
     .lockup-container {

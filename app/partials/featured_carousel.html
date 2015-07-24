@@ -1,0 +1,64 @@
+<div class="row" ng-if="!isMobile">
+  <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 big-player">
+    <youtube id="selectedVideo.youtubeId"></youtube>
+  </div>
+  <div class="col-xs-12 col-sm-12 video-items">
+    <div class="col-xs-12 col-sm-4 headings">
+    <h2 class="heading">Featured</h2>
+  </div>
+    <!-- <ul class="nhh-featured-carousel" rn-carousel rn-carousel-control> -->
+    <ul class="nhh-featured-carousel" rn-carousel rn-carousel-locked>
+      <li class="nhh-featured-slide" ng-repeat="video in slides">
+        <div class="nhh-featured-slide-item">
+          <!--
+          <a class="thumbnail-link" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}" ng-style="{ 'background-image': 'url(' + (video.thumbnail || video.thumbnailUrl || video.meta.thumbnailUrl) + ')' }">
+            <span class="text-hide">{{video.description || video.meta.description}}</span>
+          </a>
+          -->
+          <a class="thumbnail-link" href="javascript:void(0);" ng-click="updateSelected(video)" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}" ng-style="{ 'background-image': 'url(' + (video.thumbnail || video.thumbnailUrl || video.meta.thumbnailUrl) + ')' }">
+            <span class="text-hide">{{video.description || video.meta.description}}</span>
+          </a>
+          <div class="backdrop">
+            <!--
+            <a class="btn btn-play fa-stack fa-stack-large center-xy" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}">
+              <i class="fa fa-stack-2x fa-circle"></i>
+              <i class="fa fa-stack-1x fa-play fa-inverse"></i>
+            </a>
+            -->
+            <a class="btn btn-play" href="javascript:void(0);" ng-click="updateSelected(video)" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}">
+              <!-- <i class="fa fa-stack-2x fa-circle"></i> -->
+              <i class="fa fa-stack-1x fa-1 fa-play fa-inverse"></i>
+            </a>
+            <p class="caption">{{video.description || video.meta.description}}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="row" ng-if="isMobile">
+  <div class="col-xs-12 col-sm-12 videos-items">
+    <!-- <ul class="nhh-featured-carousel" rn-carousel rn-carousel-control> -->
+    <ul class="nhh-featured-carousel" rn-carousel>
+      <li class="nhh-featured-slide" ng-repeat="video in slides">
+        <div class="nhh-featured-slide-item">
+          <!-- <a class="thumbnail-link" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}" ng-style="{ 'background-image': 'url(' + (video.thumbnail || video.thumbnailUrl || video.meta.thumbnailUrl) + ')' }">
+            <span class="text-hide">{{video.description || video.meta.description}}</span>
+          </a>
+          <a class="btn btn-play fa-stack fa-stack-large center-xy" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}">
+            <i class="fa fa-stack-2x fa-circle"></i>
+            <i class="fa fa-stack-1x fa-play fa-inverse"></i>
+          </a> -->
+          <a class="thumbnail-link" href="javascript:void(0);" ng-click="updateSelected(video)" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}" ng-style="{ 'background-image': 'url(' + (video.thumbnail || video.thumbnailUrl || video.meta.thumbnailUrl) + ')' }">
+            <span class="text-hide">{{video.description || video.meta.description}}</span>
+          </a>
+           <a class="btn btn-play fa-stack fa-stack-large" href="javascript:void(0);" ng-click="updateSelected(video)" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}">
+              <i class="fa fa-stack-2x fa-circle"></i>
+              <i class="fa fa-stack-1x fa-play fa-inverse"></i>
+           </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

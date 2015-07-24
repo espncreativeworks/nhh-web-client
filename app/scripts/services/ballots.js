@@ -10,8 +10,8 @@
 angular.module('nhhApp')
   .factory('Ballots', ['$q', '$http', function ($q, $http) {
 
-    //var baseUrl = 'http://0.0.0.0:9001/api/ballots/';
-    var baseUrl = './api/ballots/';
+    var baseUrl = 'http://nhh-admin.herokuapp.com/api/ballots';
+    //var baseUrl = './api/ballots/';
 
     // Public API here
     return {
