@@ -2,22 +2,24 @@
   padding: 3px 48px;
   border: 3px solid $nhh-white;
   border-radius: 0;
-  background-color: transparent;
+  background-color: black;
   color: $nhh-white;
   text-transform: uppercase;
-  font-style: italic;
+  font-weight: normal;
 
   &:hover {
     border-color: $nhh-dark-gold;
+    color: $nhh-dark-gold;
   }
 
   &:hover,
   &:focus {
-    color: $nhh-white;
+    color: $nhh-gold;
   }
 
   &:focus {
     outline: 5px auto $nhh-gold;
+    color: $nhh-gold;
   }
 
   &:active,
@@ -29,10 +31,28 @@
 }
 
 .btn-nhh.btn-lg {
-  padding-top: 7px;
-  padding-bottom: 7px;
   font-size: 1.2em;
+  line-height: 1.1em;
+  padding-left: 6px;
+  padding-right: 6px;
+  height: 95px;
+  width: 100%;
+  margin-top:10px;
+  font-weight: 600;
 }
+
+.btn-vote {
+  padding-top: 25px;
+}
+
+.btn-enter {
+  padding-top: 15px;
+}
+
+.btn-discussion {
+  padding-top: 25px;
+}
+
 
 .btn-link-nhh {
   color: $nhh-gold;
@@ -108,5 +128,29 @@
     &.active {
       color: darken($nhh-gold, 15%);
     }
+  }
+}
+
+.larger-text {
+  font-size: 1.5em;
+  font-weight: normal;
+  font-style: italic;
+}
+
+@media (min-width: $screen-xs-min){
+  .btn-enter {
+    padding-top: 15px;
+  }
+}
+
+@media (min-width: $screen-md-min){
+  .btn-enter {
+    padding-top: 7px;
+  }
+}
+
+@media (min-width: $screen-lg-min){
+  .btn-enter {
+    padding-top: 15px;
   }
 }
