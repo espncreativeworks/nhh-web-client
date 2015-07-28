@@ -7,9 +7,9 @@
       <hr class="bookend"><h2 class="book heading">Featured</h2><hr class="bookend">
     </div>
     <!-- <ul class="nhh-featured-carousel" rn-carousel rn-carousel-control> -->
-    <ul class="nhh-featured-carousel" rn-carousel rn-carousel-locked>
+    <ul class="nhh-featured-carousel" rn-carousel rn-carousel-locked="true">
       <li class="nhh-featured-slide" ng-repeat="video in slides">
-        <div class="nhh-featured-slide-item">
+        <div class="nhh-featured-slide-item col-xs-3 co-sm-3">
           <!--
           <a class="thumbnail-link" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}" ng-style="{ 'background-image': 'url(' + (video.thumbnail || video.thumbnailUrl || video.meta.thumbnailUrl) + ')' }">
             <span class="text-hide">{{video.description || video.meta.description}}</span>
