@@ -20,13 +20,17 @@ angular.module('nhhApp')
       _categories = _categories.sort(function(a){
         if (a === 'Game Openers'){
           return -10;
+          // $scope.openers = true;
         }
         if (a === 'Heisman Highlights'){
           return 0;
+          // $scope.highlights = true;
         }
         if (a === 'Heisman to Heisman'){
           return 10;
+          // $scope.heisman = true;
         }
+        // $scope.tour = true;
         return 20;
       });
       _slides = {};
@@ -42,12 +46,14 @@ angular.module('nhhApp')
         }
 
         _slides[category] = [];
-        var _first = vids.slice(0,3);
-        var _rest = vids.slice(3);
-        _slides[category].push(_first);
-        for ( var i = 0, len = _rest.length; i < len; i += 6 ){
-          _slides[category].push(_rest.slice(i, 6));
-        }
+        // var _first = vids.slice(0,3);
+        // var _rest = vids.slice(3);
+
+        //_slides[category].push(_first);
+        _slides[category].push(vids);
+        // for ( var i = 0, len = vids.length; i < len; i += 1 ){
+        //   _slides[category].push(i);
+        // }
       });
       $scope.categories = _categories;
       $scope.slides = _slides;

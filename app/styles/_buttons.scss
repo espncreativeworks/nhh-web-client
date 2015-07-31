@@ -1,6 +1,6 @@
 .btn-nhh {
   padding: 3px 48px;
-  border: 3px solid $nhh-white;
+  border: 6px solid $nhh-white;
   border-radius: 0;
   background-color: black;
   color: $nhh-white;
@@ -8,8 +8,8 @@
   font-weight: normal;
 
   &:hover {
-    border-color: $nhh-dark-gold;
-    color: $nhh-dark-gold;
+    border-color: $nhh-gold;
+    color: $nhh-gold;
   }
 
   &:hover,
@@ -31,26 +31,25 @@
 }
 
 .btn-nhh.btn-lg {
-  font-size: 1.2em;
-  line-height: 1.1em;
-  padding-left: 6px;
-  padding-right: 6px;
-  height: 95px;
-  width: 100%;
-  margin-top:10px;
+  font-size: 1.0em;
+  line-height: 1.0em;
+  height: 80px;
+  margin-top: 10px;
+  width: 75%;
   font-weight: 600;
 }
 
-.btn-vote {
-  padding-top: 25px;
+.btn-vote,
+.btn-discussion {
+  padding-top: 20px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 .btn-enter {
-  padding-top: 15px;
-}
-
-.btn-discussion {
-  padding-top: 25px;
+  padding-top: 9px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 
@@ -132,25 +131,74 @@
 }
 
 .larger-text {
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: normal;
   font-style: italic;
 }
 
-@media (min-width: $screen-xs-min){
+@media (min-width: $screen-sm-min){
+
+  .btn-vote {
+    float: left;
+    padding-top: 30px;
+  }
+
+  .btn-discussion {
+    float: right;
+    padding-top: 30px;
+  }
+
+  .btn-nhh.btn-lg {
+    height: 110px;
+    width: 107%;
+    text-align: center;
+  }
+
+  .center-btn {
+    float: left;
+    left: -7px;
+  }
+
   .btn-enter {
     padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
 @media (min-width: $screen-md-min){
   .btn-enter {
     padding-top: 7px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .btn-vote {
+    padding-top: 25px;
+  }
+
+  .btn-discussion {
+    padding-top: 25px;
+  }
+
+  .btn-nhh.btn-lg {
+    height: 100px;
+    width: 90%;
+    font-size: 1.2em;
+    line-height: 1.1em;
+  }
+
+  .larger-text {
+    font-size: 1.5em;
   }
 }
 
 @media (min-width: $screen-lg-min){
   .btn-enter {
     padding-top: 15px;
+  }
+
+  .btn-nhh.btn-lg {
+    width: 93%;
   }
 }

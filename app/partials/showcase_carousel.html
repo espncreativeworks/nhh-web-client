@@ -1,33 +1,117 @@
-<div class="row" ng-if="!isMobile">
-  <ul class="nav nav-tabs">
-  <li role="video-playlist" class="active"><a href="#">Home</a></li>
-  <li role="video-playlist"><a href="#">Profile</a></li>
-  <li role="video-playlist"><a href="#">Messages</a></li>
-</ul>
-  <div class="col-xs-12 col-sm-4 headings">
-    <h3 class="heading-label">Video</h3>
-    <h2 class="heading">{{category}}</h2>
-  </div>
-  <div class="col-xs-12 col-sm-8 video-items">
-    <ul class="nhh-carousel" rn-carousel rn-carousel-control>
-      <li class="nhh-slide" ng-repeat="slide in slides[category]">
-        <div class="nhh-slide-item" ng-repeat="video in slide">
-          <a class="thumbnail-link" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}" ng-style="{ 'background-image': 'url(' + (video.thumbnail || video.thumbnailUrl || video.meta.thumbnailUrl) + ')' }">
-            <span class="text-hide">{{video.description || video.meta.description}}</span>
-          </a>
-          <div class="backdrop">
-            <a class="btn btn-play fa-stack fa-stack-large center-xy" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}">
-              <i class="fa fa-stack-2x fa-circle"></i>
-              <i class="fa fa-stack-1x fa-play fa-inverse"></i>
-            </a>
-            <p class="caption">{{video.description || video.meta.description}}</p>
-          </div>
-        </div>
-      </li>
+<div ng-if="!isMobile">
+  <div class="row tab-field">
+    <ul class="nav video-nav col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1">
+      <li role="video-playlist" class="active col-xs-3 col-sm-3" style="padding: 0px;"><a href="#game-openers" aria-controls="game-openers" role="tab" data-toggle="tab" class="heading">Game Openers</a></li>
+      <li role="video-playlist" class="col-xs-3 col-sm-3" style="padding: 0px;"><a href="#heisman-highlights" aria-controls="heisman-highlights" role="tab" data-toggle="tab" class="heading">Heisman Highlights</a></li>
+      <li role="video-playlist" class="col-xs-3 col-sm-3" style="padding: 0px;"><a href="#heisman-heisman" aria-controls="heisman-heisman" role="tab" data-toggle="tab" class="heading">Heisman To Heisman</a></li>
+      <li role="video-playlist" class="col-xs-3 col-sm-3" style="padding: 0px;"><a href="#house-tours" aria-controls="house-tours" role="tab" data-toggle="tab" class="heading">Heisman House Tours</a></li>
     </ul>
   </div>
+
+  <div class="tab-content col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1">
+
+    <div role="tabpanel" class="tab-pane active" id="game-openers">
+      <div class="video-items">
+        <div class="nhh-carousel" rn-carousel-control>
+          <div class="nhh-slide" ng-repeat="slide in slides['Game Openers']">
+            <ng-include src="'partials/video_slides.html'"></ng-include>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="heisman-highlights">
+      <div class="video-items">
+        <div class="nhh-carousel" rn-carousel-control>
+          <div class="nhh-slide" ng-repeat="slide in slides['Heisman Highlights']">
+            <ng-include src="'partials/video_slides.html'"></ng-include>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="heisman-heisman">
+      <div class="video-items">
+        <div class="nhh-carousel" rn-carousel-control>
+          <div class="nhh-slide" ng-repeat="slide in slides['Heisman to Heisman']">
+            <ng-include src="'partials/video_slides.html'"></ng-include>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="house-tours">
+      <div class="video-items">
+        <div class="nhh-carousel" rn-carousel-control>
+          <div class="nhh-slide" ng-repeat="slide in slides['Heisman House Tour']">
+            <ng-include src="'partials/video_slides.html'"></ng-include>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </div>
 
+
+<div ng-if="isMobile">
+  <div class="tab-field">
+    <ul class="nav video-nav col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1">
+      <li role="video-playlist" class="active col-xs-12 col-sm-12"><a href="#game-openers" aria-controls="game-openers" role="tab" data-toggle="tab" class="heading">Game Openers</a></li>
+      <li role="video-playlist" class="col-xs-12 col-sm-12"><a href="#heisman-highlights" aria-controls="heisman-highlights" role="tab" data-toggle="tab" class="heading">Heisman Highlights</a></li>
+      <li role="video-playlist" class="col-xs-12 col-sm-12"><a href="#heisman-heisman" aria-controls="heisman-heisman" role="tab" data-toggle="tab" class="heading">Heisman To Heisman</a></li>
+      <li role="video-playlist" class="col-xs-12 col-sm-12"><a href="#house-tours" aria-controls="house-tours" role="tab" data-toggle="tab" class="heading">Heisman House Tours</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1">
+
+    <div role="tabpanel" class="tab-pane active" id="game-openers">
+      <div class="video-items">
+        <div class="nhh-carousel" rn-carousel-control>
+          <div class="nhh-slide" ng-repeat="slide in slides['Game Openers']">
+            <ng-include src="'partials/video_slides.html'"></ng-include>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="heisman-highlights">
+      <div class="video-items">
+        <div class="nhh-carousel" rn-carousel-control>
+          <div class="nhh-slide" ng-repeat="slide in slides['Heisman Highlights']">
+            <ng-include src="'partials/video_slides.html'"></ng-include>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="heisman-heisman">
+      <div class="video-items">
+        <div class="nhh-carousel" rn-carousel-control>
+          <div class="nhh-slide" ng-repeat="slide in slides['Heisman to Heisman']">
+            <ng-include src="'partials/video_slides.html'"></ng-include>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="house-tours">
+      <div class="video-items">
+        <div class="nhh-carousel" rn-carousel-control>
+          <div class="nhh-slide" ng-repeat="slide in slides['Heisman House Tour']">
+            <ng-include src="'partials/video_slides.html'"></ng-include>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- 
 <div class="row" ng-if="isMobile">
   <div class="col-xs-12 col-sm-4 headings">
     <h3 class="heading-label">Video</h3>
@@ -48,4 +132,4 @@
       </li>
     </ul>
   </div>
-</div>
+</div> -->
