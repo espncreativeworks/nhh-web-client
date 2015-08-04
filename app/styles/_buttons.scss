@@ -1,15 +1,15 @@
 .btn-nhh {
   padding: 3px 48px;
-  border: 6px solid $nhh-white;
+  border: 6px solid $nhh-gold;
   border-radius: 0;
   background-color: black;
-  color: $nhh-white;
+  color: $nhh-gold;
   text-transform: uppercase;
   font-weight: normal;
 
   &:hover {
-    border-color: $nhh-gold;
-    color: $nhh-gold;
+    border-color: darken($nhh-gold, 10%);
+    color: darken($nhh-gold, 10%);
   }
 
   &:hover,
@@ -37,6 +37,14 @@
   margin-top: 10px;
   width: 75%;
   font-weight: normal;
+}
+
+/*.btn-vote.btn-hl {
+  background: url($image-path + 'logo_heisman_gold.png') no-repeat left center;
+}*/
+
+.btn-vote .bg-hl {
+  background: url($image-path + 'logo_heisman_gold.png') no-repeat left center;
 }
 
 .btn-vote,

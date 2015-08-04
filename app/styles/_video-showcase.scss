@@ -1,6 +1,21 @@
 #video-showcase-container {
   padding-bottom: 40px;
   background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+
+  .row {
+    padding-left: 0;
+    padding-right: 0;
+
+    .visible-xs {
+      padding: 0;
+
+      .tab-content {
+        padding: 0;
+      }
+    }
+  }
 
   .tab-field {
     padding-bottom: 45px;
@@ -11,6 +26,10 @@
     //height: 35px;
     padding-right: 0px;
     margin-bottom: 20px;
+  }
+
+  .visible-xs .video-nav {
+    margin-bottom: 3px;
   }
 
   .video-nav-mobile {

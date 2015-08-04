@@ -159,6 +159,11 @@
     margin-bottom: 20px;
   }
 
+  .visible-xs .heading-background {
+    margin-top: 20px;
+    margin-bottom: 2px;
+  }
+
   .featured-header {
     font-weight: bold;
     font-size: 17px;
@@ -260,3 +265,5 @@
     padding-top: 50px;
   }
 }
+
+@import "video-featured-mobile";

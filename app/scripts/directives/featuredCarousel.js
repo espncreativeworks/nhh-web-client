@@ -23,6 +23,7 @@ angular.module('nhhApp')
           });
           scope.videos = _videos;
         }
+
         scope.updateSelected = function updateSelected (video) {
           if (scope.$parent.selectedVideo._id !== video._id) {
             scope.$parent.selectedVideo = video;
