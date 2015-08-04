@@ -4,6 +4,11 @@
   padding-top: 35px;
   background-color: transparent;
 
+  .tab-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .big-player {
     .video-player-container {
       margin: 0 auto;

@@ -54,8 +54,8 @@ hr {
   > .row {
     margin-left: 0;
     margin-right: 0;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
@@ -108,4 +108,17 @@ a.no-decoration {
     background-size: 100%;
     background-position: top center;
   }
+
+  .container.full-width {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+
+  > .row {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 }

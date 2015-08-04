@@ -1,6 +1,18 @@
+.mobile-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 #video-showcase-container {
   padding-bottom: 40px;
   background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+
+  .tab-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   .tab-field {
     padding-bottom: 45px;
@@ -102,13 +114,13 @@
 
     .thumbnail-link {
       display: block;
-      float: left;
+      //float: left;
       width: 266px;
       left: 0;
       height: 100%;
       background-size: cover;
       background-position: center;
-      margin-right: 40px;
+      margin: auto;
     }
 
     .backdrop {
@@ -132,6 +144,10 @@
       //text-align: center;
       //top: 20px;
       color: $nhh-gold;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 15px;
+
     }
   }
 
@@ -194,9 +210,15 @@
       //padding-right: 14px;
       //padding-top: 14px;
 
-      //.caption {
+      .caption {
         //display: block;
-      //}
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .thumbnail-link {
+        float: left;
+      }
     }
 
     //.nhh-carousel :first-child.nhh-slide :first-child.nhh-slide-item {
@@ -209,3 +231,8 @@
     //}
   }
 }
+
+
+
+
+
