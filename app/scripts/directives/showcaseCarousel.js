@@ -15,8 +15,16 @@ angular.module('nhhApp')
       scope: true,
       link: function postLink(scope, element, attrs) {
         var _videos = [];
+
+        console.log("scope: ", scope);
+        console.log("scope.category: ", scope.categories);
+        
         if (attrs.isMobile){
           scope.isMobile = true;
+
+          console.log("isMobile scope: ", scope);
+          console.log("isMobile scope.category: ", scope.categories);
+
           _.each(scope.slides[scope.category], function (slide){
             _.each(slide, function (video){
               _videos.push(video);
