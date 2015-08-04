@@ -55,9 +55,10 @@ angular.module('nhhApp')
         //   _slides[category].push(i);
         // }
       });
+
       $scope.categories = _categories;
       $scope.slides = _slides;
     });
 
-    //$log.info(_slides);
+    // $log.info(_slides);
   }]);
