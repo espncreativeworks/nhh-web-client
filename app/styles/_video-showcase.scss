@@ -10,10 +10,23 @@
     background-color: $nhh-gold;
     //height: 35px;
     padding-right: 0px;
+    margin-bottom: 20px;
+  }
+
+  .video-nav-mobile {
+    background-color: $nhh-gold;
+    //height: 35px;
+    //padding-right: 0px;
+    margin-bottom: 5px;
   }
 
   li.active a{
     color: white;
+  }
+
+  .headers {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .heading {
@@ -26,6 +39,7 @@
     padding-left: 0px;
     padding-right: 0px;
     //margin: auto 0px;
+    margin-right: 15px;
 
 
     &:active, &.active {

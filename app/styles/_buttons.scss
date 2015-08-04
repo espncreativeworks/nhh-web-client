@@ -32,11 +32,11 @@
 
 .btn-nhh.btn-lg {
   font-size: 1.0em;
-  line-height: 1.0em;
+  line-height: 1.1em;
   height: 80px;
   margin-top: 10px;
   width: 75%;
-  font-weight: 600;
+  font-weight: normal;
 }
 
 .btn-vote,
@@ -47,9 +47,9 @@
 }
 
 .btn-enter {
-  padding-top: 9px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 
@@ -136,34 +136,41 @@
   font-style: italic;
 }
 
-@media (min-width: $screen-sm-min){
-
-  .btn-vote {
-    float: left;
-    padding-top: 30px;
-  }
-
-  .btn-discussion {
-    float: right;
-    padding-top: 30px;
-  }
-
-  .btn-nhh.btn-lg {
-    height: 110px;
-    width: 107%;
-    text-align: center;
-  }
-
-  .center-btn {
-    float: left;
-    left: -7px;
-  }
+@media (min-width: $screen-xs-min){
 
   .btn-enter {
-    padding-top: 15px;
+    padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  .btn-nhh.btn-lg {
+    line-height: 1.2em;
+  }
+
+}
+
+@media (min-width: $screen-sm-min){
+
+  .btn-enter {
+    padding-top: 5px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .btn-vote {
+    padding-top: 15px;
+  }
+
+  .btn-discussion {
+    padding-top: 15px;
+  }
+
+  .btn-nhh.btn-lg {
+    font-size: 1.2em;
+    line-height: 1.2em;
+  }
+
 }
 
 @media (min-width: $screen-md-min){

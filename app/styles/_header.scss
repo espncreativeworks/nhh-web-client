@@ -8,7 +8,7 @@ $logo-heisman-large-height: 351px;
 #home-header-container {
 
   .vote-link-container {
-    padding-top: 60px;
+    padding-top: 10px;
   }
 
   .line-end {
@@ -236,7 +236,7 @@ $logo-heisman-large-height: 351px;
 @media (min-width: $screen-sm-min){
   
   .vote-link-container {
-    padding-top: 80px;
+    padding-top: 10px;
   }
 
   .line-end {
@@ -293,6 +293,13 @@ $logo-heisman-large-height: 351px;
   }
 }
 
+@media (min-width: $screen-md-min){
+  
+  .vote-link-container {
+    padding-top: 80px;
+  }
+}
+
 @media (min-width: $screen-lg-min){
   #default-header-container,
   #home-header-container {
@@ -301,7 +308,7 @@ $logo-heisman-large-height: 351px;
     }
 
     .vote-link-container {
-      padding-top: 100px;
+      padding-top: 90px;
     }
 
     .line-end {
