@@ -1,6 +1,12 @@
 body {
-  background-image: url($image-path + 'bg_house.png');
+  background-image: url($image-path + 'bg_home.png');
+
+  @media(max-width: $screen-sm-max) {
+    background-image: url($image-path + 'bg_house2.png');  
+  }
+
   background-repeat: no-repeat;
+  background-position: top center;
   background-color: #000;
   padding-bottom: 40px;
 }
@@ -29,7 +35,8 @@ body {
 
   .heading {
     font-family: $nhh-font-family-headings;
-    color: $nhh-white
+    color: $nhh-white;
+    text-transform: uppercase;
   }
 
   hr {

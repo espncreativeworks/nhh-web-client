@@ -1,4 +1,4 @@
-<ng-include ng-controller="HeaderCtrl" src="'partials/header_default.html'"></ng-include>
+<ng-include ng-controller="HeaderCtrl" src="'partials/header_home.html'"></ng-include>
 
 <div id="ballot-container" class="container">
   <div class="row">
@@ -6,14 +6,24 @@
       <div class="page-heading-container text-center">
         <h1 class="heading">Cast Your Vote</h1>
         <hr class="narrow-top">
-        <p class="subheading">As the Premier Partner of the Heisman Trophy, Nissan has the unique privilege of casting an official vote on behalf of you, the college football fan. So, cast your vote for the next Heisman Trophy winner and you could win a trip for you and three friends to the inaugural College Football Playoff in North Texas and get to meet a Heisman Trophy winner!</p>
-        <hr>
+        <p class="subheading">As the premier partner of the Heisman Trophy, Nissan has the exclusive privilege of casting an official vote on your behalf. Cast your vote for the next Heisman Trophy winner and also enter for chance to win a trip for you and three friends to the College Football Playoff in Arizona where you will meet a Heisman Trophy winner!<br><br>
+        Learn more about this year's candidates at <a href="http://espn.go.com/college-football/heisman/" target="_blank">Heisman Watch</a></p>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="item in athletes">
       <ballot-item></ballot-item>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="dont-see">
+        <hr class="bookend"><span class="book">Don't see Your Heisman Candidate?</span><hr class="bookend">
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 text-center">
+      <a href="#!/write-in" class="btn btn-nhh btn-lg btn-nominate" title="Nominate Your Player"><span class="larger-text">Nominate Your Player</span></a>
     </div>
   </div>
 </div>

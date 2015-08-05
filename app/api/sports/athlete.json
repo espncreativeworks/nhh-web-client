@@ -1,0 +1,1571 @@
+[
+{
+"sports": [
+{
+"name": "football",
+"id": 20,
+"uid": "s:20",
+"links": {
+"api": {
+"leagues": {
+"href": "http://api-partners.espn.com/v1/sports/football/college-football"
+},
+"news": {
+"href": "http://api-partners.espn.com/v1/sports/football/college-football/news"
+},
+"notes": {
+"href": "http://api-partners.espn.com/v1/sports/football/college-football/news/notes"
+},
+"headlines": {
+"href": "http://api-partners.espn.com/v1/sports/football/college-football/news/headlines"
+},
+"events": {
+"href": "http://api-partners.espn.com/v1/sports/football/college-football/events"
+},
+"teams": {
+"href": "http://api-partners.espn.com/v1/sports/football/college-football/teams"
+},
+"athletes": {
+"href": "http://api-partners.espn.com/v1/sports/football/college-football/athletes"
+},
+"standings": {
+"href": "http://api-partners.espn.com/v1/sports/football/college-football/standings"
+}
+},
+"app": {
+"sportscenter": {
+"href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:23"
+}
+},
+"web": {
+"leagues": {
+"href": "http://espn.go.com/college-football/"
+}
+}
+},
+"leagues": [
+{
+"name": "NCAA Football",
+"abbreviation": "college-football",
+"id": 23,
+"uid": "s:20~l:23",
+"groupId": 99,
+"shortName": "NCAA Football",
+"season": {
+"year": 2015,
+"type": 2,
+"description": "regular",
+"startDate": "2015-07-30T07:00:00Z",
+"endDate": "2015-12-15T07:59:59Z"
+},
+"week": {
+"number": 1,
+"startDate": "2015-07-01T07:00:00Z",
+"endDate": "2015-08-25T06:59:59Z",
+"text": ""
+},
+"groups": [
+{
+"name": "Division II/III",
+"abbreviation": "yy",
+"groupId": 35,
+"shortName": "Div II/III",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "NCAA Division II",
+"abbreviation": "d2",
+"groupId": 57,
+"shortName": "NCAA Division II",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "CIAA",
+"abbreviation": "ciaa",
+"groupId": 104,
+"shortName": "CIAA",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "CIAA - North",
+"abbreviation": "ciaan",
+"groupId": 152,
+"shortName": "CIAA - North",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "CIAA - South",
+"abbreviation": "ciaas",
+"groupId": 153,
+"shortName": "CIAA - South",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+}
+]
+},
+{
+"name": "GLIAC",
+"abbreviation": "gliac",
+"groupId": 107,
+"shortName": "GLIAC",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Great Lakes",
+"abbreviation": "gl",
+"groupId": 108,
+"shortName": "Great Lakes",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Great Northwest",
+"abbreviation": "gn",
+"groupId": 109,
+"shortName": "Great Northwest",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Gulf South",
+"abbreviation": "gs",
+"groupId": 110,
+"shortName": "Gulf South",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Independent DII",
+"abbreviation": "ind2",
+"groupId": 112,
+"shortName": "Independent DII",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Lone Star",
+"abbreviation": "lone",
+"groupId": 116,
+"shortName": "Lone Star",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Mid America",
+"abbreviation": "mid",
+"groupId": 118,
+"shortName": "Mid America",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Northeast 10",
+"abbreviation": "neten",
+"groupId": 127,
+"shortName": "Northeast 10",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Northern Sun",
+"abbreviation": "norsun",
+"groupId": 129,
+"shortName": "Northern Sun",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "Northern Sun - North",
+"abbreviation": "nsn",
+"groupId": 154,
+"shortName": "NS - North",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Northern Sun - South",
+"abbreviation": "nss",
+"groupId": 155,
+"shortName": "NS - South",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+}
+]
+},
+{
+"name": "Pennsylvania State Athletic Conference",
+"abbreviation": "psac",
+"groupId": 133,
+"shortName": "Pennsylvania State Athletic",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "Penn State - Eastern",
+"abbreviation": "pse",
+"groupId": 156,
+"shortName": "Penn State - Eastern",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Penn State - Western",
+"abbreviation": "psw",
+"groupId": 157,
+"shortName": "Penn State - Western",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+}
+]
+},
+{
+"name": "Rocky Mountain",
+"abbreviation": "rock",
+"groupId": 135,
+"shortName": "Rocky Mountain",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "SIAC",
+"abbreviation": "siac",
+"groupId": 136,
+"shortName": "SIAC",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "SIAC - East",
+"abbreviation": "siace",
+"groupId": 158,
+"shortName": "SIAC - East",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "SIAC - West",
+"abbreviation": "siacw",
+"groupId": 159,
+"shortName": "SIAC - West",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+}
+]
+},
+{
+"name": "South Atlantic",
+"abbreviation": "souatl",
+"groupId": 139,
+"shortName": "South Atlantic",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Mountain East Conference",
+"abbreviation": "mec",
+"groupId": 144,
+"shortName": "Mountain East",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Great American Conference",
+"abbreviation": "gamc",
+"groupId": 146,
+"shortName": "Great American",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+}
+]
+},
+{
+"name": "NCAA Division III",
+"abbreviation": "d3",
+"groupId": 58,
+"shortName": "NCAA Division III",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "American Southwest",
+"abbreviation": "am sw",
+"groupId": 100,
+"shortName": "American Southwest",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "CCIW",
+"abbreviation": "cciw",
+"groupId": 102,
+"shortName": "CCIW",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Centennial",
+"abbreviation": "cent",
+"groupId": 103,
+"shortName": "Centennial",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "ECFC",
+"abbreviation": "ecfc",
+"groupId": 105,
+"shortName": "ECFC",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Empire 8",
+"abbreviation": "emp",
+"groupId": 106,
+"shortName": "Empire 8",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Heartland",
+"abbreviation": "heart",
+"groupId": 111,
+"shortName": "Heartland",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Independent DIII",
+"abbreviation": "ind3",
+"groupId": 113,
+"shortName": "Independent DIII",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Iowa",
+"abbreviation": "iowa",
+"groupId": 114,
+"shortName": "Iowa",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Liberty League",
+"abbreviation": "lib",
+"groupId": 115,
+"shortName": "Liberty League",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Michigan",
+"abbreviation": "mich",
+"groupId": 117,
+"shortName": "Michigan",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Middle Atlantic States",
+"abbreviation": "midatl",
+"groupId": 119,
+"shortName": "Middle Atlantic States",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Midwest",
+"abbreviation": "mw",
+"groupId": 120,
+"shortName": "Midwest",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "Midwest - North",
+"abbreviation": "mwn",
+"groupId": 161,
+"shortName": "MW - North",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Midwest - South",
+"abbreviation": "mws",
+"groupId": 162,
+"shortName": "MW - South",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+}
+]
+},
+{
+"name": "Minnesota",
+"abbreviation": "minn",
+"groupId": 121,
+"shortName": "Minnesota",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "NESCAC",
+"abbreviation": "nescac",
+"groupId": 122,
+"shortName": "NESCAC",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "New England",
+"abbreviation": "ne",
+"groupId": 123,
+"shortName": "New England",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "New Jersey",
+"abbreviation": "nj",
+"groupId": 124,
+"shortName": "New Jersey",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "North Coast",
+"abbreviation": "noco",
+"groupId": 126,
+"shortName": "North Coast",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Northern Athletics",
+"abbreviation": "nath",
+"groupId": 128,
+"shortName": "Northern Athletics",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Northwest",
+"abbreviation": "nw",
+"groupId": 130,
+"shortName": "Northwest",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Ohio",
+"abbreviation": "ohio",
+"groupId": 131,
+"shortName": "Ohio",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Old Dominion",
+"abbreviation": "od",
+"groupId": 132,
+"shortName": "Old Dominion",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Presidents'",
+"abbreviation": "pres",
+"groupId": 134,
+"shortName": "Presidents'",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "So. Cal.",
+"abbreviation": "socal",
+"groupId": 138,
+"shortName": "So. Cal.",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Upper Midwest",
+"abbreviation": "umw",
+"groupId": 142,
+"shortName": "Upper Midwest",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "USA South",
+"abbreviation": "ussou",
+"groupId": 143,
+"shortName": "USA South",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Wisconsin",
+"abbreviation": "wisc",
+"groupId": 145,
+"shortName": "Wisconsin",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Southern Athletic Association",
+"abbreviation": "soaa",
+"groupId": 147,
+"shortName": "Southern Athletic",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Southern Collegiate Athletic Conference",
+"abbreviation": "scac",
+"groupId": 148,
+"shortName": "Southern Collegiate",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Massachusetts State Collegiate Athletic Conference",
+"abbreviation": "mscac",
+"groupId": 160,
+"shortName": "MSCAC",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+}
+]
+}
+]
+},
+{
+"name": "NCAA Division I",
+"abbreviation": "NCAA",
+"groupId": 90,
+"shortName": "NCAA Division I",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "FBS (I-A)",
+"groupId": 80,
+"shortName": "FBS (I-A)",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "Atlantic Coast Conference",
+"abbreviation": "acc",
+"groupId": 1,
+"shortName": "ACC",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "Atlantic Coast Conference - Atlantic",
+"abbreviation": "acca",
+"groupId": 44,
+"shortName": "ACC - Atlantic",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Atlantic Coast Conference - Coastal",
+"abbreviation": "accc",
+"groupId": 45,
+"shortName": "ACC - Coastal",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+}
+]
+},
+{
+"name": "Big 12 Conference",
+"abbreviation": "big12",
+"groupId": 4,
+"shortName": "Big 12",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Big Ten Conference",
+"abbreviation": "big10",
+"groupId": 5,
+"shortName": "Big Ten",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "Big Ten - East",
+"abbreviation": "big10e",
+"groupId": 52,
+"shortName": "Big Ten - East",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Big Ten - West",
+"abbreviation": "big10w",
+"groupId": 53,
+"shortName": "Big Ten - West",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+}
+]
+},
+{
+"name": "Southeastern Conference",
+"abbreviation": "sec",
+"groupId": 8,
+"shortName": "SEC",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "SEC - East",
+"abbreviation": "sece",
+"groupId": 6,
+"shortName": "SEC - East",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "SEC - West",
+"abbreviation": "secw",
+"groupId": 7,
+"shortName": "SEC - West",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+}
+]
+},
+{
+"name": "Pac-12 Conference",
+"abbreviation": "pac12",
+"groupId": 9,
+"shortName": "Pac-12",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "Pac 12 - North",
+"abbreviation": "pac12nor",
+"groupId": 54,
+"shortName": "Pac 12 - North",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Pac 12 - South",
+"abbreviation": "pac12sou",
+"groupId": 55,
+"shortName": "Pac 12 - South",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+}
+]
+},
+{
+"name": "Conference USA",
+"abbreviation": "usa",
+"id": 8072,
+"groupId": 12,
+"shortName": "C-USA",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "Conference USA - East",
+"abbreviation": "usae",
+"groupId": 46,
+"shortName": "C-USA - East",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Conference USA - West",
+"abbreviation": "usaw",
+"groupId": 47,
+"shortName": "C-USA - West",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+}
+]
+},
+{
+"name": "Mid-American Conference",
+"abbreviation": "midam",
+"groupId": 15,
+"shortName": "MAC",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "Mid-American - East",
+"abbreviation": "midame",
+"groupId": 13,
+"shortName": "MAC - East",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Mid-American - West",
+"abbreviation": "midamw",
+"groupId": 14,
+"shortName": "MAC - West",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+}
+]
+},
+{
+"name": "Mountain West Conference",
+"abbreviation": "mwest",
+"groupId": 17,
+"shortName": "MW",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "Mountain West - West",
+"abbreviation": "mwestw",
+"groupId": 149,
+"shortName": "MWC - West",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Mountain West - Mountain",
+"abbreviation": "mwestm",
+"groupId": 150,
+"shortName": "MWC - Mountain",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+}
+]
+},
+{
+"name": "FBS Independents",
+"abbreviation": "ind",
+"groupId": 18,
+"shortName": "FBS Indep.",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Sun Belt Conference",
+"abbreviation": "belt",
+"groupId": 37,
+"shortName": "Sun Belt",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "American Athletic Conference",
+"abbreviation": "aac",
+"groupId": 151,
+"shortName": "American",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "American Athletic - East",
+"abbreviation": "aae",
+"groupId": 163,
+"shortName": "American Athletic - East",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "American Athletic - West",
+"abbreviation": "aaw",
+"groupId": 164,
+"shortName": "American Athletic - West",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+}
+]
+}
+]
+},
+{
+"name": "FCS (I-AA)",
+"groupId": 81,
+"shortName": "FCS (I-AA)",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "Big Sky Conference",
+"abbreviation": "bsky",
+"groupId": 20,
+"shortName": "Big Sky",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Missouri Valley Football Conference",
+"abbreviation": "mvfc",
+"groupId": 21,
+"shortName": "MVFC",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Ivy League",
+"abbreviation": "ivy",
+"groupId": 22,
+"shortName": "Ivy",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Mid-Eastern Athletic Conference",
+"abbreviation": "meac",
+"groupId": 24,
+"shortName": "MEAC",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Northeast Conference",
+"abbreviation": "neast",
+"groupId": 25,
+"shortName": "NEC",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Ohio Valley Conference",
+"abbreviation": "ovc",
+"groupId": 26,
+"shortName": "OVC",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Patriot League",
+"abbreviation": "pat",
+"groupId": 27,
+"shortName": "Patriot",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Pioneer Football League",
+"abbreviation": "pfl",
+"groupId": 28,
+"shortName": "Pioneer",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Southern Conference",
+"abbreviation": "south",
+"groupId": 29,
+"shortName": "Southern",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Southland Conference",
+"abbreviation": "land",
+"groupId": 30,
+"shortName": "Southland",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Southwestern Athletic Conference",
+"abbreviation": "swac",
+"groupId": 31,
+"shortName": "SWAC",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {},
+"groups": [
+{
+"name": "Southwestern Athletic - East",
+"abbreviation": "swace",
+"groupId": 33,
+"shortName": "SWAC - East",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Southwestern Athletic - West",
+"abbreviation": "swacw",
+"groupId": 34,
+"shortName": "SWAC - West",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+}
+]
+},
+{
+"name": "FCS Independents",
+"abbreviation": "indaa",
+"groupId": 32,
+"shortName": "FCS Indep.",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Big South Conference",
+"abbreviation": "bsou",
+"groupId": 40,
+"shortName": "Big South",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+},
+{
+"name": "Colonial Athletic Association",
+"abbreviation": "caa",
+"groupId": 48,
+"shortName": "CAA",
+"season": {
+"year": "2015",
+"type": 2,
+"description": "regular",
+"startDate": "2015-01-01T00:00:00Z",
+"endDate": "2015-12-31T23:59:59Z"
+},
+"week": {}
+}
+]
+}
+]
+}
+]
+}
+]
+}
+],
+"timestamp": "2015-08-05T18:14:49Z",
+"status": "success"
+}
+]

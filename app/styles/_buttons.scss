@@ -39,16 +39,38 @@
   font-weight: normal;
 }
 
-/*.btn-vote.btn-hl {
-  background: url($image-path + 'logo_heisman_gold.png') no-repeat left center;
-}*/
+.btn-vote .gold-heisman {
+  float: left;
 
-.btn-vote .bg-hl {
-  background: url($image-path + 'logo_heisman_gold.png') no-repeat left center;
+  @media (max-width: $screen-xs-max) {
+    margin-top: -15px;
+  }
+  @media (min-width: $screen-sm-min) {
+    margin-top: -10px;
+  }
+}
+
+.btn-discussion i.fa-twitter {
+  float: left;
+}
+
+.btn-nominate {
+  font-family: "proxima-nova", sans-serif;
+  color: $nhh-white !important;
+  border: 6px solid $nhh-white !important;
+  height: 70px !important;
+  font-weight: bold;
+
+  .larger-text {
+    @media (min-width: $screen-md-min) {
+      font-size: 1.4em !important;
+    }
+  }
 }
 
 .btn-vote,
-.btn-discussion {
+.btn-discussion,
+.btn-nominate {
   padding-top: 20px;
   padding-left: 6px;
   padding-right: 6px;
