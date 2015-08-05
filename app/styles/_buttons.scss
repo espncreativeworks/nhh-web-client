@@ -1,23 +1,25 @@
 .btn-nhh {
   padding: 3px 48px;
-  border: 3px solid $nhh-white;
+  border: 6px solid $nhh-gold;
   border-radius: 0;
-  background-color: transparent;
-  color: $nhh-white;
+  background-color: black;
+  color: $nhh-gold;
   text-transform: uppercase;
-  font-style: italic;
+  font-weight: normal;
 
   &:hover {
-    border-color: $nhh-dark-gold;
+    border-color: darken($nhh-gold, 10%);
+    color: darken($nhh-gold, 10%);
   }
 
   &:hover,
   &:focus {
-    color: $nhh-white;
+    color: $nhh-gold;
   }
 
   &:focus {
     outline: 5px auto $nhh-gold;
+    color: $nhh-gold;
   }
 
   &:active,
@@ -29,10 +31,57 @@
 }
 
 .btn-nhh.btn-lg {
-  padding-top: 7px;
-  padding-bottom: 7px;
-  font-size: 1.2em;
+  font-size: 1.0em;
+  line-height: 1.1em;
+  height: 80px;
+  margin-top: 10px;
+  width: 75%;
+  font-weight: normal;
 }
+
+.btn-vote .gold-heisman {
+  float: left;
+
+  @media (max-width: $screen-xs-max) {
+    margin-top: -15px;
+  }
+  @media (min-width: $screen-sm-min) {
+    margin-top: -10px;
+  }
+}
+
+.btn-discussion i.fa-twitter {
+  float: left;
+}
+
+.btn-nominate {
+  font-family: "proxima-nova", sans-serif;
+  color: $nhh-white !important;
+  border: 6px solid $nhh-white !important;
+  height: 70px !important;
+  font-weight: bold;
+
+  .larger-text {
+    @media (min-width: $screen-md-min) {
+      font-size: 1.4em !important;
+    }
+  }
+}
+
+.btn-vote,
+.btn-discussion,
+.btn-nominate {
+  padding-top: 20px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.btn-enter {
+  padding-top: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 
 .btn-link-nhh {
   color: $nhh-gold;
@@ -108,5 +157,85 @@
     &.active {
       color: darken($nhh-gold, 15%);
     }
+  }
+}
+
+.larger-text {
+  font-size: 1.4em;
+  font-weight: normal;
+  font-style: italic;
+}
+
+@media (min-width: $screen-xs-min){
+
+  .btn-enter {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .btn-nhh.btn-lg {
+    line-height: 1.2em;
+  }
+
+}
+
+@media (min-width: $screen-sm-min){
+
+  .btn-enter {
+    padding-top: 5px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .btn-vote {
+    padding-top: 15px;
+  }
+
+  .btn-discussion {
+    padding-top: 15px;
+  }
+
+  .btn-nhh.btn-lg {
+    font-size: 1.2em;
+    line-height: 1.2em;
+  }
+
+}
+
+@media (min-width: $screen-md-min){
+  .btn-enter {
+    padding-top: 7px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .btn-vote {
+    padding-top: 25px;
+  }
+
+  .btn-discussion {
+    padding-top: 25px;
+  }
+
+  .btn-nhh.btn-lg {
+    height: 100px;
+    width: 90%;
+    font-size: 1.2em;
+    line-height: 1.1em;
+  }
+
+  .larger-text {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: $screen-lg-min){
+  .btn-enter {
+    padding-top: 15px;
+  }
+
+  .btn-nhh.btn-lg {
+    width: 93%;
   }
 }

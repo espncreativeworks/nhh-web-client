@@ -1,0 +1,35 @@
+#video-featured-container {
+  .tab-content.mobile {
+    padding: 0;
+    margin: 0;
+
+    .nhh-featured-slide-item {
+      border-bottom: 1px solid $nhh-gold;
+      width: 100%;
+      height: 250px !important;
+      padding: 0;
+      margin: 0;
+
+      .thumbnail-link {
+        background-size: 250px !important;
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding: 0;
+      }
+      .col-xs-12 {
+        height: 100%;
+      }
+      .backdrop {
+        height: 165px !important;
+      }
+      .caption {
+        padding: 0 0 5px 0 !important;
+        color: $nhh-gold;
+        font-size: 14px;
+      }
+    }
+    #featured-items {
+      height: 100%;
+    }
+  }
+}

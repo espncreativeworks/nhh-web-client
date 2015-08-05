@@ -22,5 +22,5 @@ angular.module('nhhApp')
       $scope.slides = _slides;
     });
 
-    //$log.info(_slides);
+    // $log.info(_slides);
   }]);

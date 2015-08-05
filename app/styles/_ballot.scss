@@ -4,6 +4,49 @@ $ballot-item-padding-top: 15px;
 $ballot-item-padding-bottom: $ballot-item-padding-top;
 
 #ballot-container {
+  margin-top: 20px;
+
+  .page-heading-container {
+    margin-bottom: 50px;
+
+    hr.narrow-top {
+      border-top-color: transparentize($nhh-white, .8);
+    }
+  }
+
+  .dont-see {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    color: $nhh-gold;
+    padding-top: 20px;
+
+    .bookend, .book {
+      float: left;
+    }
+
+    .bookend {
+      width: 22%;
+
+      @media (min-width: $screen-md-min) {
+        margin-top: 21px;
+      }
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        margin-top: 35px;
+      }
+      @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+        margin-top: 45px;
+      }
+      @media (max-width: $screen-xs-min - 1) {
+        margin-top: 65px;
+      }
+    }
+
+    .book {
+      width: 55%;
+      text-align: center;
+    }
+  }
 
   .ballot-item {
     //max-width: $ballot-item-width;

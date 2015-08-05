@@ -1,0 +1,15 @@
+<div class="nhh-slide-border" ng-repeat="video in slide" ng-class="{'last':$last}">
+  <div class="nhh-slide-item row">
+    <a class="thumbnail-link" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}" ng-style="{ 'background-image': 'url(' + (video.thumbnail || video.thumbnailUrl || video.meta.thumbnailUrl) + ')' }"><span class="text-hide">{{video.description || video.meta.description}}</span></a>
+
+    <div class="backdrop">
+      <a class="btn btn-play fa-stack fa-stack-large center-xy" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}">
+        <i class="fa fa-stack-2x fa-circle"></i>
+        <i class="fa fa-stack-1x fa-play fa-inverse"></i>
+      </a>
+    </div>
+    <div class="cp">
+      <p class="caption">{{video.description || video.meta.description}}</p>
+    </div>
+  </div>
+</div>

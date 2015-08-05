@@ -6,7 +6,7 @@
 }
 
 .video-player-container {
-  min-height: 144px;
+  min-height: 220px;
   padding-top: 12px;
 
   .player {
@@ -19,7 +19,7 @@
 
 @media (min-width: $screen-sm-min){
   .video-player-container {
-    min-height: 288px;
+    min-height: 300px;
   }
 }
 

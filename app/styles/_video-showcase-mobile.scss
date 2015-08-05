@@ -1,0 +1,39 @@
+#video-showcase-container {
+	.tab-content.mobile {
+		.nhh-slide-border {
+			padding-bottom: 0;
+			margin-bottom: 0;
+			border-color: $nhh-gold;
+		}
+		.nhh-slide-item {
+			width: 100%;
+			height: 250px;
+			padding: 0;
+			margin: 0;
+
+			.thumbnail-link {
+		        background-size: 250px !important;
+		        background-position: top center;
+		        background-repeat: no-repeat;
+		        padding: 0;
+		        margin: 0;
+		        width: 100%;
+		        height: 200px;
+		    }
+		    .backdrop {
+		    	width: 100%;
+		    	height: 165px;
+		    }
+		    .col-xs-12 {
+		    	height: 100%;
+		    }
+		    .cp {
+
+		    }
+		    .caption {
+		        text-align: center;
+		        padding: 10px;
+		    }
+		}
+	}
+}

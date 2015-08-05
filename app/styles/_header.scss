@@ -1,11 +1,33 @@
-$default-header-height: 60px;
+$default-header-height: 45px;
 $header-components-height: 599px;
 $logo-nissan-height: 86px;
 $logo-heisman-large-width: 365px;
 $logo-heisman-large-height: 351px;
 
+body.home {
+  #home-header-container {
+    .vote-link-container {
+      padding-top: 130px;
+
+      @media (max-width: $screen-sm-max) {
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
 #default-header-container,
 #home-header-container {
+
+  .line-end {
+    width: 100%;
+    border-top-color: transparentize($nhh-white, .5);
+  }
+  
+  .enter-text {
+    max-width: 85%;
+    white-space: normal;
+  }
 
   .dismiss-container {
     background-color: $nhh-grey;
@@ -119,6 +141,7 @@ $logo-heisman-large-height: 351px;
         font-size: 30px;
         line-height: 30px;
         margin-top: 7px;
+        margin-bottom: 7px;
       }
 
       &.title-small {
@@ -219,7 +242,16 @@ $logo-heisman-large-height: 351px;
 }
 
 @media (min-width: $screen-sm-min){
+  
+  .vote-link-container {
+    padding-top: 10px;
+  }
 
+  .line-end {
+    width: 100%;
+    border-top-color: transparentize($nhh-white, .5);
+  }
+  
   #home-header-container {
     .welcome-container,
     .hero-container {
@@ -236,6 +268,7 @@ $logo-heisman-large-height: 351px;
         &.title-large {
           font-size: 45px;
           line-height: 45px;
+          margin-bottom: 7px;
         }
 
         &.title-small {
@@ -268,12 +301,30 @@ $logo-heisman-large-height: 351px;
   }
 }
 
+@media (min-width: $screen-md-min){
+  
+  .vote-link-container {
+    padding-top: 35px;
+  }
+}
+
 @media (min-width: $screen-lg-min){
+  #home-header-container {
+    .vote-link-container {
+      padding-top: 35px;
+    }
+  }
   #default-header-container,
   #home-header-container {
     .voted {
       line-height: 51px;
     }
+
+    .line-end {
+      width: 100%;
+      border-top-color: transparentize($nhh-white, .5);
+    }
+  
 
     .voted-for-container {
       background-color: transparent;
@@ -319,4 +370,6 @@ $logo-heisman-large-height: 351px;
       }
     }
   }
+
+
 }

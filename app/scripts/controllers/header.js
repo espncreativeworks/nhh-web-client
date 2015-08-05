@@ -17,9 +17,11 @@ angular.module('nhhApp')
     };
 
     $scope.isBallot = false;
-    if ($location.path() === '/ballot'){
+    if ($location.path() === '/ballot' || $location.path() === '/write-in'){
       $scope.isBallot = true;
     }
+
+    console.log("header controller scope: ", $scope);
 
     Votes.last().then(function (vote){
       var last = $moment(vote.ts);
