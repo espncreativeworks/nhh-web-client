@@ -20,8 +20,6 @@ angular.module('nhhApp')
       $scope.selectedVideo = _.first(_slides);
 
       $scope.slides = _slides;
-
-      console.log("_slides: ", _slides);
     });
 
     // $log.info(_slides);

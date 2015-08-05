@@ -4,13 +4,14 @@ $logo-nissan-height: 86px;
 $logo-heisman-large-width: 365px;
 $logo-heisman-large-height: 351px;
 
+body.home {
+  #home-header-container {
+    .vote-link-container {
+      padding-top: 130px;
 
-#home-header-container {
-  .vote-link-container {
-    padding-top: 130px;
-
-    @media (max-width: $screen-sm-max) {
-      padding-top: 10px;
+      @media (max-width: $screen-sm-max) {
+        padding-top: 10px;
+      }
     }
   }
 }
@@ -303,14 +304,14 @@ $logo-heisman-large-height: 351px;
 @media (min-width: $screen-md-min){
   
   .vote-link-container {
-    padding-top: 80px;
+    padding-top: 35px;
   }
 }
 
 @media (min-width: $screen-lg-min){
   #home-header-container {
     .vote-link-container {
-      padding-top: 150px;
+      padding-top: 35px;
     }
   }
   #default-header-container,

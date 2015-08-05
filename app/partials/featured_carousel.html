@@ -14,7 +14,7 @@
           </a>
           <div class="backdrop">
             <a class="btn btn-play btn-pad" href="javascript:void(0);" ng-click="updateSelected(video)" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}">
-              <!-- <i class="fa fa-stack-2x fa-circle"></i> -->
+              <i class="fa fa-stack-2x fa-circle"></i>
               <i class="fa fa-stack-1x fa-1 fa-play fa-inverse"></i>
             </a>
             <p class="caption">{{video.description || video.meta.description}}</p>
@@ -51,6 +51,14 @@
                     <a class="thumbnail-link" ng-href="#!/videos/{{video.youtubeId}}" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}" ng-style="{ 'background-image': 'url(' + (video.thumbnail || video.thumbnailUrl || video.meta.thumbnailUrl) + ')' }"><span class="text-hide">{{video.description || video.meta.description}}</span></a>
                     <p class="caption">{{video.description || video.meta.description}}</p>
                   </div>     
+                  <div class="backdrop">
+                    <a class="btn btn-play btn-pad" href="javascript:void(0);" ng-click="updateSelected(video)" title="{{video.name || video.title || video.meta.title}} - {{video.description || video.meta.description}}">
+                      <!-- <i class="fa fa-stack-2x fa-circle"></i> -->
+                      <i class="fa fa-stack-2x fa-circle"></i>
+                      <i class="fa fa-stack-1x fa-play fa-inverse"></i>
+                      <!-- <i class="fa fa-stack-1x fa-1 fa-play fa-inverse"></i> -->
+                    </a>
+                  </div>
                 </div>
               </div>
             <!-- </div> -->
