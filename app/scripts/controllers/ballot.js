@@ -23,6 +23,8 @@ angular.module('nhhApp')
     Page.body.set('class', 'info ballot');
 
     Athletes.active().then(function (_athletes){
+      console.log("ballot ctrl athletes: ", _athletes);
+
       $scope.athletes = _athletes;
       var description = 'Current Nissan Heisman House Ballot: '
         , keywords = ''
@@ -59,6 +61,7 @@ angular.module('nhhApp')
 
     $scope.vote = function (athlete){
       Athletes.vote(athlete).then(function (){
+        console.log("ballot ctrl athlete: ", athlete);
         $location.path('/thanks');
       });
     };
