@@ -10,8 +10,8 @@
 angular.module('nhhApp')
   .factory('Athletes', ['$q', '$http', '$timeout', 'Ballots', 'Votes', 'Modernizr', function ($q, $http, $timeout, Ballots, Votes, Modernizr) {
 
-    var baseUrl = 'http://nhh-admin.herokuapp.com/api/athletes';
-    //var baseUrl = './api/athletes/';
+    // var baseUrl = 'http://nhh-admin.herokuapp.com/api/athletes';
+    var baseUrl = 'http://0.0.0.0:9002/api/athletes/';
 
     // Public API here
     return {
@@ -46,6 +46,32 @@ angular.module('nhhApp')
         $http.get(baseUrl + '?active=1&populate=school,position,experience')
           .success(function (athletes){
             deferred.resolve(athletes);
+          }).error(function(err){
+            deferred.reject(err);
+          });
+
+        return deferred.promise;
+      },
+      exist: function (){
+        var deferred = $q.defer();
+
+        $http.get(baseUrl + '?populate=school,position,experience')
+          .success(function (athletes){
+            deferred.resolve(athletes);
+          }).error(function(err){
+            deferred.reject(err);
+          });
+
+        return deferred.promise;
+      },
+      create: function (data){
+        console.log("athletes service create: ", data);
+        var deferred = $q.defer()
+
+        $http.post(baseUrl, data)
+          .success(function (addAthlete){
+            console.log("success athletes create: ", addAthlete);
+            deferred.resolve(addAthlete);
           }).error(function(err){
             deferred.reject(err);
           });

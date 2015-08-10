@@ -41,6 +41,21 @@ angular.module('nhhApp')
           });
         return deferred.promise;
       },
+      teamInfo: function (teamId){
+        var deferred = $q.defer()
+          , resource = baseUrl + 'teams.json' 
+          //, resource = baseUrl + 'teams' 
+          , params = { groups: groupId };
+
+        $http.get(resource, { params: params })
+          .success(function (data){
+            console.log("team info data: ", data);
+            deferred.resolve(data);
+          }).error(function(err){
+            deferred.reject(err);
+          });
+        return deferred.promise;
+      },
       athletesByTeam: function (teamId){
         var deferred = $q.defer()
           , resource = baseUrl + 'athletes.json'
