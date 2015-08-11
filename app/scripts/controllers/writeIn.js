@@ -107,8 +107,8 @@ angular.module('nhhApp')
               aearr.push(fnarr[j].indexOf($scope.athlete.fullName));
             }
 
-            // console.log("aearr: ", aearr);
-            // console.log(aearr.indexOf(0));
+            console.log("aearr: ", aearr);
+            console.log(aearr.indexOf(0));
 
             var returnObj = {
               data: data,
@@ -127,7 +127,7 @@ angular.module('nhhApp')
             };
             return Athletes.create(athleteData);
           } else {
-            return data[aearr.indexOf(0)];
+            return data.data[aearr.indexOf(0)];
           }
         }).then(function (athlete){
           console.log("outside ballots active: ", athlete);
