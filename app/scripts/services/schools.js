@@ -27,6 +27,19 @@ angular.module('nhhApp')
 
         return deferred.promise;
       },
+      get: function (key) {
+        var deferred = $q.defer();
+
+        //$http.get(baseUrl + '?id=' + key)
+        $http.get(baseUrl + key)
+          .success(function (school){
+            deferred.resolve(school);
+          }).error(function(err){
+            deferred.reject(err);
+          });
+
+        return deferred.promise;
+      },
       create: function (data) {
         // console.log("schools service create: ", data);
         var deferred = $q.defer()

@@ -65,7 +65,7 @@ angular.module('nhhApp')
         return deferred.promise;
       },
       create: function (data){
-        console.log("athletes service create: ", data);
+        // console.log("athletes service create: ", data);
         var deferred = $q.defer()
 
         $http.post(baseUrl, data)
@@ -79,14 +79,19 @@ angular.module('nhhApp')
         return deferred.promise;
       },
       vote: function (athlete){
+        console.log("athlete vote: ", athlete);
         var deferred = $q.defer()
           , data = {
-            athleteId: athlete._id,
+            athleteId: athlete.athleteId,
             medium: 1
           };
 
         if (Modernizr.touch){
           data.medium = 2;
+        }
+
+        if (athlete.writein === true) {
+          
         }
 
         Ballots.active().then(function(ballot){
