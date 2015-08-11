@@ -17,21 +17,21 @@
 
         <div class="form-group">
           <label class="sr-only">Conference</label>
-          <select class="form-control" name="conference" id="conference" ng-options="conference as conference.shortName for conference in conferences track by conference.groupId" ng-model="conference" ng-required>
+          <select class="form-control" name="conference" id="conference" ng-options="conference as conference.shortName for conference in conferences track by conference.groupId" ng-model="conference" ng-disabled="disabled" ng-required>
             <option value="">-- choose conference --</option>
           </select>
         </div>
         
         <div class="form-group">
           <label class="sr-only">Teams</label>
-          <select class="form-control" name="team" id="team" ng-options="team as team.nickname for team in teams track by team.id" ng-model="team" ng-disabled="!conference" ng-required>
+          <select class="form-control" name="team" id="team" ng-options="team as team.nickname for team in teams track by team.id" ng-model="team" ng-disabled="!conference || disabled" ng-required>
             <option value="">-- choose team --</option>
           </select>
         </div>
 
         <div class="form-group">
           <label class="sr-only">Athletes</label>
-          <select class="form-control" name="athlete" id="athlete" ng-options="athlete as athlete.displayName for athlete in athletes track by athlete.id" ng-model="athlete" ng-disabled="!(conference && team)" ng-required>
+          <select class="form-control" name="athlete" id="athlete" ng-options="athlete as athlete.displayName for athlete in athletes track by athlete.id" ng-model="athlete" ng-disabled="!(conference && team) || disabled" ng-required>
             <option value="">-- choose athlete --</option>
           </select>
         </div>

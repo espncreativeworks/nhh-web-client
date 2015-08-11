@@ -61,7 +61,7 @@ angular.module('nhhApp')
 
     $scope.vote = function (athlete){
       Athletes.vote(athlete).then(function (){
-        console.log("ballot ctrl athlete: ", athlete);
+        // console.log("ballot ctrl athlete: ", athlete);
         $location.path('/thanks');
       });
     };

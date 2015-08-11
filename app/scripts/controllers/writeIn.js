@@ -107,8 +107,8 @@ angular.module('nhhApp')
               aearr.push(fnarr[j].indexOf($scope.athlete.fullName));
             }
 
-            console.log("aearr: ", aearr);
-            console.log(aearr.indexOf(0));
+            // console.log("aearr: ", aearr);
+            // console.log(aearr.indexOf(0));
 
             var returnObj = {
               data: data,
@@ -134,7 +134,7 @@ angular.module('nhhApp')
 
           Ballots.active().then(function (ballot){
             // console.log("ballot: ",ballot);
-            console.log("athlete: ", athlete);
+            // console.log("athlete: ", athlete);
 
             var doc = {
               ballotId: ballot._id,
@@ -145,8 +145,8 @@ angular.module('nhhApp')
 
             // do a check if athlete already exists in ballot.writein
             var bwilist = ballot.writein;
-            console.log("bwilist: ", bwilist);
-            console.log("bwilist indexof: ", bwilist.indexOf(athlete));
+            // console.log("bwilist: ", bwilist);
+            // console.log("bwilist indexof: ", bwilist.indexOf(athlete));
             if (bwilist.indexOf(athlete) === -1) {
               Ballots.addAthlete(doc).then(function (athlete) {
                 console.log("add athlete: ", athlete);
@@ -156,8 +156,8 @@ angular.module('nhhApp')
             }
 
             Athletes.vote(doc).then(function (athlete){
-              console.log("write in ctrl athlete: ", athlete);
-              //$location.path('/thanks');
+              // console.log("write in ctrl athlete: ", athlete);
+              $location.path('/thanks');
             });
           });
         }, function (err){
