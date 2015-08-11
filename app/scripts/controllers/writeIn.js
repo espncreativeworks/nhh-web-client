@@ -8,7 +8,7 @@
  * Controller of the nhhApp
  */
 angular.module('nhhApp')
-  .controller('WriteInCtrl', ['$scope', '$location', 'Page', 'Ballots', 'Athletes', 'Votes', 'Sports', 'Schools', 'fullNameFilter', 'underscore', '$moment', function ($scope, $location, Page, Ballots, Athletes, Votes, Sports, Schools, fullName, _, $moment) {
+  .controller('WriteInCtrl', ['$scope', '$location', 'Page', 'Ballots', 'Athletes', 'Votes', 'Sports', 'Schools', 'Positions', 'fullNameFilter', 'underscore', '$moment', function ($scope, $location, Page, Ballots, Athletes, Votes, Sports, Schools, Positions, fullName, _, $moment) {
 
     var title = 'Write-In Ballot';
 
@@ -63,106 +63,129 @@ angular.module('nhhApp')
         $scope.schoolExists = false;
         $scope.athleteExists = false;
         var searr = []
+          , pearr = []
           , aearr = []
           , fnarr = []
           , schoolID = "";
 
+        Schools.all().then(function(data){           
+          for (var i = 0; i < data.length; i++) {
+            searr.push(data[i].name.indexOf($scope.selectedTeam.nickname));
+          }
+          if (searr.indexOf(0) === -1) {
+            var schoolData = {
+              name: $scope.selectedTeam.nickname,
+              espnId: $scope.selectedTeam.id,
+              abbreviation: $scope.selectedTeam.abbreviation,
+              primaryColor: $scope.selectedTeam.color
+            };
 
-        Schools.all().then(function(data){
-          // console.log("get schools: ", data);
-          // console.log("school exists?: ", $scope.schoolExists);
-          // console.log("school scope: ", $scope);
-          if (!$scope.schoolExists) {            
+            Schools.create(schoolData).then(function(data) {
+              schoolID = data._id;
+            });  
+          }
+        }).then(function(){
+          Positions.all().then(function(data){
+            // console.log("position data: ", data);
             for (var i = 0; i < data.length; i++) {
-              searr.push(data[i].name.indexOf($scope.selectedTeam.nickname));
-            }
-            // console.log("searr: ", searr);
-            // console.log(searr.indexOf(0));
-            if (searr.indexOf(0) === -1) {
-              var schoolData = {
-                name: $scope.selectedTeam.nickname,
-                espnId: $scope.selectedTeam.id,
-                abbreviation: $scope.selectedTeam.abbreviation,
-                primaryColor: $scope.selectedTeam.color
+                pearr.push(data[i].abbreviation.indexOf($scope.athlete.positions[0].abbreviation));
+              }
+            if (pearr.indexOf(0) === -1) {
+              var positionData = {
+                name: $scope.athlete.positions[0].name,
+                abbreviation: $scope.athlete.positions[0].abbreviation
               };
 
-              Schools.create(schoolData).then(function(data) {
-                // console.log("created school: ", data);
-                schoolID = data._id;
-                $scope.schoolExists = true;
+              Positions.create(positionData).then(function(data) {
+                var positionID = data._id;
               });  
             }
-          }
+          });
+        }).then(function(){
+          Athletes.all().then(function(data){
+            // console.log("athlete data: ", data);
+            // console.log("scope.athlete: ", $scope.athlete);
+            if (!$scope.athleteExists) {
+              for (var i = 0; i < data.length; i++) {
+                fnarr.push(data[i].name.first + " " + data[i].name.last);
+              }
+              // console.log("fnarr: ", fnarr);
+              for (var j= 0; j < fnarr.length; j++) {
+                aearr.push(fnarr[j].indexOf($scope.athlete.fullName));
+              }
+
+              // console.log("aearr: ", aearr);
+              // console.log(aearr.indexOf(0));
+
+              var returnObj = {
+                data: data,
+                aearr: aearr
+              };
+              return returnObj;
+            }
+          }).then(function (data){
+            if (data.aearr.indexOf(0) === -1) {
+              if ($scope.athlete.experience === 1) {
+                $scope.athlete.experience = "Sophomore";
+              } else if ($scope.athlete.experience === 2) {
+                $scope.athlete.experience = "Junior";
+              } else if ($scope.athlete.experience === 3) {
+                $scope.athlete.experience = "Senior";
+              } else if ($scope.athlete.experience === 0) {
+                $scope.athlete.experience = "Freshman";
+              }
+
+              var athleteData = {
+                name: $scope.athlete.fullName,
+                firstName: $scope.athlete.firstName,
+                lastName: $scope.athlete.lastName,
+                espnId: $scope.athlete.id,
+                jersey: $scope.athlete.jersey,
+                school: $scope.athlete.team.abbreviation,
+                experience: $scope.athlete.experience,
+                position: $scope.athlete.positions[0].name
+              };
+              return Athletes.create(athleteData);
+            } else {
+              return data.data[aearr.indexOf(0)];
+            }
+          }).then(function (athlete){
+            console.log("outside ballots active: ", athlete);
+
+            Ballots.active().then(function (ballot){
+              // console.log("ballot: ",ballot);
+              // console.log("athlete: ", athlete);
+
+              var doc = {
+                ballotId: ballot._id,
+                athleteId: athlete._id,
+                athleteName: athlete.name.first + " " + athlete.name.last,
+                writein: true
+              }
+
+              // do a check if athlete already exists in ballot.writein
+              var bwilist = ballot.writein;
+              // console.log("bwilist: ", bwilist);
+              // console.log("bwilist indexof: ", bwilist.indexOf(athlete));
+              if (bwilist.indexOf(athlete) === -1) {
+                Ballots.addAthlete(doc).then(function (athlete) {
+                  console.log("add athlete: ", athlete);
+                }, function(err){
+                  console.log(err);
+                });
+              }
+
+              Athletes.vote(doc).then(function (athlete){
+                // console.log("write in ctrl athlete: ", athlete);
+                $location.path('/thanks');
+              });
+            });
+          }, function (err){
+            console.error(err);
+          }); 
         });
 
-        Athletes.all().then(function(data){
-          // console.log("athlete data: ", data);
-          // console.log("scope.athlete: ", $scope.athlete);
-          if (!$scope.athleteExists) {
-            for (var i = 0; i < data.length; i++) {
-              fnarr.push(data[i].name.first + " " + data[i].name.last);
-            }
-            // console.log("fnarr: ", fnarr);
-            for (var j= 0; j < fnarr.length; j++) {
-              aearr.push(fnarr[j].indexOf($scope.athlete.fullName));
-            }
-
-            // console.log("aearr: ", aearr);
-            // console.log(aearr.indexOf(0));
-
-            var returnObj = {
-              data: data,
-              aearr: aearr
-            };
-            return returnObj;
-          }
-        }).then(function (data){
-          if (data.aearr.indexOf(0) === -1) {
-            var athleteData = {
-              name: $scope.athlete.fullName,
-              firstName: $scope.athlete.firstName,
-              lastName: $scope.athlete.lastName,
-              espnId: $scope.athlete.id,
-              jersey: $scope.athlete.jersey
-            };
-            return Athletes.create(athleteData);
-          } else {
-            return data.data[aearr.indexOf(0)];
-          }
-        }).then(function (athlete){
-          console.log("outside ballots active: ", athlete);
-
-          Ballots.active().then(function (ballot){
-            // console.log("ballot: ",ballot);
-            // console.log("athlete: ", athlete);
-
-            var doc = {
-              ballotId: ballot._id,
-              athleteId: athlete._id,
-              athleteName: athlete.name.first + " " + athlete.name.last,
-              writein: true
-            }
-
-            // do a check if athlete already exists in ballot.writein
-            var bwilist = ballot.writein;
-            // console.log("bwilist: ", bwilist);
-            // console.log("bwilist indexof: ", bwilist.indexOf(athlete));
-            if (bwilist.indexOf(athlete) === -1) {
-              Ballots.addAthlete(doc).then(function (athlete) {
-                console.log("add athlete: ", athlete);
-              }, function(err){
-                console.log(err);
-              });
-            }
-
-            Athletes.vote(doc).then(function (athlete){
-              // console.log("write in ctrl athlete: ", athlete);
-              $location.path('/thanks');
-            });
-          });
-        }, function (err){
-          console.error(err);
-        }); 
+        
       }
     };
 
@@ -205,7 +228,7 @@ angular.module('nhhApp')
         });
 
         $scope.selectedTeam = newVal;
-        // console.log("selected team: ", $scope.selectedTeam);
+        console.log("selected team: ", $scope.selectedTeam);
       }
     };
 

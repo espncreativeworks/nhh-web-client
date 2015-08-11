@@ -65,7 +65,7 @@ angular.module('nhhApp')
         return deferred.promise;
       },
       create: function (data){
-        // console.log("athletes service create: ", data);
+        console.log("athletes service create: ", data);
         var deferred = $q.defer()
 
         $http.post(baseUrl, data)
@@ -91,7 +91,7 @@ angular.module('nhhApp')
         }
 
         if (athlete.writein === true) {
-          
+
         }
 
         Ballots.active().then(function(ballot){
