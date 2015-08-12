@@ -53,15 +53,29 @@ angular.module('nhhApp')
         return votes.indexOf(vote) + 1;
       });
 
+      console.log("leaderboard: ", sorted);
+      console.log("length: ", sorted.length);
+
       comma = '';
-      angular.forEach(sorted, function (_athlete, i){
-        _athlete.rank = rankings[i];
-        _athlete.displayPercentage = Math.round((_athlete.totalVotes / _totalVotes) * 100);
-        if (_athlete.rank <= limit){
-          description += comma + ordinalize(_athlete.rank) + ' - ' + fullName(_athlete.name) + ' (' + _athlete.displayPercentage + '%)';
-          comma = ', ';
+      if (sorted.length <= 19) {
+        angular.forEach(sorted, function (_athlete, i){
+          _athlete.rank = rankings[i];
+          _athlete.displayPercentage = Math.round((_athlete.totalVotes / _totalVotes) * 100);
+          if (_athlete.rank <= limit){
+            description += comma + ordinalize(_athlete.rank) + ' - ' + fullName(_athlete.name) + ' (' + _athlete.displayPercentage + '%)';
+            comma = ', ';
+          }
+        });
+      } else {
+        for (var i = 0; i < sorted.length-1; i++) { 
+          sorted.rank = rankings[i];
+          sorted.displayPercentage = Math.round((sorted.totalVotes / _totalVotes) * 100);
+          if (sorted.rank <= limit){
+            description += comma + ordinalize(_athlete.rank) + ' - ' + fullName(_athlete.name) + ' (' + _athlete.displayPercentage + '%)';
+            comma = ', ';
+          }
         }
-      });
+      }
 
       var twitterMeta = {
         'twitter:title': title,
