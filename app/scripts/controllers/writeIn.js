@@ -141,7 +141,7 @@ angular.module('nhhApp')
                 lastName: $scope.athlete.lastName,
                 espnId: $scope.athlete.id,
                 jersey: $scope.athlete.jersey,
-                school: $scope.athlete.team.abbreviation,
+                school: $scope.athlete.schools[0].name,
                 experience: $scope.athlete.experience,
                 position: $scope.athlete.positions[0].name
               };
@@ -181,7 +181,7 @@ angular.module('nhhApp')
               });
             });
           }, function (err){
-            console.error(err);
+            console.log(err);
           }); 
         });
 

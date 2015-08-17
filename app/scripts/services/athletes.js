@@ -10,8 +10,8 @@
 angular.module('nhhApp')
   .factory('Athletes', ['$q', '$http', '$timeout', 'Ballots', 'Votes', 'Modernizr', function ($q, $http, $timeout, Ballots, Votes, Modernizr) {
 
-    // var baseUrl = 'http://nhh-admin.herokuapp.com/api/athletes';
-    var baseUrl = 'http://0.0.0.0:9002/api/athletes/';
+    var baseUrl = 'http://nhh-admin.herokuapp.com/api/athletes';
+    // var baseUrl = 'http://0.0.0.0:9002/api/athletes/';
 
     // Public API here
     return {
@@ -88,10 +88,6 @@ angular.module('nhhApp')
 
         if (Modernizr.touch){
           data.medium = 2;
-        }
-
-        if (athlete.writein === true) {
-
         }
 
         Ballots.active().then(function(ballot){

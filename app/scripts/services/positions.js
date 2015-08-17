@@ -10,8 +10,8 @@
 angular.module('nhhApp')
   .factory('Positions', ['$q', '$http', '$timeout', 'Ballots', 'Votes', 'Athletes', 'Modernizr', function ($q, $http, $timeout, Ballots, Votes, Athletes, Modernizr) {
 
-    // var baseUrl = 'http://nhh-admin.herokuapp.com/api/positions';
-    var baseUrl = 'http://0.0.0.0:9002/api/positions/';
+    var baseUrl = 'http://nhh-admin.herokuapp.com/api/positions';
+    // var baseUrl = 'http://0.0.0.0:9002/api/positions/';
 
     // Public API here
     return {

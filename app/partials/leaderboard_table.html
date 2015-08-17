@@ -1,4 +1,4 @@
-<div class="row leaderboard-row" ng-class='{ "even": $even, "odd": $odd }' ng-repeat="athlete in athletes | orderBy: sortPredicate : reverse">
+<div class="row leaderboard-row" ng-class='{ "even": $even, "odd": $odd }' ng-repeat="athlete in athletes | orderBy: sortPredicate : reverse | limitTo: lbnum">
   <div class="col-xs-8 col-sm-3 leaderboard-column name">{{athlete.name | fullName}}</div>
   <div class="col-xs-4 col-sm-3 leaderboard-column vote percentage-value">{{athlete.displayPercentage}}%</div>
   <div class="col-sm-6 hidden-xs leaderboard-column vote percentage-bar">
