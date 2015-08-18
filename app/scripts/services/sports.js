@@ -16,8 +16,8 @@ angular.module('nhhApp')
     return {
       conferences: function () {
         var deferred = $q.defer()
-          , resource = baseUrl + 'conferences.json';
-          //, resource = baseUrl + 'conferences';
+          // , resource = baseUrl + 'conferences.json';
+          , resource = baseUrl + 'conferences';
 
         $http.get(resource)
           .success(function (data){
@@ -29,8 +29,8 @@ angular.module('nhhApp')
       },
       teamsByGroup: function (groupId){
         var deferred = $q.defer()
-          , resource = baseUrl + 'teams.json' 
-          //, resource = baseUrl + 'teams' 
+          // , resource = baseUrl + 'teams.json' 
+          , resource = baseUrl + 'teams' 
           , params = { groups: groupId };
 
         $http.get(resource, { params: params })
@@ -43,8 +43,8 @@ angular.module('nhhApp')
       },
       teamInfo: function (teamId){
         var deferred = $q.defer()
-          , resource = baseUrl + 'teams.json' 
-          //, resource = baseUrl + 'teams' 
+          // , resource = baseUrl + 'teams.json' 
+          , resource = baseUrl + 'teams' 
           , params = { groups: groupId };
 
         $http.get(resource, { params: params })
@@ -58,8 +58,8 @@ angular.module('nhhApp')
       },
       athletesByTeam: function (teamId){
         var deferred = $q.defer()
-          , resource = baseUrl + 'athletes.json'
-          //, resource = baseUrl + 'team'
+          // , resource = baseUrl + 'athletes.json'
+          , resource = baseUrl + 'team'
           , params = { id: teamId, enable: 'athletes' };
 
         $http.get(resource, { params: params })
@@ -72,8 +72,8 @@ angular.module('nhhApp')
       },
       athleteById: function (athleteId){
         var deferred = $q.defer()
-          , resource = baseUrl + 'athlete.json'
-          //, resource = baseUrl + 'athlete'
+          // , resource = baseUrl + 'athlete.json'
+          , resource = baseUrl + 'athlete'
           , params = { id: athleteId };
 
         $http.get(resource, { params: params })

@@ -19,8 +19,8 @@ angular.module('nhhApp')
       all: function () {
         var deferred = $q.defer();
 
-        //$http.get(baseUrl + '/')
-        $http.get(baseUrl + '/index.json')
+        $http.get(baseUrl + '/')
+        // $http.get(baseUrl + '/index.json')
           .success(function (links){
             deferred.resolve(links);
           }).error(function(err){
@@ -32,8 +32,8 @@ angular.module('nhhApp')
       social: function () {
         var deferred = $q.defer();
 
-        //$http.get(baseUrl + '/social')
-        $http.get(baseUrl + '/social.json')
+        $http.get(baseUrl + '/social')
+        // $http.get(baseUrl + '/social.json')
           .success(function (links){
             deferred.resolve(links);
           }).error(function(err){
@@ -47,7 +47,7 @@ angular.module('nhhApp')
         var deferred = $q.defer()
           , _params;
 
-        if (url !== 'http://promo.espn.go.com/espn/contests/nissan/heisman/2014/'){
+        if (url !== 'http://promo.espn.go.com/espn/contests/nissan/heisman/2015/' || url !== 'http://promo-qa.espn.go.com/espn/contests/nissan/heisman/2015/'){
           _params = { longUrl: url, '_method': 'POST' };
           $http.get(baseUrl + '/shorten', { params: _params })
           //$http.post(baseUrl + '/shorten', { longUrl: url })

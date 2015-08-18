@@ -30,8 +30,8 @@ angular.module('nhhApp')
       get: function (key) {
         var deferred = $q.defer();
 
-        //$http.get(baseUrl + '?id=' + key + '&populate=school,position,experience')
-        $http.get(baseUrl + key + '?populate=school,position,experience')
+        $http.get(baseUrl + '?id=' + key + '&populate=school,position,experience')
+        // $http.get(baseUrl + key + '?populate=school,position,experience')
           .success(function (athlete){
             deferred.resolve(athlete);
           }).error(function(err){
@@ -82,7 +82,7 @@ angular.module('nhhApp')
         console.log("athlete vote: ", athlete);
         var deferred = $q.defer()
           , data = {
-            athleteId: athlete.athleteId,
+            athleteId: athlete._id,
             medium: 1
           };
 

@@ -32,8 +32,8 @@ angular.module('nhhApp')
         var deferred = $q.defer();
 
         // $http.get(baseUrl + key + '.json')
-        // $http.get(baseUrl + '?id=' + key)
-        $http.get(baseUrl + key)
+        $http.get(baseUrl + '?id=' + key)
+        // $http.get(baseUrl + key)
           .success(function (stop){
             deferred.resolve(stop);
           }).error(function(err){

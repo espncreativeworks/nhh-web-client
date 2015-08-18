@@ -41,6 +41,7 @@ angular.module('nhhApp')
       },
       addAthlete: function(data) {
         console.log("ballot service data: ", data);
+
         var deferred = $q.defer();  
 
         $http.post(baseUrl, data)

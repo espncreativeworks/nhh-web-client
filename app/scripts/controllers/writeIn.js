@@ -158,7 +158,7 @@ angular.module('nhhApp')
 
               var doc = {
                 ballotId: ballot._id,
-                athleteId: athlete._id,
+                _id: athlete._id,
                 athleteName: athlete.name.first + " " + athlete.name.last,
                 writein: true
               }

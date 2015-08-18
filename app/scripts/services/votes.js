@@ -21,8 +21,8 @@ angular.module('nhhApp')
         console.log("vote data: ", data);
         // console.log("vote data: ", _params);
 
-        // $http.get(baseUrl, { params: _params })
-        $http.post(baseUrl, data)
+        $http.get(baseUrl, { params: _params })
+        // $http.post(baseUrl, data)
           .success(function (vote){
             console.log("vote create: ", vote);
             nhhLocalStorage.set('lastVoted', {

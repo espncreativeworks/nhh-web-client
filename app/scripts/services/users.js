@@ -13,8 +13,8 @@ angular.module('nhhApp')
     // ...
 
 
-    // var baseUrl = './api/user/';
-    var baseUrl = './api/user/index.json';
+    var baseUrl = './api/user/';
+    // var baseUrl = './api/user/index.json';
 
     // Public API here
     return {

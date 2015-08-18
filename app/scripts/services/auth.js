@@ -16,7 +16,7 @@ angular.module('nhhApp')
       SUBMIT: 1,
       appRedirect: $location.absUrl(),
       failedLocation: $location.protocol() + '://' + $location.host() + window.location.pathname + '#!/login',
-      sweepstakesName: 'ESPNPromo_Nissan_082814',
+      sweepstakesName: 'ESPNPromo_Nissan_090215',
       'aff_code': 'espn_contests',
       registrationFormId: 'espn_contests',
       desktop: {
