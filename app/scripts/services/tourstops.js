@@ -10,8 +10,8 @@
 angular.module('nhhApp')
   .factory('TourStops', ['$q', '$http', function ($q, $http) {
     //var baseUrl = 'http://0.0.0.0:9000/api/tour-stops/';
-    var baseUrl = 'http://nhh-admin.herokuapp.com/api/tour-stops/';
-    // var baseUrl = './api/tour_stops/';
+    // var baseUrl = 'http://nhh-admin.herokuapp.com/api/tour-stops/';
+    var baseUrl = './api/tour_stops/';
 
     // Public API here
     return {

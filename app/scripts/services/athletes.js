@@ -10,8 +10,9 @@
 angular.module('nhhApp')
   .factory('Athletes', ['$q', '$http', '$timeout', 'Ballots', 'Votes', 'Modernizr', function ($q, $http, $timeout, Ballots, Votes, Modernizr) {
 
-    var baseUrl = 'http://nhh-admin.herokuapp.com/api/athletes';
+    // var baseUrl = 'http://nhh-admin.herokuapp.com/api/athletes';
     // var baseUrl = 'http://0.0.0.0:9002/api/athletes/';
+    var baseUrl = './api/athletes';
 
     // Public API here
     return {
@@ -30,8 +31,8 @@ angular.module('nhhApp')
       get: function (key) {
         var deferred = $q.defer();
 
-        $http.get(baseUrl + '?id=' + key + '&populate=school,position,experience')
-        // $http.get(baseUrl + key + '?populate=school,position,experience')
+        // $http.get(baseUrl + '?id=' + key + '&populate=school,position,experience')
+        $http.get(baseUrl + key + '?populate=school,position,experience')
           .success(function (athlete){
             deferred.resolve(athlete);
           }).error(function(err){
@@ -65,10 +66,12 @@ angular.module('nhhApp')
         return deferred.promise;
       },
       create: function (data){
-        console.log("athletes service create: ", data);
+        console.log("athletes create before success: ", data);
         var deferred = $q.defer()
+          , _params = angular.extend({ '_method': 'POST' }, data);
 
-        $http.post(baseUrl, data)
+        // $http.post(baseUrl, data)
+        $http.get(baseUrl, { params: _params })
           .success(function (addAthlete){
             console.log("success athletes create: ", addAthlete);
             deferred.resolve(addAthlete);

@@ -9,7 +9,7 @@
 angular.module('nhhApp')
   .directive('featuredCarousel', ['underscore', function (_) {
     return {
-      templateUrl: 'partials/featured_carousel.html',
+      templateUrl: 'partials/featured_carousel',
       restrict: 'E',
       scope: true,
       link: function postLink(scope, element, attrs) {

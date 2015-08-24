@@ -68,11 +68,19 @@ angular.module('nhhApp')
           , fnarr = []
           , schoolID = "";
 
-        Schools.all().then(function(data){           
+        Schools.all().then(function(data){   
+          console.log("all schools: ", data);
+
           for (var i = 0; i < data.length; i++) {
-            searr.push(data[i].name.indexOf($scope.selectedTeam.nickname));
+            // console.log("school compare: ", data[i].name + ", " + $scope.selectedTeam.nickname);
+
+            if (data[i].name === $scope.selectedTeam.nickname) {
+              searr.push(i);
+            }
+            // searr.push(data[i].name.indexOf($scope.selectedTeam.nickname));
           }
-          if (searr.indexOf(0) === -1) {
+          // console.log("searr: ", searr + ", length: " + searr.length);       
+          if (searr.length === 0) {
             var schoolData = {
               name: $scope.selectedTeam.nickname,
               espnId: $scope.selectedTeam.id,
@@ -81,6 +89,7 @@ angular.module('nhhApp')
             };
 
             Schools.create(schoolData).then(function(data) {
+              console.log("create school data: ", data);
               schoolID = data._id;
             });  
           }
@@ -103,7 +112,7 @@ angular.module('nhhApp')
           });
         }).then(function(){
           Athletes.all().then(function(data){
-            // console.log("athlete data: ", data);
+            console.log("athlete data: ", data);
             // console.log("scope.athlete: ", $scope.athlete);
             if (!$scope.athleteExists) {
               for (var i = 0; i < data.length; i++) {

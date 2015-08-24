@@ -144,11 +144,6 @@ angular
           }]
         }
       })
-      .when('/login', {
-        // templateUrl: 'views/login.html',
-        templateUrl: 'views/login',
-        controller: 'LoginCtrl'
-      })
       .when('/share-vote/:athleteId', {
         // templateUrl: 'views/share_vote.html',
         templateUrl: 'views/share_vote',

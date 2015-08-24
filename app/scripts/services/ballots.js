@@ -10,8 +10,9 @@
 angular.module('nhhApp')
   .factory('Ballots', ['$q', '$http', function ($q, $http) {
 
-    var baseUrl = 'http://nhh-admin.herokuapp.com/api/ballots';
+    // var baseUrl = 'http://nhh-admin.herokuapp.com/api/ballots';
     // var baseUrl = 'http://0.0.0.0:9002/api/ballots/';
+    var baseUrl = './api/ballots/';
 
     // Public API here
     return {
@@ -42,9 +43,11 @@ angular.module('nhhApp')
       addAthlete: function(data) {
         console.log("ballot service data: ", data);
 
-        var deferred = $q.defer();  
+        var deferred = $q.defer()
+        , _params = angular.extend({ '_method': 'POST' }, data);  
 
-        $http.post(baseUrl, data)
+        // $http.post(baseUrl, data)
+        $http.get(baseUrl, { params: _params })
           .success(function (addAthlete){
             console.log("ballot service add athlete: ", addAthlete);
             

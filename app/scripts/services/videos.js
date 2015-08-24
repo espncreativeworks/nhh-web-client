@@ -10,8 +10,8 @@
 angular.module('nhhApp')
   .factory('Videos', ['$q', '$http', function ($q, $http) {
 
-    var baseUrl = 'http://nhh-admin.herokuapp.com/api/videos';
-    //var baseUrl = './api/videos/';
+    // var baseUrl = 'http://nhh-admin.herokuapp.com/api/videos';
+    var baseUrl = './api/videos/';
 
     // Public API here
     return {
@@ -39,8 +39,8 @@ angular.module('nhhApp')
         var deferred = $q.defer()
           , _params = { id: id };
 
-        $http.get(baseUrl + "/" + id)
-        //$http.get(baseUrl, { params: _params })
+        // $http.get(baseUrl + "/" + id)
+        $http.get(baseUrl, { params: _params })
           .success(function (video){
             deferred.resolve(video);
           }).error(function(err){

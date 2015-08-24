@@ -8,7 +8,7 @@
  * Controller of the nhhApp
  */
 angular.module('nhhApp')
-  .controller('HeaderCtrl', ['$scope', '$location', 'Votes', '$moment', 'fullNameFilter', function ($scope, $location, Votes, $moment, fullName) {
+  .controller('HeaderCtrl', ['$scope', '$location', 'Votes', '$moment', 'fullNameFilter', 'Auth', function ($scope, $location, Votes, $moment, fullName, Auth) {
     var now = $moment();
 
     $scope.dismissed = false;
@@ -20,6 +20,21 @@ angular.module('nhhApp')
     if ($location.path() === '/ballot' || $location.path() === '/write-in'){
       $scope.isBallot = true;
     }
+
+    Auth.status().then(function (status){
+      console.log("auth status: ", status);
+      if (status.loggedIn){
+        $scope.loggedin = true
+      } else {
+        $scope.loggedin = false
+      }
+      console.log("$scope.loggedin: ", $scope.loggedin);
+    }, function (){
+      deferred.reject({
+        loggedIn: false,
+        to: '/confirm'
+      });
+    });
 
     Votes.last().then(function (vote){
       console.log("header last vote: ", vote);

@@ -38,8 +38,8 @@ angular.module('nhhApp')
       status: function () {
         var deferred = $q.defer();
 
-        // $http.get(baseUrl + 'status')
-        $http.get(baseUrl + 'status.json')
+        $http.get(baseUrl + 'status')
+        // $http.get(baseUrl + 'status.json')
           .success(function (status){
             deferred.resolve(status);
           }).error(function (err){
@@ -51,8 +51,8 @@ angular.module('nhhApp')
       validateLoginKey: function (key) {
         var deferred = $q.defer();
 
-        // $http.get(baseUrl + 'validateLoginKey', { cache: false, params: { key: key } })
-        $http.get(baseUrl + 'validateLoginKey.json', { cache: false, params: { key: key } })
+        $http.get(baseUrl + 'validateLoginKey', { cache: false, params: { key: key } })
+        // $http.get(baseUrl + 'validateLoginKey.json', { cache: false, params: { key: key } })
           .success(function (result){
             deferred.resolve(result);
           }).error(function (err){
