@@ -39,14 +39,23 @@
   font-weight: normal;
 }
 
-.btn-vote .gold-heisman {
-  float: left;
+.btn-vote {
+  padding: 0px;
 
-  @media (max-width: $screen-xs-max) {
-    margin-top: -15px;
+  .gold-heisman {
+    background-image: url($image-path + 'logo_heisman_gold.png');
+    width: 62px;
+    height: 60px;
   }
-  @media (min-width: $screen-sm-min) {
-    margin-top: -10px;
+
+  .vote-text div {
+    display: inline-block;
+  }
+  
+  .vcopy {
+    vertical-align: top;
+    margin-top: 10px;
+    margin-left: 5px;
   }
 }
 
@@ -62,8 +71,14 @@
   }
 }
 
-.btn-discussion i.fa-twitter {
-  float: left;
+.btn-discussion {
+  .discussion-text {
+    margin-top: -5px;
+
+    div {
+      display: inline-block;
+    }
+  }
 }
 
 .btn-nominate {
@@ -85,12 +100,21 @@
   }
 }
 
-.btn-vote,
 .btn-discussion,
 .btn-nominate {
   padding-top: 20px;
   padding-left: 6px;
   padding-right: 6px;
+}
+
+.btn-vote {
+  padding-top: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+
+  .vcopy {
+    margin-top: 15px;
+  }
 }
 
 .btn-enter {
@@ -191,6 +215,10 @@
     padding-right: 20px;
   }
 
+  .btn-vote {
+    padding-top: 5px;
+  }
+
   .btn-nhh.btn-lg {
     line-height: 1.2em;
   }
@@ -206,7 +234,11 @@
   }
 
   .btn-vote {
-    padding-top: 15px;
+    padding-top: 5px;
+
+    .vcopy {
+      margin-top: 10px;
+    }
   }
 
   .btn-discussion {
@@ -228,7 +260,7 @@
   }
 
   .btn-vote {
-    padding-top: 25px;
+    padding-top: 15px;
   }
 
   .btn-discussion {

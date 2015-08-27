@@ -8,13 +8,18 @@
  * Controller of the nhhApp
  */
 angular.module('nhhApp')
-  .controller('ConfirmCtrl', ['$scope', '$location', 'Page', 'Auth', 'Sweepstakes', 'Lists', '$sce', 'underscore', 'user', function ($scope, $location, Page, Auth, Sweepstakes, Lists, $sce, _, user){
+  .controller('ConfirmCtrl', ['$scope', '$location', 'Page', 'Auth', 'Sweepstakes', 'Lists', '$sce', 'underscore', 'user', '$window', function ($scope, $location, Page, Auth, Sweepstakes, Lists, $sce, _, user, $window){
     $scope.user = user;
     $scope.auth = Auth;
 
     Page.meta.reset();
     Page.meta.set('title', 'Confirm Your Info');
     Page.body.set('class', 'info confirm');
+
+    $scope.logoutClick = function() {
+      $window.location.reload(true);
+      $window.location.replace('http://promo-qa.espn.go.com/espn/contests/nissan/heisman/2015/#!/');
+    }
 
     Lists.all().then(function (lists){
       angular.forEach(lists, function (list){
@@ -65,6 +70,7 @@ angular.module('nhhApp')
         if (err.data && err.data.message){
           msg = err.data.message;
         }
+        console.log(encodeURIComponent(msg));
         $location.path('/error?msg=' + encodeURIComponent(msg));
       }).then(function (results){
         console.log(results);
@@ -79,7 +85,7 @@ angular.module('nhhApp')
         if (err.data && err.data.errors && err.data.errors[0].message){
           msg = err.data.errors[0].message;
         }
-
+        console.log(encodeURIComponent(msg));
         $location.path('/error?msg=' + encodeURIComponent(msg));
       });
     };

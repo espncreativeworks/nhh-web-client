@@ -8,7 +8,7 @@
  * Controller of the nhhApp
  */
 angular.module('nhhApp')
-  .controller('HeaderCtrl', ['$scope', '$location', 'Votes', '$moment', 'fullNameFilter', 'Auth', function ($scope, $location, Votes, $moment, fullName, Auth) {
+  .controller('HeaderCtrl', ['$scope', '$location', 'Votes', '$moment', 'fullNameFilter', 'Auth', 'Sweepstakes', function ($scope, $location, Votes, $moment, fullName, Auth, Sweepstakes) {
     var now = $moment();
 
     $scope.dismissed = false;
@@ -35,6 +35,22 @@ angular.module('nhhApp')
         to: '/confirm'
       });
     });
+
+    Sweepstakes.status().then(function (sStatus){
+      console.log("sweeps status: ", sStatus);
+      $scope.eligibility = true;
+      console.log("$scope.eligibility: ", $scope.eligibility);
+    }, function (){
+      deferred.reject({
+        eligibility: false,
+        to: '/error'
+      });
+    });
+
+    $scope.loginClick = function() {
+      $window.location.reload(true);
+      $window.location.replace('http://promo-qa.espn.go.com/espn/contests/nissan/heisman/2015/#!/confirm');
+    }
 
     Votes.last().then(function (vote){
       console.log("header last vote: ", vote);

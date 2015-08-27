@@ -77,7 +77,7 @@ angular.module('nhhApp')
             if (data[i].name === $scope.selectedTeam.nickname) {
               searr.push(i);
             }
-            // searr.push(data[i].name.indexOf($scope.selectedTeam.nickname));
+            //searr.push(data[i].name.indexOf($scope.selectedTeam.nickname));
           }
           // console.log("searr: ", searr + ", length: " + searr.length);       
           if (searr.length === 0) {

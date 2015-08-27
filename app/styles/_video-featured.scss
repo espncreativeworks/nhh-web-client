@@ -48,6 +48,10 @@
       width: 40%;
       //margin-top: 14px;
       //margin-bottom: 14px;
+
+      &.featured {
+        border-top: 1px solid $nhh-gold;
+      }
     }
 
     .book {
@@ -59,6 +63,7 @@
   .break {
     margin-top: 30px;
     margin-bottom: 30px;
+    border-top: 1px solid $nhh-gold;
   }
 
 
@@ -238,6 +243,7 @@
 
     .bookend {
       width: 40%;
+      border-top: 1px solid $nhh-gold;
       //margin-top: 14px;
       //margin-bottom: 14px;
     }

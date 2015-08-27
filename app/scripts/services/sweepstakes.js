@@ -20,7 +20,7 @@ angular.module('nhhApp')
         $http.post(baseUrl + 'enter')
         // $http.post(baseUrl + 'enter.json')
           .success(function (result){
-            // localStorageService.set('lastEntry', Date.now());
+            localStorageService.set('lastEntry', Date.now());
             deferred.resolve(result);
           })
           .error(function (err){

@@ -7,7 +7,7 @@ $logo-heisman-large-height: 351px;
 body.home {
   #home-header-container {
     .vote-link-container {
-      padding-top: 130px;
+      padding-top: 100px;
 
       @media (max-width: $screen-sm-max) {
         padding-top: 10px;
@@ -126,7 +126,7 @@ body.home {
   }
 
   .lockup-container {
-    padding-top: 18px;
+    /*padding-top: 18px;*/
     max-width: 384px;
     @include center-block();
 

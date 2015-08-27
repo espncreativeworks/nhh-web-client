@@ -116,3 +116,24 @@ a.no-decoration {
     background-position: top center;
   }
 }
+
+.lockup-container {
+  .logo-lockup {
+    margin-left: auto;
+    margin-right: auto;
+    background: url($image-path + "lockup.png") transparent no-repeat center center;
+    background-size: contain;
+    width: 100%;
+    height: 250px;
+
+    @media only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-device-pixel-ratio: 2) {
+      margin-left: auto;
+      margin-right: auto;
+      background: url($image-path + "lockup@2x.png") transparent no-repeat center center;
+      background-size: contain;
+    }
+  }
+}
