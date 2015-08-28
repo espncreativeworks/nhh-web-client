@@ -7,10 +7,6 @@
   text-transform: uppercase;
   font-weight: normal;
 
-  @media screen and (max-width: 374px) and (min-width: 0px) {
-    padding: auto;
-  }
-
   &:hover {
     border-color: darken($nhh-gold, 10%);
     color: darken($nhh-gold, 10%);
@@ -307,5 +303,11 @@
 
   .btn-nhh.btn-lg {
     width: 93%;
+  }
+}
+
+@media screen and (max-width: 374px) and (min-width: 0px) {
+  .btn-nhh {
+    padding: auto !important;
   }
 }
