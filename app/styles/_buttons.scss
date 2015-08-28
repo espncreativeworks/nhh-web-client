@@ -7,6 +7,10 @@
   text-transform: uppercase;
   font-weight: normal;
 
+  @media screen and (max-width: 374px) and (min-width: 0px) {
+    padding: auto;
+  }
+
   &:hover {
     border-color: darken($nhh-gold, 10%);
     color: darken($nhh-gold, 10%);
@@ -46,6 +50,13 @@
     background-image: url($image-path + 'logo_heisman_gold.png');
     width: 62px;
     height: 60px;
+
+    @media screen and (max-width: 374px) and (min-width: 0px) {
+      background-size: 70%;
+      background-repeat: no-repeat;
+      background-position: left center;
+      margin-left: -5px;
+    }
   }
 
   .vote-text div {
@@ -56,6 +67,10 @@
     vertical-align: top;
     margin-top: 10px;
     margin-left: 5px;
+
+    @media screen and (max-width: 374px) and (min-width: 0px) {
+      margin-left: -15px;
+    }
   }
 }
 
@@ -118,7 +133,7 @@
 }
 
 .btn-enter {
-  padding-top: 5px;
+  padding-top: 8px;
   padding-left: 25px;
   padding-right: 25px;
 }

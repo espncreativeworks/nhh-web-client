@@ -1,6 +1,11 @@
 body {
   background-image: url($image-path + 'bg_home.png');
 
+  @media screen and (max-width: 374px) and (min-width: 0px) {
+    margin-right: 0px;
+    width: 100%;
+  }
+
   @media(max-width: $screen-sm-max) {
     background-image: url($image-path + 'bg_house2.png');  
   }
