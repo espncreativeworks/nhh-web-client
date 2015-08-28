@@ -31,8 +31,8 @@
 }
 
 .btn-nhh.btn-lg {
-  font-size: 1.0em;
-  line-height: 1.1em;
+  font-size: .9em;
+  line-height: 1em;
   height: 80px;
   margin-top: 10px;
   width: 75%;
@@ -61,7 +61,7 @@
 
 .btn-voted {
   @media (max-width: $screen-xs-max) {
-    padding-top: 10px !important;
+    padding-top: 8px !important;
   }
   @media (min-width: $screen-sm-min) {
     padding-top: 5px !important;
@@ -205,6 +205,12 @@
   font-size: 1.4em;
   font-weight: normal;
   font-style: italic;
+}
+
+.btn-thanks {
+  width: 50%;
+  padding: auto !important;
+  margin-top: 6px;
 }
 
 @media (min-width: $screen-xs-min){
