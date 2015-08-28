@@ -17,6 +17,7 @@ angular.module('nhhApp')
     Page.body.set('class', 'info confirm');
 
     $scope.logoutClick = function() {
+      $window.did.logout();
       $window.location.reload(true);
       $window.location.replace('http://promo-qa.espn.go.com/espn/contests/nissan/heisman/2015/#!/');
     }

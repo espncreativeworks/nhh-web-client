@@ -112,7 +112,7 @@ angular.module('nhhApp')
           });
         }).then(function(){
           Athletes.all().then(function(data){
-            console.log("athlete data: ", data);
+            // console.log("athlete data: ", data);
             // console.log("scope.athlete: ", $scope.athlete);
             if (!$scope.athleteExists) {
               for (var i = 0; i < data.length; i++) {
@@ -123,8 +123,8 @@ angular.module('nhhApp')
                 aearr.push(fnarr[j].indexOf($scope.athlete.fullName));
               }
 
-              // console.log("aearr: ", aearr);
-              // console.log(aearr.indexOf(0));
+              console.log("aearr: ", aearr);
+              console.log(aearr.indexOf(0));
 
               var returnObj = {
                 data: data,
@@ -154,6 +154,9 @@ angular.module('nhhApp')
                 experience: $scope.athlete.experience,
                 position: $scope.athlete.positions[0].name
               };
+
+              console.log("atheteData obj: ", athleteData);
+
               return Athletes.create(athleteData);
             } else {
               return data.data[aearr.indexOf(0)];

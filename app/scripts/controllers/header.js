@@ -8,7 +8,7 @@
  * Controller of the nhhApp
  */
 angular.module('nhhApp')
-  .controller('HeaderCtrl', ['$scope', '$location', 'Votes', '$moment', 'fullNameFilter', 'Auth', 'Sweepstakes', function ($scope, $location, Votes, $moment, fullName, Auth, Sweepstakes) {
+  .controller('HeaderCtrl', ['$scope', '$location', 'Votes', '$moment', 'fullNameFilter', 'Auth', 'Sweepstakes', '$window', function ($scope, $location, Votes, $moment, fullName, Auth, Sweepstakes, $window) {
     var now = $moment();
 
     $scope.dismissed = false;
@@ -48,8 +48,25 @@ angular.module('nhhApp')
     });
 
     $scope.loginClick = function() {
-      $window.location.reload(true);
-      $window.location.replace('http://promo-qa.espn.go.com/espn/contests/nissan/heisman/2015/#!/confirm');
+      console.log("angular clicked on .disneyid-login");
+      var modalPromise = $window.did.launchLogin();
+      modalPromise.then(function (){
+        console.group('DID#launchLogin>resolved');
+        Array.prototype.slice.call(arguments).forEach(function (arg){
+            console.info(arg);
+        });
+        console.groupEnd('DID#launchLogin>resolved');
+      });
+      modalPromise.fail(function (){
+        console.group('DID#launchLogin>rejected');
+        Array.prototype.slice.call(arguments).forEach(function (arg){
+            console.error(arg);
+        });
+        console.groupEnd('DID#launchLogin>rejected');
+      });
+      //angular.element('.disneyid-login').click();
+      // $window.location.reload(true);
+      // $window.location.replace('http://promo-qa.espn.go.com/espn/contests/nissan/heisman/2015/#!/confirm');
     }
 
     Votes.last().then(function (vote){
