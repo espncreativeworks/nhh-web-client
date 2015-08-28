@@ -150,7 +150,8 @@ angular.module('nhhApp')
                 lastName: $scope.athlete.lastName,
                 espnId: $scope.athlete.id,
                 jersey: $scope.athlete.jersey,
-                school: $scope.athlete.schools[0].name,
+                // school: $scope.athlete.schools[0].name,
+                school: $scope.selectedTeam.nickname,
                 experience: $scope.athlete.experience,
                 position: $scope.athlete.positions[0].name
               };
