@@ -17,6 +17,40 @@ angular.module('nhhApp')
       $scope.eligibility = status.eligibility;
     });
 
+    Auth.status().then(function (status){
+      console.log("auth status: ", status);
+      if (status.loggedIn){
+        $scope.loggedin = true
+      } else {
+        $scope.loggedin = false
+      }
+      console.log("$scope.loggedin: ", $scope.loggedin);
+    }, function (){
+      deferred.reject({
+        loggedIn: false,
+        to: '/confirm'
+      });
+    });
+
+    $scope.loginClick = function() {
+      console.log("angular clicked on .disneyid-login");
+      var modalPromise = $window.did.launchLogin();
+      modalPromise.then(function (){
+        console.group('DID#launchLogin>resolved');
+        Array.prototype.slice.call(arguments).forEach(function (arg){
+            console.info(arg);
+        });
+        console.groupEnd('DID#launchLogin>resolved');
+      });
+      modalPromise.fail(function (){
+        console.group('DID#launchLogin>rejected');
+        Array.prototype.slice.call(arguments).forEach(function (arg){
+            console.error(arg);
+        });
+        console.groupEnd('DID#launchLogin>rejected');
+      });
+    }
+
     Votes.last().then(function (vote){
       var cacheBust = $moment().dayOfYear() + '' + $moment().hour(); // default cache for vote sharing to 1 hour
       var baseUrl = $location.protocol() + '://' + $window.location.host + $window.location.pathname;

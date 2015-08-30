@@ -36,16 +36,17 @@ angular.module('nhhApp')
       });
     });
 
-    Sweepstakes.status().then(function (sStatus){
-      console.log("sweeps status: ", sStatus);
-      
-      currentDate = sStatus.current;
-      lastEntry = sStatus.entry;
+    Sweepstakes.status().then(function (sweepsStatus){
+      console.log("header ctrl sweepsStatus: ", sweepsStatus);
+      var currentDate = now.format("MM-DD-YYYY");
+      var lastEntry = $moment(sweepsStatus.entry).format("MM-DD-YYYY");
 
-      if (moment(currentDate).isSame(lastEntry) === true) {
-        $scope.eligibility = true;
-      } else {
+      console.log("currentDate: " + currentDate + " / lastEntry: " + lastEntry);
+
+      if ($moment(currentDate).isSame(lastEntry) === true) {
         $scope.eligibility = false;
+      } else {
+        $scope.eligibility = true;
       }
 
       console.log("$scope.eligibility: ", $scope.eligibility);

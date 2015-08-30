@@ -48,7 +48,8 @@ angular.module('nhhApp')
           , errors = []
           , results = [];
 
-        results.push(result);
+        results.push(result);   
+        console.log("confirm ctrl sweeps enter: ", result);     
 
         angular.forEach(deferreds, function (deferred){
           deferred.then(function (_result){

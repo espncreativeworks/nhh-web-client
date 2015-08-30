@@ -20,6 +20,7 @@ angular.module('nhhApp')
         $http.post(baseUrl + 'enter')
         // $http.post(baseUrl + 'enter.json')
           .success(function (result){
+            console.log("sweeps service enter: ", result);
             localStorageService.set('lastEntry', Date.now());
             deferred.resolve(result);
           })
@@ -35,20 +36,9 @@ angular.module('nhhApp')
         $http.get(baseUrl + 'status')
         // $http.get(baseUrl + 'status.json')
           .success(function (status){
-            $timeout(function (){
-              var lastVoted = nhhLocalStorage.get('lastVoted')
-                , now = Date.now()
-                , oneDayAgo = $moment(now).subtract('days', '1');
-              if (lastVoted && $moment(lastVoted.ts).isAfter(oneDayAgo)){
-                deferred.resolve(lastVoted);
-              } else {
-                nhhLocalStorage.remove('lastVoted');
-                deferred.reject(new Error('Last Vote Not Found'));
-              }
-            }, 50);
-            // if (status.lastEntry){
-            //   localStorageService.set('lastEntry', status.lastEntry);
-            // }
+            if (status.lastEntry){
+              localStorageService.set('lastEntry', status.lastEntry);
+            }
             deferred.resolve(status);
           })
           .error(function (err){
