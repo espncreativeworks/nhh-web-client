@@ -13,9 +13,9 @@ angular.module('nhhApp')
     Page.meta.set('title', 'Thanks For Voting');
     Page.body.set('class', 'info thanks');
 
-    Sweepstakes.status().then(function (status){
-      $scope.eligibility = status.eligibility;
-    });
+    // Sweepstakes.status().then(function (status){
+    //   $scope.eligibility = status.eligibility;
+    // });
 
     Auth.status().then(function (status){
       console.log("auth status: ", status);
@@ -31,6 +31,28 @@ angular.module('nhhApp')
         to: '/confirm'
       });
     });
+
+    Sweepstakes.status().then(function (sweepsStatus){
+      console.log("header ctrl sweepsStatus: ", sweepsStatus);
+      var currentDate = now.format("MM-DD-YYYY");
+      var lastEntry = $moment(sweepsStatus.entry).format("MM-DD-YYYY");
+
+      console.log("currentDate: " + currentDate + " / lastEntry: " + lastEntry);
+
+      if ($moment(currentDate).isSame(lastEntry) === true) {
+        $scope.eligibility = false;
+      } else {
+        $scope.eligibility = true;
+      }
+
+      console.log("$scope.eligibility: ", $scope.eligibility);
+    }, function (){
+      deferred.reject({
+        eligibility: false,
+        to: '/error'
+      });
+    });
+
 
     $scope.loginClick = function() {
       console.log("angular clicked on .disneyid-login");
