@@ -125,12 +125,10 @@
       float: left;
 
       @media screen and (max-width: 374px) and (min-width: 0px) {
-        .caption {
-          padding-top: 5px !important;
-          padding-bottom: 5px !important;
-          padding-left: 35px !important;
-          padding-right: 35px !important;
-        }
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        padding-left: 35px !important;
+        padding-right: 35px !important;
       }
     }
 
