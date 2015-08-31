@@ -16,8 +16,29 @@ angular.module('nhhApp')
     $scope.firstName = $location.search().firstName || '';
     $scope.pronoun = (gender === 'M' ? 'himself' : 'herself');
 
-    Sweepstakes.status().then(function (status){
-      $scope.eligibility = status.eligibility;
+    Sweepstakes.status().then(function (sweepsStatus){
+      console.log("share entry ctrl sweepsStatus: ", sweepsStatus);
+      if (sweepsStatus.entry === false) {
+        $scope.eligibility = true;
+      } else {
+        var currentDate = now.format("MM-DD-YYYY");
+        var lastEntry = $moment(sweepsStatus.entry).format("MM-DD-YYYY");
+
+        console.log("currentDate: " + currentDate + " / lastEntry: " + lastEntry);
+
+        if ($moment(currentDate).isSame(lastEntry) === true) {
+          $scope.eligibility = false;
+        } else {
+          $scope.eligibility = true;
+        }
+      }
+
+      console.log("share entry $scope.eligibility: ", $scope.eligibility);
+    }, function (){
+      deferred.reject({
+        eligibility: false,
+        to: '/error'
+      });
     });
 
     $scope.auth = {};

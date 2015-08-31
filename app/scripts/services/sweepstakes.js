@@ -36,9 +36,6 @@ angular.module('nhhApp')
         $http.get(baseUrl + 'status')
         // $http.get(baseUrl + 'status.json')
           .success(function (status){
-            if (status.lastEntry){
-              localStorageService.set('lastEntry', status.lastEntry);
-            }
             deferred.resolve(status);
           })
           .error(function (err){

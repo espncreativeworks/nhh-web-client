@@ -75,8 +75,16 @@ angular.module('nhhApp')
         console.log(encodeURIComponent(msg));
         $location.path('/error?msg=' + encodeURIComponent(msg));
       }).then(function (results){
-        console.log(results);
-        $location.path('/entered');
+        //console.log(results);
+        if (results[0].success === false) {
+          var msg = results[0].message;
+          // console.log("location redirect: /error?msg=" + encodeURIComponent(msg));
+          //$location.path('/error?msg=' + encodeURIComponent(msg));
+          $location.path('/error');
+          $location.search('msg', msg);
+        } else {
+          $location.path('/entered');
+        }
       }, function (err){
         var msg = 'An unexpected error occurred. Please try again.';
 
