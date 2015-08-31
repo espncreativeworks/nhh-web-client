@@ -36,9 +36,19 @@ angular.module('nhhApp')
       });
     });
 
-    Sweepstakes.status().then(function (sStatus){
-      console.log("sweeps status: ", sStatus);
-      $scope.eligibility = true;
+    Sweepstakes.status().then(function (sweepsStatus){
+      console.log("header ctrl sweepsStatus: ", sweepsStatus);
+      var currentDate = now.format("MM-DD-YYYY");
+      var lastEntry = $moment(sweepsStatus.entry).format("MM-DD-YYYY");
+
+      console.log("currentDate: " + currentDate + " / lastEntry: " + lastEntry);
+
+      if ($moment(currentDate).isSame(lastEntry) === true) {
+        $scope.eligibility = false;
+      } else {
+        $scope.eligibility = true;
+      }
+
       console.log("$scope.eligibility: ", $scope.eligibility);
     }, function (){
       deferred.reject({
@@ -64,9 +74,6 @@ angular.module('nhhApp')
         });
         console.groupEnd('DID#launchLogin>rejected');
       });
-      //angular.element('.disneyid-login').click();
-      // $window.location.reload(true);
-      // $window.location.replace('http://promo-qa.espn.go.com/espn/contests/nissan/heisman/2015/#!/confirm');
     }
 
     Votes.last().then(function (vote){

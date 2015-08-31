@@ -20,6 +20,7 @@ angular.module('nhhApp')
         $http.post(baseUrl + 'enter')
         // $http.post(baseUrl + 'enter.json')
           .success(function (result){
+            console.log("sweeps service enter: ", result);
             localStorageService.set('lastEntry', Date.now());
             deferred.resolve(result);
           })
@@ -35,9 +36,9 @@ angular.module('nhhApp')
         $http.get(baseUrl + 'status')
         // $http.get(baseUrl + 'status.json')
           .success(function (status){
-            // if (status.lastEntry){
-            //   localStorageService.set('lastEntry', status.lastEntry);
-            // }
+            if (status.lastEntry){
+              localStorageService.set('lastEntry', status.lastEntry);
+            }
             deferred.resolve(status);
           })
           .error(function (err){
