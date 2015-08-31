@@ -28,22 +28,17 @@
 		    	height: 100%;
 		    }
 		    .cp {
-
+		    	top: 15px;
 		    }
 		    .caption {
 		        text-align: center;
-		        padding: 10px;
+		        //padding: 10px;
 		        font-size: 12px;
+		        padding-top: 5px;
+		        padding-bottom: 5px;
+		        padding-left: 35px;
+		        padding-right: 35px;
 		    }
 		}
 	}
-
-	@media screen and (max-width: 374px) and (min-width: 0px) {
-		.caption {
-			padding-top: 5px;
-	        padding-bottom: 5px;
-	        padding-left: 35px;
-	        padding-right: 35px;
-	    }
-    }
 }
