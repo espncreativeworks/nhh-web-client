@@ -36,4 +36,13 @@
 		    }
 		}
 	}
+
+	@media screen and (max-width: 374px) and (min-width: 0px) {
+		.caption {
+			padding-top: 5px;
+	        padding-bottom: 5px;
+	        padding-left: 35px;
+	        padding-right: 35px;
+	    }
+    }
 }

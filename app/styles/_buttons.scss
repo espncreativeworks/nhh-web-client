@@ -1,5 +1,5 @@
 .btn-nhh {
-  padding: 3px 48px;
+  //padding: 3px 48px;
   border: 6px solid $nhh-gold;
   border-radius: 0;
   background-color: black;
@@ -129,7 +129,7 @@
 }
 
 .btn-enter {
-  padding-top: 8px;
+  padding-top: 3px;
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -220,7 +220,6 @@
 
 .btn-thanks {
   width: 50%;
-  padding: auto !important;
   margin-top: 6px;
 }
 
@@ -303,11 +302,5 @@
 
   .btn-nhh.btn-lg {
     width: 93%;
-  }
-}
-
-@media screen and (max-width: 374px) and (min-width: 0px) {
-  .btn-nhh {
-    padding: auto !important;
   }
 }
