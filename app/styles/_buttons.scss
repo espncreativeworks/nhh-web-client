@@ -133,11 +133,19 @@
 }
 
 .btn-enter {
-  padding-top: 3px;
   padding-left: 25px;
   padding-right: 25px;
+
+  @media screen and (max-width: 374px) and (min-width: 0px) {
+    padding-top: 3px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
 
+.btn-come-back {
+  padding-top: auto;
+}
 
 .btn-link-nhh {
   color: $nhh-gold;
@@ -253,6 +261,10 @@
     padding-right: 45px;
   }
 
+  .btn-come-back {
+    padding-top: 15px
+  }
+
   .btn-vote {
     padding-top: 5px;
 
@@ -279,6 +291,10 @@
     padding-right: 6px;
   }
 
+  .btn-come-back {
+    padding-top: 15px
+  }
+
   .btn-vote {
     padding-top: 15px;
   }
@@ -302,6 +318,10 @@
 @media (min-width: $screen-lg-min){
   .btn-enter {
     padding-top: 15px;
+  }
+
+  .btn-come-back {
+    padding-top: 25px;
   }
 
   .btn-nhh.btn-lg {
