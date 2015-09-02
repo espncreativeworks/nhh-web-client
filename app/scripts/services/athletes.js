@@ -66,14 +66,14 @@ angular.module('nhhApp')
         return deferred.promise;
       },
       create: function (data){
-        console.log("athletes create before success: ", data);
+        // console.log("athletes create before success: ", data);
         var deferred = $q.defer()
           , _params = angular.extend({ '_method': 'POST' }, data);
 
         // $http.post(baseUrl, data)
         $http.get(baseUrl, { params: _params })
           .success(function (addAthlete){
-            console.log("success athletes create: ", addAthlete);
+            // console.log("success athletes create: ", addAthlete);
             deferred.resolve(addAthlete);
           }).error(function(err){
             deferred.reject(err);
@@ -82,7 +82,7 @@ angular.module('nhhApp')
         return deferred.promise;
       },
       vote: function (athlete){
-        console.log("athlete vote: ", athlete);
+        // console.log("athlete vote: ", athlete);
         var deferred = $q.defer()
           , data = {
             athleteId: athlete._id,

@@ -19,7 +19,7 @@ angular.module('nhhApp')
     $scope.logoutClick = function() {
       $window.did.logout();
       $window.location.reload(true);
-      $window.location.replace('http://promo-qa.espn.go.com/espn/contests/nissan/heisman/2015/#!/');
+      $window.location.replace('http://promo.espn.go.com/espn/contests/nissan/heisman/2015/#!/home');
     }
 
     Lists.all().then(function (lists){
@@ -49,7 +49,7 @@ angular.module('nhhApp')
           , results = [];
 
         results.push(result);   
-        console.log("confirm ctrl sweeps enter: ", result);     
+        //console.log("confirm ctrl sweeps enter: ", result);     
 
         angular.forEach(deferreds, function (deferred){
           deferred.then(function (_result){
@@ -72,7 +72,7 @@ angular.module('nhhApp')
         if (err.data && err.data.message){
           msg = err.data.message;
         }
-        console.log(encodeURIComponent(msg));
+        //console.log(encodeURIComponent(msg));
         $location.path('/error?msg=' + encodeURIComponent(msg));
       }).then(function (results){
         //console.log(results);
@@ -95,7 +95,7 @@ angular.module('nhhApp')
         if (err.data && err.data.errors && err.data.errors[0].message){
           msg = err.data.errors[0].message;
         }
-        console.log(encodeURIComponent(msg));
+        //console.log(encodeURIComponent(msg));
         $location.path('/error?msg=' + encodeURIComponent(msg));
       });
     };

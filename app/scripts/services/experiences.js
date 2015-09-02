@@ -29,12 +29,12 @@ angular.module('nhhApp')
         return deferred.promise;
       },
       create: function (data) {
-        console.log("experiences service create: ", data);
+        // console.log("experiences service create: ", data);
         var deferred = $q.defer()
 
         $http.post(baseUrl, data)
           .success(function (addExperience){
-            console.log("school create: ", addSchool);
+            // console.log("school create: ", addSchool);
             deferred.resolve(addExperience);
           }).error(function(err){
             deferred.reject(err);

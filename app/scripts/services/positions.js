@@ -42,14 +42,14 @@ angular.module('nhhApp')
         return deferred.promise;
       },
       create: function (data) {
-        console.log("positions create before success: ", data);
+        // console.log("positions create before success: ", data);
         var deferred = $q.defer()
           , _params = angular.extend({ '_method': 'POST' }, data);
 
         // $http.post(baseUrl, data)
         $http.get(baseUrl, { params: _params })
           .success(function (addPosition){
-            console.log("position create: ", addPosition);
+            // console.log("position create: ", addPosition);
             deferred.resolve(addPosition);
           }).error(function(err){
             deferred.reject(err);

@@ -19,13 +19,13 @@ angular.module('nhhApp')
           , baseUrl = './api/votes/'
           , _params = angular.extend({ '_method': 'POST' }, data);
 
-        console.log("vote data: ", data);
+        // console.log("vote data: ", data);
         // console.log("vote data: ", _params);
 
         $http.get(baseUrl, { params: _params })
         // $http.post(baseUrl, data)
           .success(function (vote){
-            console.log("vote create: ", vote);
+            // console.log("vote create: ", vote);
             nhhLocalStorage.set('lastVoted', {
               ts: Date.now(),
               athlete: vote.athlete,

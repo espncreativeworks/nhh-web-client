@@ -22,13 +22,13 @@ angular.module('nhhApp')
     }
 
     Auth.status().then(function (status){
-      console.log("auth status: ", status);
+      //console.log("auth status: ", status);
       if (status.loggedIn){
         $scope.loggedin = true
       } else {
         $scope.loggedin = false
       }
-      console.log("$scope.loggedin: ", $scope.loggedin);
+      //console.log("$scope.loggedin: ", $scope.loggedin);
     }, function (){
       deferred.reject({
         loggedIn: false,
@@ -37,14 +37,14 @@ angular.module('nhhApp')
     });
 
     Sweepstakes.status().then(function (sweepsStatus){
-      console.log("header ctrl sweepsStatus: ", sweepsStatus);
+      //console.log("header ctrl sweepsStatus: ", sweepsStatus);
       if (sweepsStatus.entry === false) {
         $scope.eligibility = true;
       } else {
         var currentDate = now.format("MM-DD-YYYY");
         var lastEntry = $moment(sweepsStatus.entry).format("MM-DD-YYYY");
 
-        console.log("currentDate: " + currentDate + " / lastEntry: " + lastEntry);
+        //console.log("currentDate: " + currentDate + " / lastEntry: " + lastEntry);
 
         if ($moment(currentDate).isSame(lastEntry) === true) {
           $scope.eligibility = false;
@@ -53,7 +53,7 @@ angular.module('nhhApp')
         }
       }
 
-      console.log("header $scope.eligibility: ", $scope.eligibility);
+      //console.log("header $scope.eligibility: ", $scope.eligibility);
     }, function (){
       deferred.reject({
         eligibility: false,
@@ -62,7 +62,7 @@ angular.module('nhhApp')
     });
 
     $scope.loginClick = function() {
-      console.log("angular clicked on .disneyid-login");
+      //console.log("angular clicked on .disneyid-login");
       var modalPromise = $window.did.launchLogin();
       modalPromise.then(function (){
         console.group('DID#launchLogin>resolved');
@@ -81,7 +81,7 @@ angular.module('nhhApp')
     }
 
     Votes.last().then(function (vote){
-      console.log("header last vote: ", vote);
+      //console.log("header last vote: ", vote);
 
       var athletefn = vote.athlete.name.first + " " + vote.athlete.name.last;
       var last = $moment(vote.ts);
@@ -90,7 +90,7 @@ angular.module('nhhApp')
       $scope.lastVote = last.from(now);
       $scope.nextVote = next.from(now);
 
-      console.log("header $scope: ", $scope);
+      //console.log("header $scope: ", $scope);
     }).catch(function (){
       $scope.lastVote = false;
     });

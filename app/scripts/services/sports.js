@@ -49,7 +49,7 @@ angular.module('nhhApp')
 
         $http.get(resource, { params: params })
           .success(function (data){
-            console.log("team info data: ", data);
+            // console.log("team info data: ", data);
             deferred.resolve(data);
           }).error(function(err){
             deferred.reject(err);

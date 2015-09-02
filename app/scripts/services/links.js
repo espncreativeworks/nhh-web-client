@@ -43,7 +43,7 @@ angular.module('nhhApp')
         return deferred.promise;
       },
       shorten: function (url){
-        var baseUrl = 'http://0.0.0.0:9000/api/links';
+        // var baseUrl = 'http://0.0.0.0:9000/api/links';
         var deferred = $q.defer()
           , _params;
 
@@ -52,6 +52,7 @@ angular.module('nhhApp')
           $http.get(baseUrl + '/shorten', { params: _params })
           //$http.post(baseUrl + '/shorten', { longUrl: url })
             .success(function (shortenedUrlData){
+              //console.log("shortenedUrlData: ", shortenedUrlData);
               deferred.resolve(shortenedUrlData);
             }).error(function(err){
               deferred.reject(err);

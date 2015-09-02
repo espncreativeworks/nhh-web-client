@@ -14,8 +14,8 @@ angular.module('nhhApp')
     var description = '' +
       'Nissan and ESPN invite fans to "Get to know the Heisman Winners" during a ' +
       'pre-game experience that celebrates college football\'s most outstanding players. ' +
-      'The Nissan Heisman House Tour is making stops at 10 marquee matchups this ' +
-      'season including its ultimate destination of Arlington for the College Football Playoff National Championship. ' +
+      'The Nissan Heisman House Tour is making stops at 11 marquee matchups this ' +
+      'season including its ultimate destination of Glendale for the College Football Playoff National Championship. ' +
       'Admission to the tour is free! Come join us for fun interactives to win prizes and ' +
       'the opportunity to meet former Heisman winners.';
 
@@ -57,6 +57,8 @@ angular.module('nhhApp')
         stop.stopDateMoment = $moment(stop.beginsAt).tz(stop.timezone.name);
         stop.stopDateIso = stop.stopDateMoment.format('YYYY-MM-DD');
         stop.stopDate = stop.stopDateMoment.format('MMM D, YYYY');
+
+        stop.stopTime = $moment(stop.beginsAt).tz(stop.timezone.name).format("HH:mm z");
 
         stop.summaryHtml = $sce.trustAsHtml(_summary.html());
         stop.absUrl = $location.protocol() + '://' + $location.host() + window.location.pathname + '#!/tour-stops/' + stop.slug;

@@ -19,7 +19,7 @@ angular.module('nhhApp')
     $scope.fb.url = $scope.shareUrl + '&utm_source=espncreativeworks&utm_medium=social&utm_content=facebook&utm_campaign=share_entry';
     $scope.tweet = {};
     $scope.tweet.url = $scope.shareUrl + '&utm_source=espncreativeworks&utm_medium=social&utm_content=twitter&utm_campaign=share_entry';
-    $scope.tweet.text = 'I just entered to win a trip for me and three friends to the College Football Playoff in North Texas!';
+    $scope.tweet.text = 'I just entered to win a trip for me and three friends to the 2016 College Football Playoff National Championship in Glendale, Arizona!';
     $scope.tweet.hashtags = 'HeismanHouse';
     $scope.tweet.related = 'NissanUSA,ESPNPromotions';
 

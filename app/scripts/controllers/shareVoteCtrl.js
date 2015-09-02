@@ -43,6 +43,7 @@ angular.module('nhhApp')
       // find athlete that was voted for
       $scope.athletes = [];
       angular.forEach(sorted, function (_athlete, i){
+        // console.log("share vote ctrl: " + _athlete);
         _athlete.rank = rankings[i];
         _athlete.displayPercentage = Math.round((_athlete.totalVotes / totalVotes) * 100);
         $scope.athletes.push(_athlete);

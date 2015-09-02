@@ -13,6 +13,8 @@ angular.module('nhhApp')
       e.preventDefault();
       var url = $(e.currentTarget).attr('data-share-url');
 
+      // console.log("facebook share url: ", url);
+
       FB.ui({
         method: 'share',
         href: url
@@ -40,12 +42,17 @@ angular.module('nhhApp')
         , tweetWindowOptions = 'width=550,height=426,left=' + ($(window).width() - 550) / 2 + ',top=' + ($(window).height() - 426) / 2
         , url = $this.attr('data-share-url');
 
+        // console.log("twitter share url: ", url);
+
       params['original_referer'] = window.location.href;
-      params.url = url;
+      // params.url = url;
+      params.url = 'http://nissanheismanhouse.com';
       params.text = $this.attr('data-share-text');
       params.hashtags = $this.attr('data-share-hashtags') || '';
       params.related = $this.attr('data-related-accounts') || '';
       tweetWindowUrl += $.param(params);
+
+
 
       $this.attr('href',tweetWindowUrl);
       twttr.widgets.load();

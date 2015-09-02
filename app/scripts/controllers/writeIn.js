@@ -69,7 +69,7 @@ angular.module('nhhApp')
           , schoolID = "";
 
         Schools.all().then(function(data){   
-          console.log("all schools: ", data);
+          // console.log("all schools: ", data);
 
           for (var i = 0; i < data.length; i++) {
             // console.log("school compare: ", data[i].name + ", " + $scope.selectedTeam.nickname);
@@ -89,7 +89,7 @@ angular.module('nhhApp')
             };
 
             Schools.create(schoolData).then(function(data) {
-              console.log("create school data: ", data);
+              // console.log("create school data: ", data);
               schoolID = data._id;
             });  
           }
@@ -123,8 +123,8 @@ angular.module('nhhApp')
                 aearr.push(fnarr[j].indexOf($scope.athlete.fullName));
               }
 
-              console.log("aearr: ", aearr);
-              console.log(aearr.indexOf(0));
+              // console.log("aearr: ", aearr);
+              // console.log(aearr.indexOf(0));
 
               var returnObj = {
                 data: data,
@@ -156,14 +156,14 @@ angular.module('nhhApp')
                 position: $scope.athlete.positions[0].name
               };
 
-              console.log("atheteData obj: ", athleteData);
+              // console.log("atheteData obj: ", athleteData);
 
               return Athletes.create(athleteData);
             } else {
               return data.data[aearr.indexOf(0)];
             }
           }).then(function (athlete){
-            console.log("outside ballots active: ", athlete);
+            // console.log("outside ballots active: ", athlete);
 
             Ballots.active().then(function (ballot){
               // console.log("ballot: ",ballot);
@@ -182,7 +182,7 @@ angular.module('nhhApp')
               // console.log("bwilist indexof: ", bwilist.indexOf(athlete));
               if (bwilist.indexOf(athlete) === -1) {
                 Ballots.addAthlete(doc).then(function (athlete) {
-                  console.log("add athlete: ", athlete);
+                  // console.log("add athlete: ", athlete);
                 }, function(err){
                   console.log(err);
                 });
@@ -241,14 +241,14 @@ angular.module('nhhApp')
         });
 
         $scope.selectedTeam = newVal;
-        console.log("selected team: ", $scope.selectedTeam);
+        // console.log("selected team: ", $scope.selectedTeam);
       }
     };
 
     var onathletechange = function (newVal, oldVal){
       if (newVal && (newVal !== oldVal)){
         $scope.athlete = newVal;
-        console.log("selected athlete: ", $scope.athlete);
+        // console.log("selected athlete: ", $scope.athlete);
       } 
     }
 

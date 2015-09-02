@@ -42,14 +42,14 @@ angular.module('nhhApp')
         return deferred.promise;
       },
       create: function (data) {
-        console.log("schools create before success: ", data);
+        // console.log("schools create before success: ", data);
         var deferred = $q.defer()
         , _params = angular.extend({ '_method': 'POST' }, data);
 
         // $http.post(baseUrl, data)
         $http.get(baseUrl, { params: _params })
           .success(function (addSchool){
-            console.log("school create: ", addSchool);
+            // console.log("school create: ", addSchool);
             deferred.resolve(addSchool);
           }).error(function(err){
             deferred.reject(err);

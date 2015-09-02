@@ -13,18 +13,20 @@ angular.module('nhhApp')
     Page.meta.set('title', 'Thanks For Voting');
     Page.body.set('class', 'info thanks');
 
+    var now = $moment();
+
     // Sweepstakes.status().then(function (status){
     //   $scope.eligibility = status.eligibility;
     // });
 
     Auth.status().then(function (status){
-      console.log("auth status: ", status);
+      // console.log("auth status: ", status);
       if (status.loggedIn){
         $scope.loggedin = true
       } else {
         $scope.loggedin = false
       }
-      console.log("$scope.loggedin: ", $scope.loggedin);
+      // console.log("$scope.loggedin: ", $scope.loggedin);
     }, function (){
       deferred.reject({
         loggedIn: false,
@@ -33,14 +35,14 @@ angular.module('nhhApp')
     });
 
     Sweepstakes.status().then(function (sweepsStatus){
-      console.log("thanks ctrl sweepsStatus: ", sweepsStatus);
+      // console.log("thanks ctrl sweepsStatus: ", sweepsStatus);
       if (sweepsStatus.entry === false) {
         $scope.eligibility = true;
       } else {
         var currentDate = now.format("MM-DD-YYYY");
         var lastEntry = $moment(sweepsStatus.entry).format("MM-DD-YYYY");
 
-        console.log("currentDate: " + currentDate + " / lastEntry: " + lastEntry);
+        // console.log("currentDate: " + currentDate + " / lastEntry: " + lastEntry);
 
         if ($moment(currentDate).isSame(lastEntry) === true) {
           $scope.eligibility = false;
@@ -49,7 +51,7 @@ angular.module('nhhApp')
         }
       }
 
-      console.log("thanks $scope.eligibility: ", $scope.eligibility);
+      // console.log("thanks $scope.eligibility: ", $scope.eligibility);
     }, function (){
       deferred.reject({
         eligibility: false,

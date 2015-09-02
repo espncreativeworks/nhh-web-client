@@ -41,7 +41,7 @@ angular.module('nhhApp')
         return deferred.promise;
       },
       addAthlete: function(data) {
-        console.log("ballot service data: ", data);
+        // console.log("ballot service data: ", data);
 
         var deferred = $q.defer()
         , _params = angular.extend({ '_method': 'POST' }, data);  
@@ -49,7 +49,7 @@ angular.module('nhhApp')
         // $http.post(baseUrl, data)
         $http.get(baseUrl, { params: _params })
           .success(function (addAthlete){
-            console.log("ballot service add athlete: ", addAthlete);
+            // console.log("ballot service add athlete: ", addAthlete);
             
             deferred.resolve(addAthlete);
           }).error(function(err){
