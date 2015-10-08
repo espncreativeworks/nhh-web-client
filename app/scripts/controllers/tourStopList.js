@@ -41,14 +41,47 @@ angular.module('nhhApp')
     Page.meta.set('twitter', twitterMeta);
     Page.meta.set('facebook', facebookMeta);
 
+    var pastStops = [];
+    var futureStops = [];
+
     $scope.overview = 'Loading...';
     TourStops.all().then(function (stops){
-      stops = stops.sort(function (a,b){
+      angular.forEach(stops, function (stop){
+        if (stop.isPast) {
+          pastStops.push(stop);
+        } else {
+          futureStops.push(stop);
+        }
+      });
+
+      // console.log("list of past stops: ", pastStops);
+      // console.log("list of future stops: ", futureStops);
+
+      var pstops = pastStops.sort(function(a,b){
         return a.stopNumber - b.stopNumber;
       });
+      var fstops = futureStops.sort(function(a,b){
+        return a.stopNumber - b.stopNumber;
+      });
+
+      var newStops = fstops.concat(pstops);
+      stops = newStops;
+      // stops = stops.sort(function (a,b){
+      //   return a.stopNumber - b.stopNumber;
+      // });
+
       $scope.stops = stops;
+
+      // console.log("new ordered: ", $scope.stops); 
+
       $scope.overview = description;
       angular.forEach($scope.stops, function (stop){
+        stop.hostList = [];
+        stop.guestList = [];
+        stop.hostExists = true;
+        stop.guestExists = true;
+        stop.tbd = false;
+
         var viewMoreBtn = $('<a>', { 'class': 'btn-link btn-link-nhh hidden-xs no-decoration', 'href': '#!/tour-stops/' + stop.slug, 'title': 'View More' }).html('View More ');
         var iconHtml = $('<i>', { 'class': 'fa fa-angle-double-right' });
         viewMoreBtn.append(iconHtml);
@@ -58,7 +91,29 @@ angular.module('nhhApp')
         stop.stopDateIso = stop.stopDateMoment.format('YYYY-MM-DD');
         stop.stopDate = stop.stopDateMoment.format('MMM D, YYYY');
 
-        stop.stopTime = $moment(stop.beginsAt).tz(stop.timezone.name).format("HH:mm z");
+        if (stop.isFinal == true) {
+          stop.stopTimeStart = $moment(stop.beginsAt).tz(stop.timezone.name).format("hh:mm A");
+          stop.stopTimeEnd = $moment(stop.endsAt).tz(stop.timezone.name).format("hh:mm A");
+        } else {
+          stop.tbd = true;
+        }
+
+        angular.forEach(stop.hosts, function(host){
+          stop.hostList.push(host.name.first + " " + host.name.last);
+        });
+        angular.forEach(stop.guests, function(guest){
+          stop.guestList.push(guest.name.first + " " + guest.name.last);
+        });
+
+        if (stop.hostList.length === 0) {
+          stop.hostExists = false;
+        }
+        if (stop.guestList.length === 0) {
+          stop.guestExists = false;
+        }
+
+        // console.log("hosts: " + stop.hostList + " , length: " + stop.hostList.length + ", exist: " + stop.hostExists);
+        // console.log("guests: " + stop.guestList + " , length: " + stop.guestList.length + ", exist: " + stop.guestExists);
 
         stop.summaryHtml = $sce.trustAsHtml(_summary.html());
         stop.absUrl = $location.protocol() + '://' + $location.host() + window.location.pathname + '#!/tour-stops/' + stop.slug;
@@ -73,6 +128,8 @@ angular.module('nhhApp')
           pan: true,
           draggable: true
         };
+
+        // console.log("all stop info: ", stop); 
       });
     });
 

@@ -45,8 +45,11 @@ angular.module('nhhApp')
       });
     });
 
-    var title = $scope.firstName + ' just entered to win a trip for ' + $scope.pronoun + ' and three friends to the 2016 College Football Playoff National Championship in Glendale, Arizona!';
-    var description = 'Join ' + $scope.firstName + ' and visit the Nissan Heisman House to enter for your chance to win!';
+    // var title = $scope.firstName + ' just entered to win a trip for ' + $scope.pronoun + ' and three friends to the 2016 College Football Playoff National Championship in Glendale, Arizona!';
+    // var description = 'Join ' + $scope.firstName + ' and visit the Nissan Heisman House to enter for your chance to win!';
+
+    var title = 'Nissan Heisman House';
+    var description = 'As the presenting sponsor of the Heisman Trophy, Nissan has the unique advantage of casting an official vote on behalf of you, the college football fan. So cast your own vote for the next Heisman Trophy Winner and also enter yourself for a chance to win a trip to the 2016 College Football Playoff National Championship in Glendale, Arizona!';
 
     var twitterMeta = {
       'twitter:title': title,

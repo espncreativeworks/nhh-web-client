@@ -1,245 +1,268 @@
 [
-  {
-    "id": 1,
-    "espnId": "511459",
-    "active": true,
-    "votes": 2389,
-    "name": {
-      "first": "Marcus",
-      "last": "Mariota",
-      "short": "M. Mariota"
-    },
-    "position": {
-      "abbreviation": "QB",
-      "name": "Quarterback"
-    },
-    "jersey": 8,
-    "experience": {
-      "abbreviation": "JR",
-      "name": "Junior",
-      "count": 2
-    },
-    "school": {
-      "espnId": "2483",
-      "abbreviation": "ORE",
-      "name": "Oregon",
-      "primaryColor": "#022000"
-    }
-  },
-  {
-    "id": 2,
-    "espnId": "530308",
-    "active": true,
-    "votes": 2134,
-    "name": {
-      "first": "Jameis",
-      "last": "Winston",
-      "short": "J. Winston"
-    },
-    "position": {
-      "abbreviation": "QB",
-      "name": "Quarterback"
-    },
-    "jersey": 5,
-    "experience": {
-      "abbreviation": "SO",
-      "name": "Sophomore",
-      "count": 1
-    },
-    "school": {
-      "espnId": "52",
-      "abbreviation": "FSU",
-      "name": "Florida State",
-      "primaryColor": "#7f001b"
-    }
-  },
-  {
-    "id": 3,
-    "espnId": "534669",
-    "active": true,
-    "votes": 1324,
-    "name": {
-      "first": "Todd",
-      "last": "Gurley",
-      "short": "T. Gurley"
-    },
-    "position": {
-      "abbreviation": "RB",
-      "name": "Running Back"
-    },
-    "jersey": 3,
-    "experience": {
-      "abbreviation": "JR",
-      "name": "Junior",
-      "count": 2
-    },
-    "school": {
-      "espnId": "61",
-      "abbreviation": "UGA",
-      "name": "Georgia",
-      "primaryColor": "#a0000b"
-    }
-  },
-  {
-    "id": 4,
-    "espnId": "512838",
-    "active": true,
-    "votes": 102,
-    "name": {
-      "first": "Braxton",
-      "last": "Miller",
-      "short": "B. Miller"
-    },
-    "position": {
-      "abbreviation": "QB",
-      "name": "Quarterback"
-    },
-    "jersey": 5,
-    "experience": {
-      "abbreviation": "SR",
-      "name": "Senior",
-      "count": 3
-    },
-    "school": {
-      "espnId": "194",
-      "abbreviation": "OSU",
-      "name": "Ohio State",
-      "primaryColor": "#a00612"
-    }
-  },
-  {
-    "id": 5,
-    "espnId": "511982",
-    "active": true,
-    "votes": 1896,
-    "name": {
-      "first": "Brett",
-      "last": "Hundley",
-      "short": "B. Hundley"
-    },
-    "position": {
-      "abbreviation": "QB",
-      "name": "Quarterback"
-    },
-    "jersey": 17,
-    "experience": {
-      "abbreviation": "JR",
-      "name": "Junior",
-      "count": 2
-    },
-    "school": {
-      "espnId": "26",
-      "abbreviation": "UCLA",
-      "name": "UCLA",
-      "primaryColor": "#004775"
-    }
-  },
-  {
-    "id": 6,
-    "espnId": "480746",
-    "active": true,
-    "votes": 9765,
-    "name": {
-      "first": "Bryce",
-      "last": "Petty",
-      "short": "B. Petty"
-    },
-    "position": {
-      "abbreviation": "QB",
-      "name": "Quarterback"
-    },
-    "jersey": 14,
-    "experience": {
-      "abbreviation": "SR",
-      "name": "Senior",
-      "count": 3
-    },
-    "school": {
-      "espnId": "239",
-      "abbreviation": "BAY",
-      "name": "Baylor",
-      "primaryColor": "#003322"
-    }
-  },
-  {
-    "id": 7,
-    "espnId": "514218",
-    "active": true,
-    "votes": 4536,
-    "name": {
-      "first": "Melvin",
-      "last": "Gordon",
-      "short": "M. Gordon"
-    },
-    "position": {
-      "abbreviation": "RB",
-      "name": "Running Back"
-    },
-    "jersey": 25,
-    "experience": {
-      "abbreviation": "JR",
-      "name": "Junior",
-      "count": 2
-    },
-    "school": {
-      "espnId": "275",
-      "abbreviation": "WIS",
-      "name": "Wisconsin",
-      "primaryColor": "#c32122"
-    }
-  },
-  {
-    "id": 8,
-    "espnId": "530398",
-    "active": true,
-    "votes": 2341,
-    "name": {
-      "first": "Duke",
-      "last": "Johnson",
-      "short": "D. Johnson"
-    },
-    "position": {
-      "abbreviation": "RB",
-      "name": "Running Back"
-    },
-    "jersey": 8,
-    "experience": {
-      "abbreviation": "JR",
-      "name": "Junior",
-      "count": 2
-    },
-    "school": {
-      "espnId": "2390",
-      "abbreviation": "MIA",
-      "name": "Miami (FL)",
-      "primaryColor": "#004325"
-    }
-  },
-  {
-    "id": 9,
-    "espnId": "534409",
-    "active": true,
-    "votes": 3459,
-    "name": {
-      "first": "T.J.",
-      "last": "Yeldon",
-      "short": "T. Yeldon"
-    },
-    "position": {
-      "abbreviation": "RB",
-      "name": "Running Back"
-    },
-    "jersey": 4,
-    "experience": {
-      "abbreviation": "JR",
-      "name": "Junior",
-      "count": 2
-    },
-    "school": {
-      "espnId": "333",
-      "abbreviation": "ALA",
-      "name": "Alabama",
-      "primaryColor": "#690014"
-    }
-  }
+{
+"_id": "55e5b8c91a41a00300f8a548",
+"createdAt": "2015-09-01T14:40:09.748Z",
+"createdBy": "5409eb3d49ab7902008b43a5",
+"espnId": "549811",
+"experience": "54079037d7e9cea74be1512f",
+"introducedOn": "2015-09-02T00:00:00.000Z",
+"jersey": 15,
+"position": "54079099d7e9cea74be15132",
+"school": "54078c4ed7e9cea74be15123",
+"slug": "ezekiel-elliott",
+"updatedAt": "2015-09-01T14:40:38.182Z",
+"updatedBy": "5409eb3d49ab7902008b43a5",
+"totalVotes": 670,
+"isReturning": false,
+"isIntroduction": true,
+"isWritein": false,
+"isActive": true,
+"name": {
+"last": "Elliott",
+"first": "Ezekiel"
+}
+},
+{
+"_id": "55e5b8fd1a41a00300f8a549",
+"createdAt": "2015-09-01T14:41:02.057Z",
+"createdBy": "5409eb3d49ab7902008b43a5",
+"espnId": "517127",
+"experience": "54079042d7e9cea74be15130",
+"introducedOn": "2015-09-02T00:00:00.000Z",
+"jersey": 2,
+"position": "5407908cd7e9cea74be15131",
+"school": "544ff19bc01cad0200eb1397",
+"slug": "trevone-boykin",
+"updatedAt": "2015-09-01T14:41:19.328Z",
+"updatedBy": "5409eb3d49ab7902008b43a5",
+"totalVotes": 380,
+"isReturning": false,
+"isIntroduction": true,
+"isWritein": false,
+"isActive": true,
+"name": {
+"last": "Boykin",
+"first": "Trevone"
+}
+},
+{
+"_id": "55e5b947c8ee67030068c182",
+"createdAt": "2015-09-01T14:42:15.412Z",
+"createdBy": "5409eb3d49ab7902008b43a5",
+"espnId": "513329",
+"experience": "54079042d7e9cea74be15130",
+"introducedOn": "2015-09-02T00:00:00.000Z",
+"jersey": 6,
+"position": "5407908cd7e9cea74be15131",
+"school": "54078f87d7e9cea74be1512b",
+"slug": "cody-kessler",
+"updatedAt": "2015-09-01T14:45:09.977Z",
+"updatedBy": "5409eb3d49ab7902008b43a5",
+"totalVotes": 271,
+"isReturning": false,
+"isIntroduction": true,
+"isWritein": false,
+"isActive": true,
+"name": {
+"last": "Kessler",
+"first": "Cody"
+}
+},
+{
+"_id": "55e5b9b51a41a00300f8a54a",
+"createdAt": "2015-09-01T14:44:05.311Z",
+"createdBy": "5409eb3d49ab7902008b43a5",
+"espnId": "3128720",
+"experience": "5407902ad7e9cea74be1512e",
+"introducedOn": "2015-09-02T00:00:00.000Z",
+"jersey": 27,
+"position": "54079099d7e9cea74be15132",
+"school": "54078bfad7e9cea74be15122",
+"slug": "nick-chubb",
+"updatedAt": "2015-09-01T14:45:16.815Z",
+"updatedBy": "5409eb3d49ab7902008b43a5",
+"totalVotes": 549,
+"isReturning": false,
+"isIntroduction": true,
+"isWritein": false,
+"isActive": true,
+"name": {
+"last": "Chubb",
+"first": "Nick"
+}
+},
+{
+"_id": "55e5ba3bc8ee67030068c185",
+"createdAt": "2015-09-01T14:46:19.332Z",
+"createdBy": "5409eb3d49ab7902008b43a5",
+"espnId": "559752",
+"experience": "5407902ad7e9cea74be1512e",
+"introducedOn": "2015-09-02T00:00:00.000Z",
+"jersey": 7,
+"position": "54079099d7e9cea74be15132",
+"school": "55d4ab83a1af2e030065a614",
+"slug": "leonard-fournette",
+"updatedAt": "2015-09-01T14:46:39.080Z",
+"updatedBy": "5409eb3d49ab7902008b43a5",
+"totalVotes": 157,
+"isReturning": false,
+"isIntroduction": true,
+"isWritein": false,
+"isActive": true,
+"name": {
+"last": "Fournette",
+"first": "Leonard"
+}
+},
+{
+"_id": "55e5ba8ac8ee67030068c186",
+"createdAt": "2015-09-01T14:47:38.646Z",
+"createdBy": "5409eb3d49ab7902008b43a5",
+"espnId": "546368",
+"experience": "54079037d7e9cea74be1512f",
+"introducedOn": "2015-09-02T00:00:00.000Z",
+"jersey": 2,
+"position": "54079099d7e9cea74be15132",
+"school": "54078d2ed7e9cea74be15126",
+"slug": "derrick-henry",
+"updatedAt": "2015-09-01T14:48:00.117Z",
+"updatedBy": "5409eb3d49ab7902008b43a5",
+"totalVotes": 594,
+"isReturning": false,
+"isIntroduction": true,
+"isWritein": false,
+"isActive": true,
+"name": {
+"last": "Henry",
+"first": "Derrick"
+}
+},
+{
+"_id": "55e5bad6c8ee67030068c188",
+"createdAt": "2015-09-01T14:48:54.138Z",
+"createdBy": "5409eb3d49ab7902008b43a5",
+"espnId": "512838",
+"experience": "54079042d7e9cea74be15130",
+"introducedOn": "2015-09-02T00:00:00.000Z",
+"jersey": 1,
+"position": "540790a7d7e9cea74be15133",
+"school": "54078c4ed7e9cea74be15123",
+"slug": "braxton-miller",
+"updatedAt": "2015-09-01T14:49:08.480Z",
+"updatedBy": "5409eb3d49ab7902008b43a5",
+"totalVotes": 509,
+"isReturning": false,
+"isIntroduction": true,
+"isWritein": false,
+"isActive": true,
+"name": {
+"last": "Miller",
+"first": "Braxton"
+}
+},
+{
+"_id": "55e5bb8fc8ee67030068c18a",
+"createdAt": "2015-09-01T14:51:59.596Z",
+"createdBy": "5409eb3d49ab7902008b43a5",
+"espnId": "535511",
+"experience": "54079037d7e9cea74be1512f",
+"introducedOn": "2015-09-02T00:00:00.000Z",
+"jersey": 17,
+"position": "5407908cd7e9cea74be15131",
+"school": "54078cced7e9cea74be15125",
+"slug": "seth-russell",
+"updatedAt": "2015-09-01T14:52:12.833Z",
+"updatedBy": "5409eb3d49ab7902008b43a5",
+"totalVotes": 99,
+"isReturning": false,
+"isIntroduction": true,
+"isWritein": false,
+"isActive": true,
+"name": {
+"last": "Russell",
+"first": "Seth"
+}
+},
+{
+"_id": "55e8c32ff8968a030026773f",
+"createdAt": "2015-09-03T22:01:19.315Z",
+"espnId": "3116593",
+"experience": "5407902ad7e9cea74be1512e",
+"jersey": 4,
+"position": "54079099d7e9cea74be15132",
+"school": "55d1f57da4054d0300c67e3e",
+"slug": "dalvin-cook",
+"updatedAt": "2015-09-03T22:01:19.315Z",
+"totalVotes": 181,
+"isReturning": false,
+"isIntroduction": false,
+"isWritein": true,
+"isActive": true,
+"name": {
+"first": "Dalvin",
+"last": "Cook"
+}
+},
+{
+"_id": "55eb8368de41ec0300968aa6",
+"createdAt": "2015-09-06T00:06:00.612Z",
+"espnId": "545796",
+"experience": "54079010d7e9cea74be1512d",
+"jersey": 12,
+"position": "5407908cd7e9cea74be15131",
+"school": "540f906b82388f0200cbb47c",
+"slug": "tanner-mangum",
+"updatedAt": "2015-09-06T00:06:00.612Z",
+"totalVotes": 48,
+"isReturning": false,
+"isIntroduction": false,
+"isWritein": true,
+"isActive": true,
+"name": {
+"first": "Tanner",
+"last": "Mangum"
+}
+},
+{
+"_id": "55ebc83fde41ec0300968af3",
+"createdAt": "2015-09-06T04:59:43.364Z",
+"espnId": "3886377",
+"experience": "54079010d7e9cea74be1512d",
+"jersey": 3,
+"position": "5407908cd7e9cea74be15131",
+"school": "54078c72d7e9cea74be15124",
+"slug": "josh-rosen",
+"updatedAt": "2015-09-06T04:59:43.364Z",
+"totalVotes": 161,
+"isReturning": false,
+"isIntroduction": false,
+"isWritein": true,
+"isActive": true,
+"name": {
+"first": "Josh",
+"last": "Rosen"
+}
+},
+{
+"_id": "55f84f8481e2930300b75122",
+"createdAt": "2015-09-15T17:04:04.354Z",
+"createdBy": "5409eb3d49ab7902008b43a5",
+"espnId": "547401",
+"experience": "54079037d7e9cea74be1512f",
+"jersey": 16,
+"position": "5407908cd7e9cea74be15131",
+"school": "55db459b1dbd43030042d023",
+"slug": "jared-goff",
+"updatedAt": "2015-09-15T17:05:16.829Z",
+"updatedBy": "5409eb3d49ab7902008b43a5",
+"totalVotes": 9,
+"isReturning": false,
+"isIntroduction": true,
+"isWritein": false,
+"isActive": true,
+"name": {
+"last": "Goff",
+"first": "Jared"
+}
+}
 ]

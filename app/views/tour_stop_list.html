@@ -27,6 +27,8 @@
         <h5 class="heading"><a ng-href="#!/tour-stops/{{stop.slug}}" class="btn-link btn-link-nhh no-decoration">Stop {{stop.stopNumber}} - <span itemprop="name">{{stop.title}}</span> - {{stop.venue.name}}</a></h5>
         <a ng-href="{{stop.absUrl}}" class="hide" itemprop="url">{{stop.absUrl}}</a>
         <div class="subheading date" itemprop="startDate" content="{{stop.stopDateIso}}">{{stop.stopDate | date}}</div>
+        <div class="subheading time" itemprop="time" ng-if="stop.tbd == false">{{ stop.stopTimeStart }} to {{ stop.stopTimeEnd }}</div>
+        <div class="subheading time" itemprop="time" ng-if="stop.tbd == true">TBD</div>
         <div class="subheading location" itemprop="location" itemscope itemtype="http://schema.org/Place">
           <span class="hide" itemprop="name">{{stop.venue.name}}</span>
           <a class="hide" itemprop="url" ng-href="{{stop.venueUrl}}">{{stop.venueUrl}}</a>

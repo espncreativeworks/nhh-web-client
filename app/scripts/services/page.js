@@ -11,7 +11,8 @@ angular.module('nhhApp')
   .service('Page', ['$rootScope', 'ngProgress', '$location', 'underscore', function ($rootScope, ngProgress, $location, _) {
     // Service logic
     // ...
-    var _description = 'As the presenting sponsor of the Heisman Trophy, Nissan has the unique advantage of casting an official vote on behalf of you, the college football fan. So cast your vote for the next Heisman Trophy Winner and you could win.';
+    //var _description = 'As the presenting sponsor of the Heisman Trophy, Nissan has the unique advantage of casting an official vote on behalf of you, the college football fan. So cast your own vote for the next Heisman Trophy Winner and also enter yourself for a chance to win a trip to the 2016 College Football Playoff National Championship in Glendale, Arizona!';
+    var _description = 'Nissan Heisman House is back and better than ever. #HeismanHouse';
     var suffix = ' | Nissan Heisman House';
     var defaultMeta = {
       title: 'Welcome to the Nissan Heisman House',
@@ -31,7 +32,7 @@ angular.module('nhhApp')
         'og:site_name': 'Nissan Heisman House',
         'og:title': 'Nissan Heisman House',
         'og:description': _description,
-        'og:image': 'http://a.espncdn.com/contests/nissan/heisman/2014/display/100x100.jpg'
+        'og:image': 'http://a.espncdn.com/promotions/bsa/apps/nissan/heisman/2015/images/200x200.jpg'
       }
     };
     var defaultBody = {

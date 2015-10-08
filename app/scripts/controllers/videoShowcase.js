@@ -37,7 +37,7 @@ angular.module('nhhApp')
       _.each(_categories, function (category){
         var vids = _videos[category];
 
-        if (category === 'Heisman House Tour' || category === "Heisman House Special"){
+        if (category === 'Heisman House Tour' || category === "Heisman House Special" || category === "Social"){
           vids.sort(function(a,b){
             return (new Date(b.updatedAt).valueOf()) - (new Date(a.updatedAt).valueOf());
           });

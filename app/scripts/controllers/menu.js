@@ -17,7 +17,6 @@ angular.module('nhhApp')
       angular.forEach(links, function (link){
         if (link.network === 'facebook'){
           $scope.facebookLink = link;
-          console.log("menu ctrl: ", $scope.facebookLink);
         }
         if (link.network === 'twitter'){
           $scope.twitterLink = link;
